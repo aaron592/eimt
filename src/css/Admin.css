@@ -1,0 +1,30 @@
+.admin_panel{
+    padding-top:20px;
+    padding-bottom:20px;
+    height:40vh;
+    background-color:red;
+    display: flex;
+    align-items: center;
+    justify-content:space-evenly;
+}
+
+.course_nut{
+    height:20vh;
+    background-color:white;
+    border-radius:10px;
+}
+
+.add_btn{
+    height:20vh;
+    border-radius:10px;
+    display:flex;
+    justify-content:flex-end;
+}
+
+.add_btn>button{
+    height:40px;
+    border: 1px solid black;
+    border-radius:5px;
+    padding-left:10px;
+    padding-right:10px;
+}
