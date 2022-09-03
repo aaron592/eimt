@@ -225,7 +225,7 @@
     
 }
 
-@media (min-width: 1200px ){
+@media (min-width: 1000px ){
 
     .text_h{
         display:flex;
@@ -260,8 +260,29 @@
         /* background-color:blue; */
     }
     
+    .contact_form_div1>p{
+        padding-right: 10px;
+    }
+    
+    .toast_div{
+        width:100%;
+        height:40px;
+        /* background-color:red; */
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        color:rgb(10, 120, 10);
+        font-weight:bold;
+        font-family: 'Segoe UI';
+    }
+    
+    .toast_div>img{
+        width:12%;
+        height:40px;
+    }
+    
     .contact_form_div2{
-        height:78vh;
+        height:80vh;
         width:40%;
         background-color:white;
         display:flex;
@@ -291,7 +312,7 @@
         border:1px solid grey;
         height:40px;
         border-radius:5px;
-        box-shadow: rgba(0, 0, 0, 0.35) 0px 2px 5px;
+        
     
     }
     
@@ -304,11 +325,12 @@
         display:flex;
         align-items:center;
         justify-content:space-evenly;
+        padding-bottom: 20px;
         /* position:absolute; */
     }
     
     .contact_form_div{
-        width:70%;
+        width:85%;
         padding:30px;
         background-color:#b4d5fd;
         position:absolute;
@@ -319,16 +341,18 @@
     }
     
     .contact_tabs{
-        width:20%;
         height:45vh;
+        width:30%;
         background-color:white;
         box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content:space-around;
+        border-radius: 5px;
         
     }
+    
     
     .contact_logo1{
         margin-top:-20px;
@@ -341,7 +365,7 @@
     }
     
     .contact_logo1>img{
-        object-fit: contain;
+        object-fit: cover;
         width:100%;
         height:100%;
     }
@@ -368,6 +392,50 @@
     
     .locations>p{
         text-align: center;
+        color:rgb(172, 172, 172);
+    }
+    .flex-row{
+        flex-direction: row !important;
+    }
+    
+    .d-flex{display:flex!important;}
+    
+    .contact_build{
+        padding:10px;
+        padding-top:15px;
+        padding-bottom:10px;
+        width:95%;
+        height:75px;
+        background-color:rgb(235, 235, 235);
+        box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(123, 123, 123, 0.8) -6px -2px 16px 0px;;
+        display:flex;
+        align-items:center;
+        justify-content:flex-start;
+        /* border-radius: 10px; */
+        
+    }
+    
+    .contact_build>div>h6{
+        display:flex;
+    }
+    
+    .contact_form_div2{
+        margin-top:0px;
+    }
+    
+    .contact_build>div{
+        padding:10px;
+    }
+
+    .footer_details_2{
+        padding:0px;
+        margin:0px;
+    }
+
+    .footer_details_3{
+        display:block;
+        padding:0px;
+        margin:0px;
     }
 }
 

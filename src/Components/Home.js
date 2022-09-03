@@ -32,7 +32,7 @@ function Header(){
 
   useEffect(() => {
     document.head.innerHTML+=`
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, shrink-to-fit=no, user-scalable=0" />
     `
   }, []);
 
@@ -101,7 +101,7 @@ function Header(){
             <div className="col-sm-12 banner1_div">
             <p className="tag_cover"><span className="tag">New</span> Becoming a new program</p>
             <h1 className="heading">EBENEZER INSTITUTE OF <br></br> MODERN TECHNOLOGY</h1>
-            <p className="content">EIMT is a Project of Shuwaiter international Charitable Trust for the upliftment of the society through professional education which helps the students to find jobs.<span className="hidden"> EIMT aims the transformation of a student to professional, Our courses are based on helping students from various background to find a job through our professional training and working professionals to upgrade their job to next level.</span></p>
+            <p className="content">EIMT is a Project of Shuwaiter international Charitable Trust for the upliftment of the society through professional education which helps the students to find jobs. EIMT aims the transformation of a student to professional, Our courses are based on helping students from various background to find a job through our professional training and working professionals to upgrade their job to next level.</p>
             <button type="button" className="bro_btn">
               Brochure <span className="download_btn">&#8681;</span>
             </button>
@@ -122,7 +122,7 @@ function Header(){
           <h2>&#127891; What We Does</h2>
         </div>
 
-        <div className="col-lg-12 col-xl-12 col-md-12 col-sm-12 prin_tab">
+        <div className="d-flex flex-row prin_tab">
            <div className="d-flex flex-row prin_div">
              <div className="img_right">
                  <img src={principal} />
@@ -133,7 +133,7 @@ function Header(){
            </div>
         </div>
 
-        <div className="col-lg-12 col-xl-12 col-md-12 col-sm-12 prin_tab">
+        <div className="d-flex flex-row  prin_tab">
            <div className="d-flex flex-row prin_div">
              <div className="msg_left">
                  <div className="regular"><h1>&#10077;</h1>We see it as EIMT's responsibility to build an educational sector inspired by yesterday as a promise for tomorrow. Selfless service and dedication sets us apart.We encourage mutual respect and positive thinking. We are always willing to provide assistance and guidance to the job opportunities worldwide.<h6>- Bp.Rev.Dr.Simon Peter</h6></div>
@@ -228,7 +228,7 @@ function Header(){
         </Slider>
       </div>
         
-        <div className="col-lg-12 col-xl-12 col-md-12 col-sm-12 contact_div">
+        <div className="contact_div">
           <div className="d-flex flex-row contact_tab">
            <h2>Are You Ready To Start Your <br></br>Course Now</h2>
            <Link style={{ textDecoration: 'none', color: 'white' }} to="/contact"><button className="contact_btn">Contact Us</button></Link>
@@ -236,7 +236,7 @@ function Header(){
         </div>
 
         <div className="col-lg-12 col-xl-12 col-md-12 col-sm-12 footer">
-            <div className="d-flex flex-row footer_details" id="footer_detail">
+            <div className="d-flex flex-wrap footer_details" id="footer_detail">
               <div className=" footer_logo">
                 <img src={logo} />
                 <p><em>EIMT aims the transformation <br></br>of a student to professional.</em></p>
