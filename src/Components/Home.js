@@ -11,8 +11,10 @@ import instagram from '../images/instagram.png';
 import facebook from '../images/facebook.png';
 import twitter from '../images/twitter.png';
 import youtube from '../images/youtube.png';
-import principal from '../images/principal.gif'
+import principal from '../images/principal.gif';
+import director from '../images/director.gif';
 import {Link} from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 
 
@@ -51,11 +53,11 @@ function Header(){
                       <div className="col-lg-2 col-xl-3 col-md-6 col-sm-2 search_new">
                         <input type="text" placeholder="&#128269; Search for anything...." className="search_bar"/>
                      </div>
-                     <div className="col-xl-4 col-sm-6 col-md-8 nav_details_new">
-                  <p className="nav_p">Home</p>
-                  <Link to="/about"><p className="nav_p">About</p></Link>
-                  <Link to="/courses"><p className="nav_p">Courses</p></Link>
-                  <Link to="/contact"><p className="nav_p">Contact</p></Link>
+                     <div className="col-xl-4 col-sm-6 col-md-8 nav_details_new" onClick={()=>{setMenu(true)}}>
+                     <Link style={{ textDecoration: 'none', color: 'white' }} to="/"><p className="nav_p">Home</p></Link>
+                  <Link style={{ textDecoration: 'none', color: 'white' }} to="/about"><p className="nav_p">About</p></Link>
+                  <Link style={{ textDecoration: 'none', color: 'white' }} to="/courses"><p className="nav_p">Courses</p></Link>
+                  <Link style={{ textDecoration: 'none', color: 'white' }} to="/contact"><p className="nav_p">Contact</p></Link>
               </div>
               <div className="col-lg-2 col-xl-2 col-sm-6 col-md-8 login_details_new">
                  <button className="register">APPLY NOW</button>  
@@ -71,10 +73,10 @@ function Header(){
               {menubar1===true?(
                 <section className="cover" onClick={()=>{setMenu1(false)}}>
                 <div className="col-xl-4 col-sm-6 col-md-8 nav_details_new">
-                  <p className="nav_p">Home</p>
-                  <Link to="/about"><p className="nav_p">About</p></Link>
-                  <Link to="/courses"><p className="nav_p">Courses</p></Link>
-                  <Link to="/contact"><p className="nav_p">Contact</p></Link>
+                <Link style={{ textDecoration: 'none', color: 'white' }} to="/"><p className="nav_p">Home</p></Link>
+                  <Link style={{ textDecoration: 'none', color: 'white' }} to="/about"><p className="nav_p">About</p></Link>
+                  <Link style={{ textDecoration: 'none', color: 'white' }} to="/courses"><p className="nav_p">Courses</p></Link>
+                  <Link style={{ textDecoration: 'none', color: 'white' }} to="/contact"><p className="nav_p">Contact</p></Link>
               </div>
               <div className="col-lg-2 col-xl-2 col-sm-6 col-md-8 login_details_new">
                  <button className="register">APPLY NOW</button> 
@@ -82,10 +84,10 @@ function Header(){
               </section>
               ):null}
               <div className="col-xl-4 col-sm-6 col-md-8 nav_details">
-                  <p className="nav_p">Home</p>
-                  <Link to="/about"><p className="nav_p">About</p></Link>
-                  <Link to="/courses"><p className="nav_p">Courses</p></Link>
-                  <Link to="/contact"><p className="nav_p">Contact</p></Link>
+              <Link style={{ textDecoration: 'none', color: 'white' }} to="/"><p className="nav_p">Home</p></Link>
+                  <Link style={{ textDecoration: 'none', color: 'white' }} to="/about"><p className="nav_p">About</p></Link>
+                  <Link style={{ textDecoration: 'none', color: 'white' }} to="/courses"><p className="nav_p">Courses</p></Link>
+                  <Link style={{ textDecoration: 'none', color: 'white' }} to="/contact"><p className="nav_p">Contact</p></Link>
               </div>
               <div className="col-lg-2 col-xl-2 col-sm-6 col-md-8 login_details">
                 <button className="register">APPLY NOW</button>
@@ -116,19 +118,34 @@ function Header(){
         <marquee behavior="scroll" direction="left">ADMISSIONS ARE OPEN.. HURRY UP.. APPLY NOW</marquee>
         </div>
 
+        <div className="what_head">
+          <h2>&#127891; What We Does</h2>
+        </div>
+
+        <div className="col-lg-12 col-xl-12 col-md-12 col-sm-12 prin_tab">
+           <div className="d-flex flex-row prin_div">
+             <div className="img_right">
+                 <img src={principal} />
+             </div>
+             <div className="msg_left">
+                 <div className="regular"><h1>&#10077;</h1>We take the responsibility of EIMT for the future of the students to create an educational sector that invokes the moral values ​​of the past and shapes the future of the present. EIMT has faculty and dedicated members with global perspective and experience.<h6>- Mrs. Sheenamol Joseph</h6></div>
+             </div>
+           </div>
+        </div>
+
         <div className="col-lg-12 col-xl-12 col-md-12 col-sm-12 prin_tab">
            <div className="d-flex flex-row prin_div">
              <div className="msg_left">
-                 <div className="regular"><span class="bi bi-quote"></span>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati "</div>
+                 <div className="regular"><h1>&#10077;</h1>We see it as EIMT's responsibility to build an educational sector inspired by yesterday as a promise for tomorrow. Selfless service and dedication sets us apart.We encourage mutual respect and positive thinking. We are always willing to provide assistance and guidance to the job opportunities worldwide.<h6>- Bp.Rev.Dr.Simon Peter</h6></div>
              </div>
              <div className="img_right">
-                 <img src={principal} />
+                 <img src={director} />
              </div>
            </div>
         </div>
 
         <div className="new_slide" max-width="720px" >
-        <h2 className="slide_head">Popular Courses</h2>
+           <h2 className="slide_head">Most Popular Courses</h2>
         <Slider {...settings}>
           <div className="slide_1">
             <div className="courses_1">
@@ -214,7 +231,7 @@ function Header(){
         <div className="col-lg-12 col-xl-12 col-md-12 col-sm-12 contact_div">
           <div className="d-flex flex-row contact_tab">
            <h2>Are You Ready To Start Your <br></br>Course Now</h2>
-           <button>Contact Us</button>
+           <Link style={{ textDecoration: 'none', color: 'white' }} to="/contact"><button className="contact_btn">Contact Us</button></Link>
           </div>
         </div>
 
@@ -226,16 +243,16 @@ function Header(){
               </div>
               <div className="footer_details_1">
               <p className="footer_head">Locations</p>
-              <p><i>Ashis Building ,Marine Drive Hign Court JN, Ernakulam</i> <br></br>682031</p>
+              <p>Ashis Building ,Marine Drive Hign Court JN, Ernakulam<br></br>682031</p>
               <p className="footer_head">Head Office:</p>
-              <p><i>SMICT Piraroor P.O, Kalady, Kerala, India</i> <br></br>683574</p>
+              <p>SMICT Piraroor P.O, Kalady, Kerala, India <br></br>683574</p>
               </div>
               <div className="col-lg-flex col-xl-flex footer_details_2">
               <p className="footer_head">Quick Links</p>
                 <p>Home</p>
-                <Link to="/about"><p>About</p></Link>
-                <p>Courses</p>
-                <p>Contact</p>
+                <Link style={{ textDecoration: 'none', color: 'black' }} to="/about"><p>About</p></Link>
+                <Link style={{ textDecoration: 'none', color: 'black' }} to="/courses"><p>Courses</p></Link>
+                <Link style={{ textDecoration: 'none', color: 'black' }} to="/contact"><p>Contact</p></Link>
               </div>
               <div className="footer_details_3">
               <p className="footer_head">Courses</p>
@@ -255,7 +272,7 @@ function Header(){
             </div>
         </div>
         <div className="col-lg-12 col-xl-12 col-md-12 col-sm-12 rights">
-          <p>© 2022 Copyright. Designed by <a href="https://luc.to/aaron" >ATJ</a></p>
+          <p>© 2022 Copyright. Designed by <a href="https://luc.to/aaron" > ATJ</a></p>
         </div>
       </section>
     );

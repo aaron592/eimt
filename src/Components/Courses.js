@@ -1,6 +1,7 @@
 import {Link} from 'react-router-dom';
 import '../css/Header.css';
 import '../css/Course.css';
+import '../css/About.css';
 import logo from '../images/eimt_final.png';
 import {useEffect ,useState} from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -11,8 +12,33 @@ import instagram from '../images/instagram.png';
 import facebook from '../images/facebook.png';
 import twitter from '../images/twitter.png';
 import youtube from '../images/youtube.png';
+import about_img from '../images/preview.jpg';
+
 
 function Courses(){
+
+  let [courses,setCourses]= useState([]);
+
+  useEffect(()=>{
+      fetch("http://localhost:8000/courses")
+      .then((response)=>response.json())
+      .then((courseData)=>{
+          setCourses(courseData);
+      })
+      .catch((err)=>{
+          console.log(err);
+      })
+
+  },[])
+
+
+  function filterData(course){
+    const updatedData = courses.filter((cour)=>{
+      return cour.course === course;
+    })
+    setCourses(updatedData);
+  }
+
     var settings = {
         dots: true,
         autoplay:true,
@@ -22,15 +48,12 @@ function Courses(){
         slidesToScroll: 1,
         overflow: false,
       };
-    useEffect(() => {
-        document.head.innerHTML+=`
-        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-        `
-      }, []);
+
     
       let [menubar,setMenu] = useState(false);
       let [menubar1,setMenu1] = useState(false);
 
+     
     return(
         <section>
         <div className="container-fluid">
@@ -44,15 +67,14 @@ function Courses(){
                       <div className="col-lg-2 col-xl-3 col-md-6 col-sm-2 search_new">
                         <input type="text" placeholder="&#128269; Search for anything...." className="search_bar"/>
                      </div>
-                     <div className="col-xl-4 col-sm-6 col-md-8 nav_details_new">
-                  <Link to="/"><p className="">Home</p></Link>
-                  <Link to="/about"><p>About</p></Link>
-                  <Link to="/courses"><p>Courses</p></Link>
-                  <p>Contact</p>
+                     <div className="col-xl-4 col-sm-6 col-md-8 nav_details_new" onClick={()=>{setMenu(true)}}>
+                     <Link style={{ textDecoration: 'none', color: 'white' }} to="/"><p className="nav_p">Home</p></Link>
+                  <Link style={{ textDecoration: 'none', color: 'white' }} to="/about"><p className="nav_p">About</p></Link>
+                  <Link style={{ textDecoration: 'none', color: 'white' }} to="/courses"><p className="nav_p">Courses</p></Link>
+                  <Link style={{ textDecoration: 'none', color: 'white' }} to="/contact"><p className="nav_p">Contact</p></Link>
               </div>
               <div className="col-lg-2 col-xl-2 col-sm-6 col-md-8 login_details_new">
-                <button className="login_new">Login</button>
-                <button className="register_new">Register</button>
+                 <button className="register">APPLY NOW</button>  
               </div>
               </section>
                     ):null}
@@ -65,298 +87,97 @@ function Courses(){
               {menubar1===true?(
                 <section className="cover" onClick={()=>{setMenu1(false)}}>
                 <div className="col-xl-4 col-sm-6 col-md-8 nav_details_new">
-                <Link to="/"><p className="">Home</p></Link>
-                  <Link to="/about"><p>About</p></Link>
-                  <Link to="/courses"><p>Courses</p></Link>
-                  <p>Contact</p>
+                <Link style={{ textDecoration: 'none', color: 'white' }} to="/"><p className="nav_p">Home</p></Link>
+                  <Link style={{ textDecoration: 'none', color: 'white' }} to="/about"><p className="nav_p">About</p></Link>
+                  <Link style={{ textDecoration: 'none', color: 'white' }} to="/courses"><p className="nav_p">Courses</p></Link>
+                  <Link style={{ textDecoration: 'none', color: 'white' }} to="/contact"><p className="nav_p">Contact</p></Link>
               </div>
               <div className="col-lg-2 col-xl-2 col-sm-6 col-md-8 login_details_new">
-                <button className="login_new">Login</button>
-                <button className="register_new">Register</button>
+                 <button className="register">APPLY NOW</button> 
               </div>
               </section>
               ):null}
               <div className="col-xl-4 col-sm-6 col-md-8 nav_details">
-              <Link to="/"><p className="">Home</p></Link>
-                  <Link to="/about"><p>About</p></Link>
-                  <Link to="/courses"><p>Courses</p></Link>
-                  <p>Contact</p>
+              <Link style={{ textDecoration: 'none', color: 'white' }} to="/"><p className="nav_p">Home</p></Link>
+                  <Link style={{ textDecoration: 'none', color: 'white' }} to="/about"><p className="nav_p">About</p></Link>
+                  <Link style={{ textDecoration: 'none', color: 'white' }} to="/courses"><p className="nav_p">Courses</p></Link>
+                  <Link style={{ textDecoration: 'none', color: 'white' }} to="/contact"><p className="nav_p">Contact</p></Link>
               </div>
               <div className="col-lg-2 col-xl-2 col-sm-6 col-md-8 login_details">
-                <button className="login">Login</button>
-                <button className="register">Register</button>
+                <button className="register">APPLY NOW</button>
               </div>
               
            </div>
           
         </div>
-        <div className="new_slide" max-width="720px" width= "100%">
-        <h2 className="slide_head">Programming Courses</h2>
-        <Slider {...settings}>
-          <div className="slide_1">
-            <div className="courses_1">
-                <div className="course_1">
-                  <div className="course_img">
-                    <div className="course_details"><img src="https://www.ciitinstitute.com/images/courses/dotnet1.png" /></div>
-                    <div className="course_details1">
-                      <p className="course_head">Microsoft .Net </p>
-                      <p className="course_p">. NET (dot NET) course is a software developing course, where the developers use dot Net framework and machine level languages to develop different software. It is a free open source platform to develop different types of software applications.</p>
-                    </div>
-                  </div>
-                </div>
-                <div className="course_1">
-                <div className="course_img">
-                    <div className="course_details"><img src="https://www.edarabia.com/wp-content/uploads/2017/03/aviation-foundation-course-140846.jpg" /></div>
-                    <div className="course_details1">
-                      <p className="course_head">Aviation Course</p>
-                      <p className="course_p">The aviation industry, therefore, includes all aspects of air travel and related activities. This would include airlines, aircraft manufacturers, research companies, military aircraft activities, etc. </p>
-                    </div>
-                  </div>
-                </div>
-                <div className="course_1">
-                <div className="course_img">
-                    <div className="course_details"><img src="https://www.mytechmint.com/wp-content/uploads/2020/05/SQL2BTutorials2B-2BShout4Education.png" /></div>
-                    <div className="course_details1">
-                      <p className="course_head">SQL </p>
-                      <p className="course_p">Structured Query Language (SQL) is a commonly used programming language. It is used to manage relational databases, perform operations, and also to carry out several other activities on the data stored on those databases. </p>
-                    </div>
-                  </div>
-                </div>
-                <div className="course_1">
-                <div className="course_img">
-                    <div className="course_details"><img src="https://leapscholar.com/blog/wp-content/uploads/2022/02/shutterstock_1234571242-min-1024x576.png" /></div>
-                    <div className="course_details1">
-                      <p className="course_head">Hotel Management</p>
-                      <p className="course_p">Hotel Management subjects integrally focus on exploring the vast spectrum of Hospitality and Tourism Management and imparting students with the necessary knowledge and skills of handling varied situations with professionalism. </p>
-                    </div>
-                  </div>
-                </div>
-                <div className="course_1">
-                <div className="course_img">
-                    <div className="course_details"><img src="https://media.istockphoto.com/photos/cheerful-fashion-designer-holding-color-swatches-picture-id1343691232?b=1&k=20&m=1343691232&s=170667a&w=0&h=qSIIfS5sit5w9Jb9KQi4MMi_wREWHDKX5IP5I0ULEVo=" /></div>
-                    <div className="course_details1">
-                      <p className="course_head">Fashion Design & Technology </p>
-                      <p className="course_p">Fashion designers innovate and reinvent by studying old and contemporary trends and creating aesthetic designs.</p>
-                    </div>
-                  </div>
-                </div>
-            </div>
+        <div className="col-lg-12 col-xl-12 about_msg">
+       <img src={about_img}/>
+       <span className="col-lg-12 col-xl-12 overlay">
+          <div className="about_header">
+             <div className="about_h1">
+               <h1>Explore Our Courses</h1>
+             </div>
+             <div className="text_h">
+             <div className="text_head">Dear members and visitors of Ebenezer Institute of Modern Technology family.</div> 
+             <div className="text_head"> 
+               <span>&nbsp;Welcome to the website. </span>
+             </div>
+             </div>
           </div>
-          <div>
-          <div className="course_1">
-          <div className="course_img">
-                    <div className="course_details"><img src="https://www.ciitinstitute.com/images/courses/dotnet1.png" /></div>
-                    <div className="course_details1">
-                      <p className="course_head">Microsoft .Net </p>
-                      <p className="course_p">. NET (dot NET) course is a software developing course, where the developers use dot Net framework and machine level languages to develop different software. It is a free open source platform to develop different types of software applications.</p>
-                    </div>
-                  </div>
-          </div>
-          <div className="course_1">
-          <div className="course_img">
-                    <div className="course_details"><img src="https://www.ciitinstitute.com/images/courses/dotnet1.png" /></div>
-                    <div className="course_details1">
-                      <p className="course_head">Microsoft .Net </p>
-                      <p className="course_p">. NET (dot NET) course is a software developing course, where the developers use dot Net framework and machine level languages to develop different software. It is a free open source platform to develop different types of software applications.</p>
-                    </div>
-                  </div>
-          </div>
-          <div className="course_1">
-          <div className="course_img">
-                    <div className="course_details"><img src="https://www.ciitinstitute.com/images/courses/dotnet1.png" /></div>
-                    <div className="course_details1">
-                      <p className="course_head">Microsoft .Net </p>
-                      <p className="course_p">. NET (dot NET) course is a software developing course, where the developers use dot Net framework and machine level languages to develop different software. It is a free open source platform to develop different types of software applications.</p>
-                    </div>
-                  </div>
-          </div> 
-          </div>
-        </Slider>
-      </div>
-      <div className="new_slide" max-width="720px" width= "100%">
-        <h2 className="slide_head">Fashion Designing Courses</h2>
-        <Slider {...settings}>
-          <div className="slide_1">
-            <div className="courses_1">
-                <div className="course_1">
-                  <div className="course_img">
-                    <div className="course_details"><img src="https://www.ciitinstitute.com/images/courses/dotnet1.png" /></div>
-                    <div className="course_details1">
-                      <p className="course_head">Microsoft .Net </p>
-                      <p className="course_p">. NET (dot NET) course is a software developing course, where the developers use dot Net framework and machine level languages to develop different software. It is a free open source platform to develop different types of software applications.</p>
-                    </div>
-                  </div>
-                </div>
-                <div className="course_1">
-                <div className="course_img">
-                    <div className="course_details"><img src="https://www.edarabia.com/wp-content/uploads/2017/03/aviation-foundation-course-140846.jpg" /></div>
-                    <div className="course_details1">
-                      <p className="course_head">Aviation Course</p>
-                      <p className="course_p">The aviation industry, therefore, includes all aspects of air travel and related activities. This would include airlines, aircraft manufacturers, research companies, military aircraft activities, etc. </p>
-                    </div>
-                  </div>
-                </div>
-                <div className="course_1">
-                <div className="course_img">
-                    <div className="course_details"><img src="https://www.mytechmint.com/wp-content/uploads/2020/05/SQL2BTutorials2B-2BShout4Education.png" /></div>
-                    <div className="course_details1">
-                      <p className="course_head">SQL </p>
-                      <p className="course_p">Structured Query Language (SQL) is a commonly used programming language. It is used to manage relational databases, perform operations, and also to carry out several other activities on the data stored on those databases. </p>
-                    </div>
-                  </div>
-                </div>
-                <div className="course_1">
-                <div className="course_img">
-                    <div className="course_details"><img src="https://leapscholar.com/blog/wp-content/uploads/2022/02/shutterstock_1234571242-min-1024x576.png" /></div>
-                    <div className="course_details1">
-                      <p className="course_head">Hotel Management</p>
-                      <p className="course_p">Hotel Management subjects integrally focus on exploring the vast spectrum of Hospitality and Tourism Management and imparting students with the necessary knowledge and skills of handling varied situations with professionalism. </p>
-                    </div>
-                  </div>
-                </div>
-                <div className="course_1">
-                <div className="course_img">
-                    <div className="course_details"><img src="https://media.istockphoto.com/photos/cheerful-fashion-designer-holding-color-swatches-picture-id1343691232?b=1&k=20&m=1343691232&s=170667a&w=0&h=qSIIfS5sit5w9Jb9KQi4MMi_wREWHDKX5IP5I0ULEVo=" /></div>
-                    <div className="course_details1">
-                      <p className="course_head">Fashion Design & Technology </p>
-                      <p className="course_p">Fashion designers innovate and reinvent by studying old and contemporary trends and creating aesthetic designs.</p>
-                    </div>
-                  </div>
-                </div>
-            </div>
-          </div>
-          <div>
-          <div className="course_1">
-          <div className="course_img">
-                    <div className="course_details"><img src="https://www.ciitinstitute.com/images/courses/dotnet1.png" /></div>
-                    <div className="course_details1">
-                      <p className="course_head">Microsoft .Net </p>
-                      <p className="course_p">. NET (dot NET) course is a software developing course, where the developers use dot Net framework and machine level languages to develop different software. It is a free open source platform to develop different types of software applications.</p>
-                    </div>
-                  </div>
-          </div>
-          <div className="course_1">
-          <div className="course_img">
-                    <div className="course_details"><img src="https://www.ciitinstitute.com/images/courses/dotnet1.png" /></div>
-                    <div className="course_details1">
-                      <p className="course_head">Microsoft .Net </p>
-                      <p className="course_p">. NET (dot NET) course is a software developing course, where the developers use dot Net framework and machine level languages to develop different software. It is a free open source platform to develop different types of software applications.</p>
-                    </div>
-                  </div>
-          </div>
-          <div className="course_1">
-          <div className="course_img">
-                    <div className="course_details"><img src="https://www.ciitinstitute.com/images/courses/dotnet1.png" /></div>
-                    <div className="course_details1">
-                      <p className="course_head">Microsoft .Net </p>
-                      <p className="course_p">. NET (dot NET) course is a software developing course, where the developers use dot Net framework and machine level languages to develop different software. It is a free open source platform to develop different types of software applications.</p>
-                    </div>
-                  </div>
-          </div> 
-          </div>
-        </Slider>
-      </div>
-      <div className="new_slide" max-width="720px" width= "100%">
-        <h2 className="slide_head">Fire & Safety Courses</h2>
-        <Slider {...settings}>
-          <div className="slide_1">
-            <div className="courses_1">
-                <div className="course_1">
-                  <div className="course_img">
-                    <div className="course_details"><img src="https://www.ciitinstitute.com/images/courses/dotnet1.png" /></div>
-                    <div className="course_details1">
-                      <p className="course_head">Microsoft .Net </p>
-                      <p className="course_p">. NET (dot NET) course is a software developing course, where the developers use dot Net framework and machine level languages to develop different software. It is a free open source platform to develop different types of software applications.</p>
-                    </div>
-                  </div>
-                </div>
-                <div className="course_1">
-                <div className="course_img">
-                    <div className="course_details"><img src="https://www.edarabia.com/wp-content/uploads/2017/03/aviation-foundation-course-140846.jpg" /></div>
-                    <div className="course_details1">
-                      <p className="course_head">Aviation Course</p>
-                      <p className="course_p">The aviation industry, therefore, includes all aspects of air travel and related activities. This would include airlines, aircraft manufacturers, research companies, military aircraft activities, etc. </p>
-                    </div>
-                  </div>
-                </div>
-                <div className="course_1">
-                <div className="course_img">
-                    <div className="course_details"><img src="https://www.mytechmint.com/wp-content/uploads/2020/05/SQL2BTutorials2B-2BShout4Education.png" /></div>
-                    <div className="course_details1">
-                      <p className="course_head">SQL </p>
-                      <p className="course_p">Structured Query Language (SQL) is a commonly used programming language. It is used to manage relational databases, perform operations, and also to carry out several other activities on the data stored on those databases. </p>
-                    </div>
-                  </div>
-                </div>
-                <div className="course_1">
-                <div className="course_img">
-                    <div className="course_details"><img src="https://leapscholar.com/blog/wp-content/uploads/2022/02/shutterstock_1234571242-min-1024x576.png" /></div>
-                    <div className="course_details1">
-                      <p className="course_head">Hotel Management</p>
-                      <p className="course_p">Hotel Management subjects integrally focus on exploring the vast spectrum of Hospitality and Tourism Management and imparting students with the necessary knowledge and skills of handling varied situations with professionalism. </p>
-                    </div>
-                  </div>
-                </div>
-                <div className="course_1">
-                <div className="course_img">
-                    <div className="course_details"><img src="https://media.istockphoto.com/photos/cheerful-fashion-designer-holding-color-swatches-picture-id1343691232?b=1&k=20&m=1343691232&s=170667a&w=0&h=qSIIfS5sit5w9Jb9KQi4MMi_wREWHDKX5IP5I0ULEVo=" /></div>
-                    <div className="course_details1">
-                      <p className="course_head">Fashion Design & Technology </p>
-                      <p className="course_p">Fashion designers innovate and reinvent by studying old and contemporary trends and creating aesthetic designs.</p>
-                    </div>
-                  </div>
-                </div>
-            </div>
-          </div>
-          <div>
-          <div className="course_1">
-          <div className="course_img">
-                    <div className="course_details"><img src="https://www.ciitinstitute.com/images/courses/dotnet1.png" /></div>
-                    <div className="course_details1">
-                      <p className="course_head">Microsoft .Net </p>
-                      <p className="course_p">. NET (dot NET) course is a software developing course, where the developers use dot Net framework and machine level languages to develop different software. It is a free open source platform to develop different types of software applications.</p>
-                    </div>
-                  </div>
-          </div>
-          <div className="course_1">
-          <div className="course_img">
-                    <div className="course_details"><img src="https://www.ciitinstitute.com/images/courses/dotnet1.png" /></div>
-                    <div className="course_details1">
-                      <p className="course_head">Microsoft .Net </p>
-                      <p className="course_p">. NET (dot NET) course is a software developing course, where the developers use dot Net framework and machine level languages to develop different software. It is a free open source platform to develop different types of software applications.</p>
-                    </div>
-                  </div>
-          </div>
-          <div className="course_1">
-          <div className="course_img">
-                    <div className="course_details"><img src="https://www.ciitinstitute.com/images/courses/dotnet1.png" /></div>
-                    <div className="course_details1">
-                      <p className="course_head">Microsoft .Net </p>
-                      <p className="course_p">. NET (dot NET) course is a software developing course, where the developers use dot Net framework and machine level languages to develop different software. It is a free open source platform to develop different types of software applications.</p>
-                    </div>
-                  </div>
-          </div> 
-          </div>
-        </Slider>
-      </div>
-      <div className="col-lg-12 col-xl-12 col-md-12 col-sm-12 footer">
-            <div className="footer_details">
-              <div className="footer_logo">
+       </span>
+    </div>
+
+
+        <div className="filter_container">
+           <button onClick={()=>filterData('Programming')}>Programming</button>
+           <button onClick={()=>filterData('Graphic Designing')}>Graphic Designing</button>
+           <button onClick={()=>filterData('Networking')}>Networking</button>
+           <button onClick={()=>filterData('Fashion Designing')}>Fashion Designing</button>
+           <button onClick={()=>filterData('Language')}>Language</button>
+           <button onClick={()=>filterData('Musical')}>Musical</button>
+           <button onClick={()=>filterData('Hotel Management')}>Hotel Management</button>
+           <button onClick={()=>filterData('Fire & Safety')}>Fire & Safety</button>
+           <button onClick={()=>filterData('Aviation')}>Aviation</button>
+        </div>
+        <div className="course_container">
+          {
+            courses.map((course,index)=>{
+               return(
+                <div className="course_container1" key={index}>
+              <div className="course_img_cont">
+              <img src={course.image} alt={course.name} />
+              </div>
+              <div className="course_details_cont">
+                 <h6>{course.name}</h6>
+                 <p>{course.description}</p>
+              </div>
+           </div>
+               )
+            })
+          }
+          
+        </div>
+
+        
+
+        <div className="col-lg-12 col-xl-12 col-md-12 col-sm-12 footer">
+            <div className="d-flex flex-row footer_details" id="footer_detail">
+              <div className=" footer_logo">
                 <img src={logo} />
                 <p><em>EIMT aims the transformation <br></br>of a student to professional.</em></p>
               </div>
               <div className="footer_details_1">
               <p className="footer_head">Locations</p>
-              <p><i>Ashis Building ,Marine Drive Hign Court JN, Ernakulam</i> <br></br>682031</p>
+              <p>Ashis Building ,Marine Drive Hign Court JN, Ernakulam<br></br>682031</p>
               <p className="footer_head">Head Office:</p>
-              <p><i>SMICT Piraroor P.O, Kalady, Kerala, India</i> <br></br>683574</p>
+              <p>SMICT Piraroor P.O, Kalady, Kerala, India <br></br>683574</p>
               </div>
-              <div className="footer_details_2">
+              <div className="col-lg-flex col-xl-flex footer_details_2">
               <p className="footer_head">Quick Links</p>
-                <p>Home</p>
-                <Link to="/about"><p>About</p></Link>
+              <Link style={{ textDecoration: 'none', color: 'black' }} to="/"><p>Home</p></Link>
+                <Link style={{ textDecoration: 'none', color: 'black' }} to="/about"><p>About</p></Link>
                 <p>Courses</p>
-                <p>Contact</p>
+                <Link style={{ textDecoration: 'none', color: 'black' }} to="/contact"> <p>Contact</p></Link>
               </div>
               <div className="footer_details_3">
               <p className="footer_head">Courses</p>
@@ -374,7 +195,9 @@ function Courses(){
               </p>
               </div>
             </div>
-
+        </div>
+        <div className="col-lg-12 col-xl-12 col-md-12 col-sm-12 rights">
+          <p>© 2022 Copyright. Designed by <a href="https://luc.to/aaron" > ATJ</a></p>
         </div>
         </section>
     )

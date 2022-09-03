@@ -5,7 +5,7 @@
 }
 
 .about_msg{
-    height:80vh;
+    height:50vh;
     background-color: #6DAFFE;
     display:flex;
     align-items:center;
@@ -121,12 +121,72 @@
 .about_msg>img{
     height:100%;
     width:100%;
-    opacity:.3;
+    opacity:0.85;
 }
 
+.about_eimt{
+    width: 100%;
+    padding-top:50px;
+    padding-bottom:50px;
+    /* background-color: red; */
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    
+}
 
+.about_eimt_div{
+    width:70%;
+    padding-top:20px;
+    padding-bottom: 20px;
+    background-color:white;
+    display: flex;
+    /* height:0vh; */
+    align-items: center;
+    justify-content:space-evenly;
+    box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(123, 123, 123, 0.8) -6px -2px 16px 0px;;
+
+}
+
+.about_eimt_img{
+    width:30%;
+    height:60vh;
+    /* background-color:blue; */
+}
+
+.about_eimt_img>img{
+    width:100%;
+    height:60vh;
+}
+
+.about_eimt_details{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width:65%;
+    height:60vh;
+    /* background-color:green; */
+    letter-spacing: 1px;
+}
+
+.about_eimt_details>h4{
+    padding-bottom:10px;
+    color:#f60!important;
+    font-weight: 500!important;
+    font-family: 'Segoe UI' ;
+}
+
+.about_eimt_details>p{
+    font-family: 'Segoe UI' ;
+    color:#6C6A74;
+}
 
 @media (min-width: 375px ) {
+
+    .about_msg>img{
+        object-fit: cover;
+        opacity:0.85;
+    }
 
     .new_slider{
         margin-top:35px;
@@ -140,10 +200,11 @@
     .new_slider>h1{
         padding-top:10px;
         padding-bottom:20px;
+        /* background-color:#b4d5fd; */
     }
     
     .sliderimg{
-        width: 55%;
+        width: 50%;
         /* background-color:red;  */
         height: 200px;
         object-fit: center;
@@ -154,6 +215,41 @@
       .ins_logo{
         display: none
       }
+
+      .about_eimt_div{
+        /* flex-direction: column!important; */
+        width:90%;
+        
+
+      }
+
+      .about_eimt_img{
+        width:100%;
+      }
+
+      .about_eimt_details>h4{
+        text-align: center;
+      }
+      .about_eimt_details>p{
+        padding-left:5px;
+        padding-right:5px;
+      }
+      .about_eimt_details{
+        width:100%;
+        text-align: contain;
+        height:auto;
+        text-align: justify;
+      }
+
+      .flex-row{ display: flex !important;
+        flex-direction: column !important;
+    }
+
+    .d-flex{
+        display: flex !important;
+        flex-direction: column !important;
+    
+    }
   
 }
 
@@ -194,6 +290,62 @@
         height:150px;
     }
     
+    .about_eimt{
+        width: 100%;
+        padding-top:50px;
+        padding-bottom:50px;
+        /* background-color: red; */
+        display:flex;
+        align-items: center;
+        justify-content: center;
+        
+    }
+    
+    .about_eimt_div{
+        width:70%;
+        padding-top:20px;
+        padding-bottom: 20px;
+        background-color:white;
+        display: flex;
+        /* height:0vh; */
+        align-items: center;
+        justify-content:space-evenly;
+        box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(123, 123, 123, 0.8) -6px -2px 16px 0px;;
+    
+    }
+    
+    .about_eimt_img{
+        width:30%;
+        height:60vh;
+        /* background-color:blue; */
+    }
+    
+    .about_eimt_img>img{
+        width:100%;
+        height:60vh;
+    }
+    
+    .about_eimt_details{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width:65%;
+        height:60vh;
+        /* background-color:green; */
+        letter-spacing: 1px;
+    }
+    
+    .about_eimt_details>h4{
+        padding-bottom:10px;
+        color:#f60!important;
+        font-weight: 500!important;
+        font-family: 'Segoe UI' ;
+    }
+    
+    .about_eimt_details>p{
+        font-family: 'Segoe UI' ;
+    }
+    
 } 
 
 @media (min-width: 1400px ){
@@ -203,7 +355,7 @@
 
    .ins_logo{
     height:50vh;
-    background-color: #6DAFFE;
+    background-color: #b4d5fd;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -227,6 +379,71 @@
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 
 }
+.about_eimt{
+    width: 100%;
+    padding-top:50px;
+    padding-bottom:50px;
+    /* background-color: red; */
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.about_eimt_div{
+    width:70%;
+    padding-top:20px;
+    padding-bottom: 20px;
+    background-color:white;
+    display: flex!important;
+    /* height:0vh; */
+    align-items: center;
+    justify-content:space-evenly;
+    box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(123, 123, 123, 0.8) -6px -2px 16px 0px;;
+
+}
+
+.about_eimt_img{
+    width:35%;
+    height:60vh;
+    /* background-color:blue; */
+}
+
+.about_eimt_img>img{
+    width:100%;
+    height:60vh;
+}
+
+.about_eimt_details{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width:60%;
+    height:60vh;
+    /* background-color:green; */
+    letter-spacing: 1px;
+}
+
+.about_eimt_details>h4{
+    padding-bottom:10px;
+    color:#f60!important;
+    font-weight: 500!important;
+    font-family: 'Segoe UI' ;
+    text-align:left;
+    padding-left:2px;
+}
+
+.about_eimt_details>p{
+    font-family: 'Segoe UI' ;
+    
+}
+
+.flex-row{
+    flex-direction: row !important;
+}
+
+.d-flex{display:flex!important;}
+
 
 
 } 

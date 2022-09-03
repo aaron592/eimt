@@ -2,6 +2,7 @@ body{
     background-color:#6DAFFE;
 }
 
+
 /* .container-fluid{
     background-color: aliceblue;
     height:80px;
@@ -29,7 +30,6 @@ body{
 .logo_img{
     height:70px;
 }
-
 
 
 .search{
@@ -68,6 +68,7 @@ body{
     align-items: center;
     justify-content: space-evenly;
     font-family:'Candara';
+    text-decoration: none;
 }
 
 .nav_details_new{
@@ -300,7 +301,7 @@ marquee{
 }
 
 .prin_div{
-    width:85%;
+    width:60%;
     height:50vh;
     background-color:#b4d5fd;
     border-radius:20px;
@@ -337,8 +338,8 @@ marquee{
 .new_slide{
     overflow: hidden;
     background-color:#b4d5fd;
-    height:60vh;
-    margin-top:30px;
+    height:70vh;
+    margin-top:50px;
     
 }
 
@@ -351,7 +352,7 @@ marquee{
 
 .slide_1{
     /* background-color:blue; */
-    height:45vh;
+    height:50vh;
     display:flex;
     align-items:center;
     justify-content:space-evenly;
@@ -362,7 +363,7 @@ marquee{
 
 .courses_1{
     width:100%;
-    height:45vh;
+    height:50vh;
     /* background-color:white; */
     padding-bottom:20px;
 }
@@ -374,7 +375,7 @@ marquee{
     /* background-color:red; */
     /* flex-direction: row; */
     width:18%;
-    height:40vh;
+    height:45vh;
     background-color:rgb(255, 255, 255);
     border-radius: 10px;
     overflow: hidden;
@@ -450,7 +451,7 @@ marquee{
     font-weight:bold;
 }
 
-.contact_tab>button{
+.contact_btn{
     height:45px;
     background-color:white;
     border:none;
@@ -548,8 +549,38 @@ marquee{
     display:none;
 }
 
+.regular>h1{
+    font-size:60px;
+    color:#f60!important;
+}
+
+.regular>h6{
+    padding-top:20px;
+}
+
+.what_head{
+    width:100%;
+    height:20vh;
+    /* background-color:red; */
+    display:flex;
+    align-items: flex-end;
+    justify-content:center;
+    font-weight:400;
+
+}
+
+.what_head:hover{
+    color:white;
+}
+
+
+
 
 @media (min-width: 375px ) {
+    .row{
+       box-shadow:2px 2px 2px grey;
+    }
+
     .menu_div{
         display:none;
     }
@@ -561,21 +592,37 @@ marquee{
         height:60px;
     }
 
+    .footer_details_3{
+        display:none;
+    }
+
     .logo{
         display:flex;
         justify-content:space-between;
         align-items:center;
     }
 
-    .menu_sm{position:relative; display:flex;}
+    .menu_sm{
+        border:1px solid black;
+        background-color:#c6ddf9;
+        color:black;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        padding-left:10px;
+        padding-right:10px;
+        position:relative; 
+        display:flex;
+        border-radius:5px;
+    }
         
+    
     .search{
         display:none;
     }
 
     .cover{
         position:relative;
-        background-color: rgba(183, 210, 248, 0.7);
+        background-color: rgba(19, 69, 141, 0.7);
         z-index:1;
     }
     
@@ -610,12 +657,12 @@ marquee{
     }
 
     .banner_1{
-        height:50%;
+        height:45%;
         background-color:#6DAFFE;
     }
 
     .banner_2{
-        height:50%;
+        height:55%;
         /* background-color:red; */
         
     }
@@ -639,16 +686,22 @@ marquee{
     }
 
     .banner1_div{
+        /* background-color:red; */
+        height:100%;
         width:100%;
         padding-left:10px;
+        display:flex;
+        justify-content: center;
     }
 
     .bro_btn{
         /* padding-right:15px; */
-        height:50px;
+        text-align:center;
+        width:25%;
+        height:40px;
         display:flex;
         align-items: center;
-        justify-content:space-between;
+        justify-content:center;
     }
 
     .download_btn{
@@ -660,7 +713,8 @@ marquee{
     }
 
     .footer{
-        padding-top:10px;
+        padding-top:20px;
+        padding-left:20px;
         /* background-color:blue; */
         box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
         height:auto;
@@ -674,6 +728,8 @@ marquee{
 
     .footer_details_1{
         width:100%;
+        /* background-color:red; */
+        height:32vh;
     }
 
     .footer_details_2{
@@ -682,8 +738,12 @@ marquee{
 
     }
 
-    .footer_details_3{
+    .social{
+        display:flex;
+        align-items: flex-start;
+        justify-content:space-evenly;
     }
+    
 
     .footer_details_4{
         width:100%;
@@ -769,6 +829,10 @@ marquee{
 
     .img_right{
         width:80%;
+    }
+
+    .contact_tab{
+        width:95%;
     }
     
 }
@@ -1280,7 +1344,7 @@ marquee{
     .nav_details{
         display:flex;
         color:white;
-
+        text-decoration: none;
     }
 
     .nav_p{
@@ -1399,6 +1463,7 @@ marquee{
 
     .footer{
         margin-top:30px;
+        padding:0px;
         height:50vh;
         background-color:#6DAFFE;
         display:flex;
@@ -1447,6 +1512,8 @@ marquee{
         flex-direction:column;
     }
     .footer_details_3{
+        display:flex;
+        flex-direction:column;
         height:25vh;
         width:15%;
         /* background-color:red; */
@@ -1513,8 +1580,8 @@ marquee{
 .new_slide{
     overflow: hidden;
     background-color:#b4d5fd;
-    height:60vh;
-    margin-top:30px;
+    height:70vh;
+   margin-top:50px;
     display:inline-block;
     
 }
@@ -1528,7 +1595,7 @@ marquee{
 
 .slide_1{
     /* background-color:blue; */
-    height:45vh;
+    height:50vh;
     display:flex;
     align-items:center;
     justify-content:space-evenly;
@@ -1539,7 +1606,7 @@ marquee{
 
 .courses_1{
     width:100%;
-    height:45vh;
+    height:50vh;
     /* background-color:white; */
     padding-bottom:20px;
 }
@@ -1551,7 +1618,7 @@ marquee{
     /* background-color:red; */
     /* flex-direction: row; */
     width:18%;
-    height:40vh;
+    height:45vh;
     background-color:rgb(255, 255, 255);
     border-radius: 10px;
     overflow: hidden;
@@ -1613,16 +1680,23 @@ marquee{
 }
 
 .prin_div{
-    width:85%;
+    width:70%;
     height:50vh;
     background-color:#b4d5fd;
+    padding-top:10px;
+    padding-bottom:10px;
     border-radius:20px;
     display:flex;
     align-items:center;
     justify-content:center;
 }
 
+.regular{
+    padding-left:10px;
+}
+
 .msg_left{
+    /* padding-left:10px; */
     width:70%;
     height:90%;
     padding:5px;
@@ -1636,6 +1710,31 @@ marquee{
     /* background-color:green; */
     border-radius:10px;
 
+}
+
+blockquote {
+    border:none;
+    font-family:Georgia, "Times New Roman", Times, serif;
+    margin-bottom:-30px;
+    quotes: "\201C""\201D""\2018""\2019";
+}
+
+blockquote h3 {
+font-size:21px;
+}
+
+blockquote h3:before { 
+content: open-quote;
+font-weight: bold;
+font-size:100px;
+color:#889c0b;
+} 
+blockquote h3:after { 
+content: close-quote;
+font-weight: bold;
+font-size:100px;
+color:#889c0b;
+  
 }
 
 

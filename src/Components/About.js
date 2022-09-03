@@ -13,6 +13,7 @@ import instagram from '../images/instagram.png';
 import facebook from '../images/facebook.png';
 import twitter from '../images/twitter.png';
 import youtube from '../images/youtube.png';
+import about_gif from '../images/about.gif';
 
 function About(){
   
@@ -29,66 +30,66 @@ function About(){
     
    return(
     <section>
-    <div className="container-fluid">
-       <div className="row">
-          <div className="col-lg-1 col-xl-2 col-md-3 col-sm-6  logo">
-              <img className="logo_img" src={logo} alt="logo"/>
-              <button className="menu_sm" onClick={()=>{setMenu(true)}}>☰</button>
-          </div>
-          {menubar===true?(
-            <section className="cover" onClick={()=>{setMenu(false)}}>
-                  <div className="col-lg-2 col-xl-3 col-md-6 col-sm-2 search_new">
-                    <input type="text" placeholder="&#128269; Search for anything...." className="search_bar"/>
-                 </div>
-                 <div className="col-xl-4 col-sm-6 col-md-8 nav_details_new">
-              <Link to="/"><p className="">Home</p></Link>
-              <Link to="/about"><p>About</p></Link>
-              <Link to="/courses"><p>Courses</p></Link>
-              <Link to="/contact"><p className="nav_p">Contact</p></Link>
-          </div>
-          <div className="col-lg-2 col-xl-2 col-sm-6 col-md-8 login_details_new">
-             <button className="register">APPLY NOW</button>
-          </div>
-          </section>
-                ):null}
-          <div className="col-lg-2 col-xl-3 col-md-6 col-sm-2 search">
-            <input type="text" placeholder="&#128269; Search for anything...." className="search_bar"/>
-          </div>
-          <div className="col-lg-2 col-xl-3 col-md-3 col-sm-2 menu_div">
-            <button className="menu" onClick={()=>{setMenu1(true)}}>☰</button>
-          </div>
-          {menubar1===true?(
-            <section className="cover" onClick={()=>{setMenu1(false)}}>
-            <div className="col-xl-4 col-sm-6 col-md-8 nav_details_new">
-            <Link to="/"><p className="">Home</p></Link>
-              <Link to="/about"><p>About</p></Link>
-              <Link to="/courses"><p>Courses</p></Link>
-              <Link to="/contact"><p className="nav_p">Contact</p></Link>
-          </div>
-          <div className="col-lg-2 col-xl-2 col-sm-6 col-md-8 login_details_new">
-            <button className="register">APPLY NOW</button>
-          </div>
-          </section>
-          ):null}
-          <div className="col-xl-4 col-sm-6 col-md-8 nav_details">
-          <Link to="/"><p className="">Home</p></Link>
-              <Link to="/about"><p>About</p></Link>
-              <Link to="/courses"><p>Courses</p></Link>
-              <Link to="/contact"><p className="nav_p">Contact</p></Link>
-          </div>
-          <div className="col-lg-2 col-xl-2 col-sm-6 col-md-8 login_details">
-            <button className="register">APPLY NOW</button>
-          </div>
+   <div className="container-fluid">
+           <div className="row">
+              <div className="col-lg-1 col-xl-2 col-md-3 col-sm-6  logo">
+                  <img className="logo_img" src={logo} alt="logo"/>
+                  <button className="menu_sm" onClick={()=>{setMenu(true)}}>☰</button>
+              </div>
+              {menubar===true?(
+                <section className="cover" onClick={()=>{setMenu(false)}}>
+                      <div className="col-lg-2 col-xl-3 col-md-6 col-sm-2 search_new">
+                        <input type="text" placeholder="&#128269; Search for anything...." className="search_bar"/>
+                     </div>
+                     <div className="col-xl-4 col-sm-6 col-md-8 nav_details_new" onClick={()=>{setMenu(true)}}>
+                     <Link style={{ textDecoration: 'none', color: 'white' }} to="/"><p className="nav_p">Home</p></Link>
+                  <Link style={{ textDecoration: 'none', color: 'white' }} to="/about"><p className="nav_p">About</p></Link>
+                  <Link style={{ textDecoration: 'none', color: 'white' }} to="/courses"><p className="nav_p">Courses</p></Link>
+                  <Link style={{ textDecoration: 'none', color: 'white' }} to="/contact"><p className="nav_p">Contact</p></Link>
+              </div>
+              <div className="col-lg-2 col-xl-2 col-sm-6 col-md-8 login_details_new">
+                 <button className="register">APPLY NOW</button>  
+              </div>
+              </section>
+                    ):null}
+              <div className="col-lg-2 col-xl-3 col-md-6 col-sm-2 search">
+                <input type="text" placeholder="&#128269; Search for anything...." className="search_bar"/>
+              </div>
+              <div className="col-lg-2 col-xl-3 col-md-3 col-sm-2 menu_div">
+                <button className="menu" onClick={()=>{setMenu1(true)}}>☰</button>
+              </div>
+              {menubar1===true?(
+                <section className="cover" onClick={()=>{setMenu1(false)}}>
+                <div className="col-xl-4 col-sm-6 col-md-8 nav_details_new">
+                <Link style={{ textDecoration: 'none', color: 'white' }} to="/"><p className="nav_p">Home</p></Link>
+                  <Link style={{ textDecoration: 'none', color: 'white' }} to="/about"><p className="nav_p">About</p></Link>
+                  <Link style={{ textDecoration: 'none', color: 'white' }} to="/courses"><p className="nav_p">Courses</p></Link>
+                  <Link style={{ textDecoration: 'none', color: 'white' }} to="/contact"><p className="nav_p">Contact</p></Link>
+              </div>
+              <div className="col-lg-2 col-xl-2 col-sm-6 col-md-8 login_details_new">
+                 <button className="register">APPLY NOW</button> 
+              </div>
+              </section>
+              ):null}
+              <div className="col-xl-4 col-sm-6 col-md-8 nav_details">
+              <Link style={{ textDecoration: 'none', color: 'white' }} to="/"><p className="nav_p">Home</p></Link>
+                  <Link style={{ textDecoration: 'none', color: 'white' }} to="/about"><p className="nav_p">About</p></Link>
+                  <Link style={{ textDecoration: 'none', color: 'white' }} to="/courses"><p className="nav_p">Courses</p></Link>
+                  <Link style={{ textDecoration: 'none', color: 'white' }} to="/contact"><p className="nav_p">Contact</p></Link>
+              </div>
+              <div className="col-lg-2 col-xl-2 col-sm-6 col-md-8 login_details">
+                <button className="register">APPLY NOW</button>
+              </div>
+              
+           </div>
           
-       </div>
-      
-    </div>
+        </div>
     <div className="col-lg-12 col-xl-12 about_msg">
        <img src={about_img}/>
        <span className="col-lg-12 col-xl-12 overlay">
           <div className="about_header">
              <div className="about_h1">
-               <h1>ABOUT US</h1>
+               <h1>ABOUT</h1>
              </div>
              <div className="text_h">
              <div className="text_head">Dear members and visitors of Ebenezer Institute of Modern Technology family.</div> 
@@ -99,6 +100,24 @@ function About(){
           </div>
        </span>
     </div>
+    
+    <div className="about_eimt">
+      <div className="d-flex flex-row about_eimt_div">
+        <div className="about_eimt_img">
+          <img src={about_gif}/>
+        </div>
+        <div className="about_eimt_details">
+          <h4>ABOUT US</h4>
+          <p>We see it as EIMT's responsibility to build an educational sector inspired by yesterday as a promise for tomorrow. Selfless service and dedication sets us apart.
+
+We take the responsibility of EIMT for the future of the students to create an educational sector that invokes the moral values ​​of the past and shapes the future of the present. EIMT has faculty and dedicated members with global perspective and experience.
+
+We encourage mutual respect and positive thinking. We are always willing to provide assistance and guidance to the  job opportunities worldwide . As parents and teachers, it is our commitment to adopt ways and means to channelize the talents and energy of our students into creative community building. With this noble sense of purpose may I request all staff, parents and well wishers to join hands as we take EIMT to greater heights.</p>
+        </div>
+      </div>
+    </div>
+
+
     <section className="new_slider">
       <h1>Our Team</h1>
       <AliceCarousel autoPlay autoPlayInterval="3000" >
@@ -125,16 +144,16 @@ function About(){
               </div>
               <div className="footer_details_1">
               <p className="footer_head">Locations</p>
-              <p><i>Ashis Building ,Marine Drive Hign Court JN, Ernakulam</i> <br></br>682031</p>
+              <p>Ashis Building ,Marine Drive Hign Court JN, Ernakulam<br></br>682031</p>
               <p className="footer_head">Head Office:</p>
-              <p><i>SMICT Piraroor P.O, Kalady, Kerala, India</i> <br></br>683574</p>
+              <p>SMICT Piraroor P.O, Kalady, Kerala, India<br></br>683574</p>
               </div>
               <div className="col-lg-flex col-xl-flex footer_details_2">
               <p className="footer_head">Quick Links</p>
-                <p>Home</p>
-                <Link to="/about"><p>About</p></Link>
-                <p>Courses</p>
-                <p>Contact</p>
+              <Link style={{ textDecoration: 'none', color: 'black' }} to="/"><p>Home</p></Link>
+                <p>About</p>
+                <Link style={{ textDecoration: 'none', color: 'black' }} to="/courses"><p>Courses</p></Link>
+                <Link style={{ textDecoration: 'none', color: 'black' }} to="/contact"><p>Contact</p></Link>
               </div>
               <div className="footer_details_3">
               <p className="footer_head">Courses</p>
