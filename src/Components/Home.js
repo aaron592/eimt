@@ -102,9 +102,9 @@ function Header(){
             <p className="tag_cover"><span className="tag">New</span> Becoming a new program</p>
             <h1 className="heading">EBENEZER INSTITUTE OF MODERN TECHNOLOGY</h1>
             <p className="content">EIMT is a Project of Shuwaiter international Charitable Trust for the upliftment of the society through professional education which helps the students to find jobs. EIMT aims the transformation of a student to professional, Our courses are based on helping students from various background to find a job through our professional training and working professionals to upgrade their job to next level.</p>
-            <a href="" download="../file/EIMT-BROCHURE.pdf"> <button className="bro_btn">
+            <button type="button" className="bro_btn">
               Brochure <span className="download_btn">&#8681;</span>
-            </button></a>
+            </button>
             </div>
           </div>
           <div className="col-lg-6 col-xl-6 col-md-12 col-sm-12 banner_2">
