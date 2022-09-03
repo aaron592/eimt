@@ -225,6 +225,20 @@
     
 }
 
+@media screen  and (min-width: 560px ) and (max-width:999px){
+
+    .contact_form_div{
+        width:60%;
+    }
+
+    .contact_tabs{
+        width:40%;
+        border-radius:5px;
+    }
+
+}
+
+
 @media (min-width: 1000px ){
 
     .text_h{
