@@ -816,6 +816,7 @@ marquee{
      }
  
      .prin_div{
+        width:95%;
          height:auto;
          display:flex;
          flex-direction:column;
@@ -960,7 +961,10 @@ marquee{
     .bro_btn{
         /* padding-right:15px; */
         text-align:center;
-        width:25%;
+        padding-top:8px;
+        padding-bottom:8px;
+        padding-left:15px;
+        padding-right:15px;
         height:40px;
         display:flex;
         align-items: center;
@@ -1086,6 +1090,7 @@ marquee{
     }
 
     .prin_div{
+        width:90%;
         height:auto;
         display:flex;
         flex-direction:column;
