@@ -4,7 +4,7 @@ import 'slick-carousel/slick/slick.css';
 import "slick-carousel/slick/slick-theme.css";
 import { Nav, Navbar } from 'react-bootstrap';
 import '../css/Header.css';
-import eimt_logo from '../images/logo.png';
+import logo from '../images/logo.png';
 import bannerImage from '../images/banner.gif';
 import {useEffect ,useState} from 'react';
 import instagram from '../images/instagram.png';
@@ -45,7 +45,7 @@ function Header(){
         <div className="container-fluid">
            <div className="row">
               <div className="col-lg-1 col-xl-2 col-md-3 col-sm-6  logo">
-                  <img className="logo_img" src={eimt_logo} alt="logo"/>
+                  <img className="logo_img" src={logo} alt="logo"/>
                   <button className="menu_sm" onClick={()=>{setMenu(true)}}>☰</button>
               </div>
               {menubar===true?(
@@ -238,7 +238,7 @@ function Header(){
         <div className="col-lg-12 col-xl-12 col-md-12 col-sm-12 footer">
             <div className="d-flex flex-wrap footer_details" id="footer_detail">
               <div className=" footer_logo">
-                <img src={eimt_logo} />
+                <img src={logo} />
                 <p><em>EIMT aims the transformation <br></br>of a student to professional.</em></p>
               </div>
               <div className="footer_details_1">

@@ -2,7 +2,7 @@ import {Link} from 'react-router-dom';
 import '../css/Header.css';
 import '../css/Course.css';
 import '../css/About.css';
-import eimt_logo from '../images/logo.png';
+import logo from '../images/logo.png';
 import {useEffect ,useState} from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Slider from "react-slick";
@@ -59,7 +59,7 @@ function Courses(){
         <div className="container-fluid">
            <div className="row">
               <div className="col-lg-1 col-xl-2 col-md-3 col-sm-6  logo">
-                  <img className="logo_img" src={eimt_logo} alt="logo"/>
+                  <img className="logo_img" src={logo} alt="logo"/>
                   <button className="menu_sm" onClick={()=>{setMenu(true)}}>☰</button>
               </div>
               {menubar===true?(

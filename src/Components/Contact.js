@@ -3,7 +3,7 @@ import '../css/About.css';
 import '../css/contact.css';
 import {useEffect ,useState} from 'react';
 import {Link} from 'react-router-dom';
-import eimt_logo from '../images/logo.png';
+import logo from '../images/logo.png';
 import instagram from '../images/instagram.png';
 import facebook from '../images/facebook.png';
 import twitter from '../images/twitter.png';
