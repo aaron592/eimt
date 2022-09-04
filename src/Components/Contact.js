@@ -54,7 +54,7 @@ function Contact(){
         <div className="container-fluid">
            <div className="row">
               <div className="col-lg-1 col-xl-2 col-md-3 col-sm-6  logo">
-                  <img className="logo_img" src={eimt_logo} alt="logo"/>
+                  <img className="logo_img" src={logo} alt="logo"/>
                   <button className="menu_sm" onClick={()=>{setMenu(true)}}>☰</button>
               </div>
               {menubar===true?(
