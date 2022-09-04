@@ -3,7 +3,7 @@ import AliceCarousel from 'react-alice-carousel';
 import "react-alice-carousel/lib/alice-carousel.css";
 import '../css/Header.css';
 import '../css/About.css';
-import logo from '../images/eimt_final.png';
+import eimt_logo from '../images/logo.png';
 import {useEffect ,useState} from 'react';
 import logo1 from '../images/logo1.jpeg';
 import logo2 from '../images/logo2.jpeg';
@@ -33,7 +33,7 @@ function About(){
    <div className="container-fluid">
            <div className="row">
               <div className="col-lg-1 col-xl-2 col-md-3 col-sm-6  logo">
-                  <img className="logo_img" src={logo} alt="logo"/>
+                  <img className="logo_img" src={eimt_logo} alt="logo"/>
                   <button className="menu_sm" onClick={()=>{setMenu(true)}}>☰</button>
               </div>
               {menubar===true?(

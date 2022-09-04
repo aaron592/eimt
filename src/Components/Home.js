@@ -4,7 +4,7 @@ import 'slick-carousel/slick/slick.css';
 import "slick-carousel/slick/slick-theme.css";
 import { Nav, Navbar } from 'react-bootstrap';
 import '../css/Header.css';
-import eimt_logo from '../images/eimt_final.png';
+import eimt_logo from '../images/logo.png';
 import bannerImage from '../images/banner.gif';
 import {useEffect ,useState} from 'react';
 import instagram from '../images/instagram.png';

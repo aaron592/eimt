@@ -3,7 +3,7 @@ import '../css/About.css';
 import '../css/contact.css';
 import {useEffect ,useState} from 'react';
 import {Link} from 'react-router-dom';
-import logo from '../images/eimt_final.png';
+import eimt_logo from '../images/logo.png';
 import instagram from '../images/instagram.png';
 import facebook from '../images/facebook.png';
 import twitter from '../images/twitter.png';
@@ -30,7 +30,7 @@ function Contact(){
       }
 
       function addForm(){
-        fetch("http://localhost:8000/submit",{
+        fetch("https://eimt-backend.herokuapp.com/submit",{
             method:"POST",
             headers:{
                 "Content-Type": "application/json"
@@ -54,7 +54,7 @@ function Contact(){
         <div className="container-fluid">
            <div className="row">
               <div className="col-lg-1 col-xl-2 col-md-3 col-sm-6  logo">
-                  <img className="logo_img" src={logo} alt="logo"/>
+                  <img className="logo_img" src={eimt_logo} alt="logo"/>
                   <button className="menu_sm" onClick={()=>{setMenu(true)}}>☰</button>
               </div>
               {menubar===true?(
