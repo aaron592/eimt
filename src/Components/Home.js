@@ -4,6 +4,8 @@ import 'slick-carousel/slick/slick.css';
 import "slick-carousel/slick/slick-theme.css";
 import { Nav, Navbar } from 'react-bootstrap';
 import '../css/Header.css';
+import banner_1 from '../images/Banner_1.png';
+import banner_2 from '../images/Banner_2.png';
 import logo from '../images/logo.png';
 import bannerImage from '../images/banner.gif';
 import {useEffect ,useState} from 'react';
@@ -11,15 +13,39 @@ import instagram from '../images/instagram.png';
 import facebook from '../images/facebook.png';
 import twitter from '../images/twitter.png';
 import youtube from '../images/youtube.png';
-import principal from '../images/principal.gif';
-import director from '../images/director.gif';
+import principal from '../images/principal.png';
+import director from '../images/director.png';
 import {Link} from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+// import { Carousel } from 'react-carousel-minimal';
+import {
+  MDBCarousel,
+  MDBCarouselItem,
+} from 'mdb-react-ui-kit';
+// const Carousel = require('react-responsive-carousel').Carousel;
+// import '//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css';
 
 
 
 
 function Header(){
+
+  const data = [
+    {
+      image: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/GoldenGateBridge-001.jpg/1200px-GoldenGateBridge-001.jpg",
+      caption: '<button type="button" style="font-weight:500;border:1px solid #D5BF02;border-radius:5px;background-color:#D5BF02;font-size:15px;padding-top:5px;padding-bottom:5px;padding-left:10px;padding-right:10px;" className="bro_btn">DOWNLOAD BROCHURE</button>'
+    },
+    {
+      image: "https://cdn.britannica.com/s:800x450,c:crop/35/204435-138-2F2B745A/Time-lapse-hyper-lapse-Isle-Skye-Scotland.jpg",
+      caption: '<button type="button" style="font-weight:500;border:1px solid #D5BF02;border-radius:5px;background-color:#D5BF02;font-size:15px;padding-top:5px;padding-bottom:5px;padding-left:10px;padding-right:10px;" className="bro_btn">DOWNLOAD BROCHURE</button>'
+    }
+  ];
+
+  const captionStyle = {
+    fontSize: '2em',
+    fontWeight: 'bold',
+  }
+  
   var settings = {
     dots: true,
     autoplay:true,
@@ -45,7 +71,7 @@ function Header(){
         <div className="container-fluid">
            <div className="row">
               <div className="col-lg-1 col-xl-2 col-md-3 col-sm-6  logo">
-                  <img className="logo_img" src={logo} alt="logo"/>
+                  <img className="logo_img" src={logo} alt="logo" style={{height:"90%"}}/>
                   <button className="menu_sm" onClick={()=>{setMenu(true)}}>☰</button>
               </div>
               {menubar===true?(
@@ -64,16 +90,14 @@ function Header(){
               </div>
               </section>
                     ):null}
-              <div className="col-lg-2 col-xl-3 col-md-6 col-sm-2 search">
-                <input type="text" placeholder="&#128269; Search for anything...." className="search_bar"/>
-              </div>
+              
               <div className="col-lg-2 col-xl-3 col-md-3 col-sm-2 menu_div">
                 <button className="menu" onClick={()=>{setMenu1(true)}}>☰</button>
               </div>
               {menubar1===true?(
                 <section className="cover" onClick={()=>{setMenu1(false)}}>
                 <div className="col-xl-4 col-sm-6 col-md-8 nav_details_new">
-                <Link style={{ textDecoration: 'none', color: 'white' }} to="/"><p className="nav_p">Home</p></Link>
+                  <Link style={{ textDecoration: 'none', color: 'white' }} to="/"><p className="nav_p">Home</p></Link>
                   <Link style={{ textDecoration: 'none', color: 'white' }} to="/about"><p className="nav_p">About</p></Link>
                   <Link style={{ textDecoration: 'none', color: 'white' }} to="/courses"><p className="nav_p">Courses</p></Link>
                   <Link style={{ textDecoration: 'none', color: 'white' }} to="/contact"><p className="nav_p">Contact</p></Link>
@@ -84,10 +108,14 @@ function Header(){
               </section>
               ):null}
               <div className="col-xl-4 col-sm-6 col-md-8 nav_details">
-              <Link style={{ textDecoration: 'none', color: 'white' }} to="/"><p className="nav_p">Home</p></Link>
-                  <Link style={{ textDecoration: 'none', color: 'white' }} to="/about"><p className="nav_p">About</p></Link>
-                  <Link style={{ textDecoration: 'none', color: 'white' }} to="/courses"><p className="nav_p">Courses</p></Link>
-                  <Link style={{ textDecoration: 'none', color: 'white' }} to="/contact"><p className="nav_p">Contact</p></Link>
+                  <Link style={{ textDecoration: 'none', color: '#494949' }} to="/"><p className="nav_p">Home</p></Link>
+                  <Link style={{ textDecoration: 'none', color: '#494949' }} to="/about"><p className="nav_p">About</p></Link>
+                  <Link style={{ textDecoration: 'none', color: '#494949' }} to="/courses"><p className="nav_p">Courses</p></Link>
+                  <Link style={{ textDecoration: 'none', color: '#494949' }} to="/contact"><p className="nav_p">Contact</p></Link>
+              </div>
+              <div className="col-lg-2 col-xl-3 col-md-6 col-sm-2 search">
+              <input type="text" placeholder="&#xf3ee; Search...." className="search_bar"/>
+              
               </div>
               <div className="col-lg-2 col-xl-2 col-sm-6 col-md-8 login_details">
                 <button className="register">APPLY NOW</button>
@@ -96,30 +124,69 @@ function Header(){
            </div>
           
         </div>
-        <div className="banner">
+
+        <MDBCarousel showControls showIndicators className="h-500">
+      <MDBCarouselItem
+        className='w-100 d-block'
+        itemId={1}
+        src={banner_1}
+        height="550px"
+        alt='...'
+      >
+        {/* <h5>First slide label</h5> */}
+        <button type="button" className="bro_btn">DOWNLOAD BROCHURE</button>
+      </MDBCarouselItem>
+      <MDBCarouselItem
+        className='w-100 d-block'
+        itemId={2}
+        src={banner_2}
+        alt='...'
+      >
+        {/* <h5>Second slide label</h5> */}
+        <button type="button" className="bro_btn">DOWNLOAD BROCHURE</button>
+      </MDBCarouselItem>
+    </MDBCarousel>
+
+       {/* <section className="banner_slide">
+        <div>
+        <Slider {...settings}>
+          <div >
+            <img src="https://images.theconversation.com/files/96268/original/image-20150925-17694-1endp65.jpg?ixlib=rb-1.1.0&rect=0%2C88%2C1024%2C496&q=45&auto=format&w=1356&h=668&fit=crop" style={{width:"100%"}}/>
+            <div className="image_overlay">
+
+            </div>
+          </div>
+          <div>
+            <img src="https://gumlet.assettype.com/freepressjournal/2022-06/417f026c-11b7-4e6a-9c57-cbf68d8bd039/istockphoto_1024531876_612x612.jpg?format=webp&w=480&dpr=2.6" style={{width:"100%"}}/>
+          </div>
+          <div>
+            <h3>3</h3>
+          </div>
+        </Slider>
+      </div>
+      </section> */}
+
+        {/* <div className="banner">
           <div className="col-lg-6 col-xl-6 col-md-12 col-sm-12 banner_1">
             <div className="col-sm-12 banner1_div">
             <p className="tag_cover"><span className="tag">New</span> Becoming a new program</p>
             <h1 className="heading">EBENEZER INSTITUTE OF MODERN TECHNOLOGY</h1>
             <p className="content">EIMT is a Project of Shuwaiter international Charitable Trust for the upliftment of the society through professional education which helps the students to find jobs. EIMT aims the transformation of a student to professional, Our courses are based on helping students from various background to find a job through our professional training and working professionals to upgrade their job to next level.</p>
-            <button type="button" className="bro_btn">
+            <a href="https://drive.google.com/file/d/1R4jdskNYe8x8mcAyG1jNgJ2oY82XAnNG/view?usp=sharing" download="https://drive.google.com/file/d/1R4jdskNYe8x8mcAyG1jNgJ2oY82XAnNG/view?usp=sharing"><button type="button" className="bro_btn">
               Brochure <span className="download_btn">&#8681;</span>
-            </button>
+            </button></a>
             </div>
           </div>
           <div className="col-lg-6 col-xl-6 col-md-12 col-sm-12 banner_2">
             <img src={bannerImage}  className="banner_image"/>
           </div>
-        </div>
-        <div className="col-lg-12 col-xl-12 col-md-12 col-sm-12 update_field">
-        <div className="update_header">
-          <p>New Updates</p>
-        </div>
-        <marquee behavior="scroll" direction="left">ADMISSIONS ARE OPEN.. HURRY UP.. APPLY NOW</marquee>
+        </div> */}
+        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 example1">
+            <h5>ADMISSION STARTED ..... HURRY UP ... APPLY NOW</h5>
         </div>
 
         <div className="what_head">
-          <h2>&#127891; What We Does</h2>
+          <h2>&#127891; What We Do</h2>
         </div>
 
         <div className="d-flex flex-row prin_tab">
@@ -145,7 +212,7 @@ function Header(){
         </div>
 
         <div className="new_slide" max-width="720px" >
-           <h2 className="slide_head">Most Popular Courses</h2>
+           <h2 className="slide_head">Popular Courses</h2>
         <Slider {...settings}>
           <div className="slide_1">
             <div className="courses_1">
@@ -250,9 +317,9 @@ function Header(){
               <div className="col-lg-flex col-xl-flex footer_details_2">
               <p className="footer_head">Quick Links</p>
                 <p>Home</p>
-                <Link style={{ textDecoration: 'none', color: 'black' }} to="/about"><p>About</p></Link>
-                <Link style={{ textDecoration: 'none', color: 'black' }} to="/courses"><p>Courses</p></Link>
-                <Link style={{ textDecoration: 'none', color: 'black' }} to="/contact"><p>Contact</p></Link>
+                <Link style={{ textDecoration: 'none', color: 'white' }} to="/about"><p>About</p></Link>
+                <Link style={{ textDecoration: 'none', color: 'white' }} to="/courses"><p>Courses</p></Link>
+                <Link style={{ textDecoration: 'none', color: 'white' }} to="/contact"><p>Contact</p></Link>
               </div>
               <div className="footer_details_3">
               <p className="footer_head">Courses</p>

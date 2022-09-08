@@ -1,5 +1,4 @@
 
-import './App.css';
 import Header from './Components/Home.js';
 import About from './Components/About.js';
 import Course from './Components/Courses.js';
