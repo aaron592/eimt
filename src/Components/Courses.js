@@ -56,10 +56,10 @@ function Courses(){
      
     return(
         <section>
-        <div className="container-fluid">
+       <div className="container-fluid">
            <div className="row">
               <div className="col-lg-1 col-xl-2 col-md-3 col-sm-6  logo">
-                  <img className="logo_img" src={logo} alt="logo"/>
+                  <img className="logo_img" src={logo} alt="logo" style={{height:"90%"}}/>
                   <button className="menu_sm" onClick={()=>{setMenu(true)}}>☰</button>
               </div>
               {menubar===true?(
@@ -78,16 +78,14 @@ function Courses(){
               </div>
               </section>
                     ):null}
-              <div className="col-lg-2 col-xl-3 col-md-6 col-sm-2 search">
-                <input type="text" placeholder="&#128269; Search for anything...." className="search_bar"/>
-              </div>
+              
               <div className="col-lg-2 col-xl-3 col-md-3 col-sm-2 menu_div">
                 <button className="menu" onClick={()=>{setMenu1(true)}}>☰</button>
               </div>
               {menubar1===true?(
                 <section className="cover" onClick={()=>{setMenu1(false)}}>
                 <div className="col-xl-4 col-sm-6 col-md-8 nav_details_new">
-                <Link style={{ textDecoration: 'none', color: 'white' }} to="/"><p className="nav_p">Home</p></Link>
+                  <Link style={{ textDecoration: 'none', color: 'white' }} to="/"><p className="nav_p">Home</p></Link>
                   <Link style={{ textDecoration: 'none', color: 'white' }} to="/about"><p className="nav_p">About</p></Link>
                   <Link style={{ textDecoration: 'none', color: 'white' }} to="/courses"><p className="nav_p">Courses</p></Link>
                   <Link style={{ textDecoration: 'none', color: 'white' }} to="/contact"><p className="nav_p">Contact</p></Link>
@@ -98,10 +96,14 @@ function Courses(){
               </section>
               ):null}
               <div className="col-xl-4 col-sm-6 col-md-8 nav_details">
-              <Link style={{ textDecoration: 'none', color: 'white' }} to="/"><p className="nav_p">Home</p></Link>
-                  <Link style={{ textDecoration: 'none', color: 'white' }} to="/about"><p className="nav_p">About</p></Link>
-                  <Link style={{ textDecoration: 'none', color: 'white' }} to="/courses"><p className="nav_p">Courses</p></Link>
-                  <Link style={{ textDecoration: 'none', color: 'white' }} to="/contact"><p className="nav_p">Contact</p></Link>
+                  <Link style={{ textDecoration: 'none', color: '#494949' }} to="/"><p className="nav_p">Home</p></Link>
+                  <Link style={{ textDecoration: 'none', color: '#494949' }} to="/about"><p className="nav_p">About</p></Link>
+                  <Link style={{ textDecoration: 'none', color: '#494949' }} to="/courses"><p className="nav_p">Courses</p></Link>
+                  <Link style={{ textDecoration: 'none', color: '#494949' }} to="/contact"><p className="nav_p">Contact</p></Link>
+              </div>
+              <div className="col-lg-2 col-xl-3 col-md-6 col-sm-2 search">
+              <input type="text" placeholder="&#xf3ee; Search...." className="search_bar"/>
+              
               </div>
               <div className="col-lg-2 col-xl-2 col-sm-6 col-md-8 login_details">
                 <button className="register">APPLY NOW</button>
@@ -117,12 +119,7 @@ function Courses(){
              <div className="about_h1">
                <h1>Explore Our Courses</h1>
              </div>
-             <div className="text_h">
-             <div className="text_head">Dear members and visitors of Ebenezer Institute of Modern Technology family.</div> 
-             <div className="text_head"> 
-               <span>&nbsp;Welcome to the website. </span>
-             </div>
-             </div>
+             
           </div>
        </span>
     </div>
@@ -138,6 +135,9 @@ function Courses(){
            <button onClick={()=>filterData('Hotel Management')}>Hotel Management</button>
            <button onClick={()=>filterData('Fire & Safety')}>Fire & Safety</button>
            <button onClick={()=>filterData('Aviation')}>Aviation</button>
+        </div>
+        <div className="course_header_tag">
+           <h2>&#128366; Courses</h2>
         </div>
         <div className="course_container">
           {
@@ -174,10 +174,10 @@ function Courses(){
               </div>
               <div className="col-lg-flex col-xl-flex footer_details_2">
               <p className="footer_head">Quick Links</p>
-              <Link style={{ textDecoration: 'none', color: 'black' }} to="/"><p>Home</p></Link>
-                <Link style={{ textDecoration: 'none', color: 'black' }} to="/about"><p>About</p></Link>
+              <Link style={{ textDecoration: 'none', color: 'white' }} to="/"><p>Home</p></Link>
+                <Link style={{ textDecoration: 'none', color: 'white' }} to="/about"><p>About</p></Link>
                 <p>Courses</p>
-                <Link style={{ textDecoration: 'none', color: 'black' }} to="/contact"> <p>Contact</p></Link>
+                <Link style={{ textDecoration: 'none', color: 'white' }} to="/contact"> <p>Contact</p></Link>
               </div>
               <div className="footer_details_3">
               <p className="footer_head">Courses</p>

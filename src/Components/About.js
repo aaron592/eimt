@@ -167,10 +167,10 @@ and maintain their competitiveness on worldwide scale.</p>
               </div>
               <div className="col-lg-flex col-xl-flex footer_details_2">
               <p className="footer_head">Quick Links</p>
-              <Link style={{ textDecoration: 'none', color: 'black' }} to="/"><p>Home</p></Link>
+              <Link style={{ textDecoration: 'none', color: 'white' }} to="/"><p>Home</p></Link>
                 <p>About</p>
-                <Link style={{ textDecoration: 'none', color: 'black' }} to="/courses"><p>Courses</p></Link>
-                <Link style={{ textDecoration: 'none', color: 'black' }} to="/contact"><p>Contact</p></Link>
+                <Link style={{ textDecoration: 'none', color: 'white' }} to="/courses"><p>Courses</p></Link>
+                <Link style={{ textDecoration: 'none', color: 'white' }} to="/contact"><p>Contact</p></Link>
               </div>
               <div className="footer_details_3">
               <p className="footer_head">Courses</p>
