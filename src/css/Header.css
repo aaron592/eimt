@@ -976,7 +976,7 @@ marquee{
     .cover{
         position:relative;
         background-color: rgba(19, 69, 141, 0.7);
-        z-index:1;
+        z-index:6;
     }
     
     .search_new{
@@ -1182,7 +1182,7 @@ marquee{
     }
 
     .prin_div{
-        width:90%;
+        width:75%;
         height:auto;
         background-color:white;
         box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(205, 205, 205, 0.8) -6px -2px 16px 0px;

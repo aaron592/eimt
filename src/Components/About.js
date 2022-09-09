@@ -33,7 +33,7 @@ function About(){
    <div className="container-fluid">
            <div className="row">
               <div className="col-lg-1 col-xl-2 col-md-3 col-sm-6  logo">
-                  <img className="logo_img" src={logo} alt="logo"/>
+                  <img className="logo_img" src={logo} alt="logo" style={{height:"90%"}}/>
                   <button className="menu_sm" onClick={()=>{setMenu(true)}}>☰</button>
               </div>
               {menubar===true?(
@@ -52,16 +52,14 @@ function About(){
               </div>
               </section>
                     ):null}
-              <div className="col-lg-2 col-xl-3 col-md-6 col-sm-2 search">
-                <input type="text" placeholder="&#128269; Search for anything...." className="search_bar"/>
-              </div>
+              
               <div className="col-lg-2 col-xl-3 col-md-3 col-sm-2 menu_div">
                 <button className="menu" onClick={()=>{setMenu1(true)}}>☰</button>
               </div>
               {menubar1===true?(
                 <section className="cover" onClick={()=>{setMenu1(false)}}>
                 <div className="col-xl-4 col-sm-6 col-md-8 nav_details_new">
-                <Link style={{ textDecoration: 'none', color: 'white' }} to="/"><p className="nav_p">Home</p></Link>
+                  <Link style={{ textDecoration: 'none', color: 'white' }} to="/"><p className="nav_p">Home</p></Link>
                   <Link style={{ textDecoration: 'none', color: 'white' }} to="/about"><p className="nav_p">About</p></Link>
                   <Link style={{ textDecoration: 'none', color: 'white' }} to="/courses"><p className="nav_p">Courses</p></Link>
                   <Link style={{ textDecoration: 'none', color: 'white' }} to="/contact"><p className="nav_p">Contact</p></Link>
@@ -72,10 +70,14 @@ function About(){
               </section>
               ):null}
               <div className="col-xl-4 col-sm-6 col-md-8 nav_details">
-              <Link style={{ textDecoration: 'none', color: 'white' }} to="/"><p className="nav_p">Home</p></Link>
-                  <Link style={{ textDecoration: 'none', color: 'white' }} to="/about"><p className="nav_p">About</p></Link>
-                  <Link style={{ textDecoration: 'none', color: 'white' }} to="/courses"><p className="nav_p">Courses</p></Link>
-                  <Link style={{ textDecoration: 'none', color: 'white' }} to="/contact"><p className="nav_p">Contact</p></Link>
+                  <Link style={{ textDecoration: 'none', color: '#494949' }} to="/"><p className="nav_p">Home</p></Link>
+                  <Link style={{ textDecoration: 'none', color: '#494949' }} to="/about"><p className="nav_p">About</p></Link>
+                  <Link style={{ textDecoration: 'none', color: '#494949' }} to="/courses"><p className="nav_p">Courses</p></Link>
+                  <Link style={{ textDecoration: 'none', color: '#494949' }} to="/contact"><p className="nav_p">Contact</p></Link>
+              </div>
+              <div className="col-lg-2 col-xl-3 col-md-6 col-sm-2 search">
+              <input type="text" placeholder="&#xf3ee; Search...." className="search_bar"/>
+              
               </div>
               <div className="col-lg-2 col-xl-2 col-sm-6 col-md-8 login_details">
                 <button className="register">APPLY NOW</button>
@@ -90,12 +92,6 @@ function About(){
           <div className="about_header">
              <div className="about_h1">
                <h1>ABOUT</h1>
-             </div>
-             <div className="text_h">
-             <div className="text_head">Dear members and visitors of Ebenezer Institute of Modern Technology family.</div> 
-             <div className="text_head"> 
-               <span>&nbsp;Welcome to the website. </span>
-             </div>
              </div>
           </div>
        </span>
@@ -114,6 +110,27 @@ We take the responsibility of EIMT for the future of the students to create an e
 
 We encourage mutual respect and positive thinking. We are always willing to provide assistance and guidance to the  job opportunities worldwide . As parents and teachers, it is our commitment to adopt ways and means to channelize the talents and energy of our students into creative community building. With this noble sense of purpose may I request all staff, parents and well wishers to join hands as we take EIMT to greater heights.</p>
         </div>
+      </div>
+    </div>
+
+    <div className="vision">
+      <h2>Vision</h2>
+      <div className="vision_details">
+        <p>To attain the best academic standards possible for all students
+to help them realise their full potential and to provide
+them with the skills they need to contribute positively
+to society as productive, moral, responsible, creative and
+compassionate citizens</p>
+      </div>
+    </div>
+
+    <div className="vision">
+      <h2>Mision</h2>
+      <div className="vision_details">
+        <p>EBENEZER INSTITUTE OF MODERN TECHNOLOGY'S Mission
+is to advance excellence in technical career and academic
+studies so that graduates are ready to enter the workforce
+and maintain their competitiveness on worldwide scale.</p>
       </div>
     </div>
 
