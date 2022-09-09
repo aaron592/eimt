@@ -955,6 +955,10 @@ marquee{
         align-items:center;
     }
 
+    .logo_img{
+        background-color: lightgrey;
+    }
+
     .menu_sm{
         border:1px solid black;
         background-color:#c6ddf9;
