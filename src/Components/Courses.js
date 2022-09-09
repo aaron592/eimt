@@ -168,9 +168,9 @@ function Courses(){
               </div>
               <div className="footer_details_1">
               <p className="footer_head">Locations</p>
-              <p>Ashis Building ,Marine Drive Hign Court JN, Ernakulam<br></br>682031</p>
+              <p>ERNAKULAM, KALADY, KALLUMALA, UAE</p>
               <p className="footer_head">Head Office:</p>
-              <p>SMICT Piraroor P.O, Kalady, Kerala, India <br></br>683574</p>
+              <p>SECOND FLOOR, ASHIS BUILDING, MARINE DRIVE HIGH COURT JUNCTION, ERNAKULAM <br></br>682031</p>
               </div>
               <div className="col-lg-flex col-xl-flex footer_details_2">
               <p className="footer_head">Quick Links</p>

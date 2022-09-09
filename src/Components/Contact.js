@@ -133,20 +133,20 @@ function Contact(){
                   <div><h2>&#127970;</h2></div>
                   <div>
                     <h6>Office Address</h6>
-                    <p>Ashis Building ,Marine Drive Hign Court JN, Ernakulam 682031</p>
+                    <p>SECOND FLOOR, ASHIS BUILDING, MARINE DRIVE HIGH COURT JUNCTION, ERNAKULAM 682031</p>
                   </div>
                 </div>
                 <div className="contact_build">
                   <div><h2>	&#128241;</h2></div>
                   <div>
-                    <h6>+91 64429823</h6>
+                    <h6>+91 8590 745 911 , +91 9744 914 308</h6>
                     <p>Mon to Fri 9am to 6pm</p>
                   </div>
                 </div>
                 <div className="contact_build">
                   <div><h2>	&#x2709;</h2></div>
                   <div>
-                    <h6>support@ebenezer.in</h6>
+                    <h6>admission@ebenezer-imt.org</h6>
                     <p>Send us your query anytime!</p>
                     
                   </div>
@@ -191,10 +191,10 @@ function Contact(){
              </div>
              <div className="contact_details1">
                   <div className="locations">
+                      <h6>Branches</h6>
+                      <p>ERNAKULAM, KALADY, KALLUMALA, UAE</p>
                       <h6>Head Office</h6>
-                      <p>SMICT Piraroor P.O, Kalady, Kerala, India 683574</p>
-                      <h6>Centre</h6>
-                      <p>Ashis Building ,Marine Drive High Court JN, Ernakulam 682031</p>
+                      <p>SECOND FLOOR, ASHIS BUILDING, MARINE DRIVE HIGH COURT JUNCTION, ERNAKULAM 682031</p>
                   </div>
              </div>
 
@@ -206,11 +206,10 @@ function Contact(){
              <div className="contact_details1">
                   <div className="locations">
                       <h6>Email Address</h6>
-                      <p>ebenzer2022@gmail.com</p>
+                      <p>admission@ebenezer-imt.org</p>
                       <h6>Phone Number</h6>
-                      <p>+91 963738783</p>
-                      <h6>Landline</h6>
-                      <p>0479 2495952</p>
+                      <p>+91 8590 745 911</p>
+                      <p>+91 9744 914 308</p>
                   </div>
              </div>
           </div>
@@ -229,15 +228,16 @@ function Contact(){
               </div>
               <div className="footer_details_1">
               <p className="footer_head">Locations</p>
-              <p>Ashis Building ,Marine Drive Hign Court JN, Ernakulam<br></br>682031</p>
+              <p>ERNAKULAM, KALADY, KALLUMALA, UAE</p>
               <p className="footer_head">Head Office:</p>
-              <p>SMICT Piraroor P.O, Kalady, Kerala, India<br></br>683574</p>
+              <p>SECOND FLOOR, ASHIS BUILDING, MARINE DRIVE
+HIGH COURT JUNCTION, ERNAKULAM<br></br>682031</p>
               </div>
               <div className="col-lg-flex col-xl-flex footer_details_2">
               <p className="footer_head">Quick Links</p>
-                <Link style={{ textDecoration: 'none', color: 'black' }} to="/"><p>Home</p></Link>
-                <Link style={{ textDecoration: 'none', color: 'black' }} to="/about"><p>About</p></Link>
-                <Link style={{ textDecoration: 'none', color: 'black' }} to="/courses"><p>Courses</p></Link>
+                <Link style={{ textDecoration: 'none', color: 'white' }} to="/"><p>Home</p></Link>
+                <Link style={{ textDecoration: 'none', color: 'white' }} to="/about"><p>About</p></Link>
+                <Link style={{ textDecoration: 'none', color: 'white' }} to="/courses"><p>Courses</p></Link>
                 <p>Contact</p>
               </div>
               <div className="footer_details_3">
