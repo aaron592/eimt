@@ -76,7 +76,7 @@ function About(){
                   <Link style={{ textDecoration: 'none', color: '#494949' }} to="/contact"><p className="nav_p">Contact</p></Link>
               </div>
               <div className="col-lg-2 col-xl-3 col-md-6 col-sm-2 search">
-              <input type="text" placeholder="&#xf3ee; Search...." className="search_bar"/>
+              <input type="text" placeholder="&#128269; Search...." className="search_bar"/>
               
               </div>
               <div className="col-lg-2 col-xl-2 col-sm-6 col-md-8 login_details">

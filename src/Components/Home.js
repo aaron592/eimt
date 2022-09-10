@@ -16,6 +16,7 @@ import youtube from '../images/youtube.png';
 import principal from '../images/principal.png';
 import director from '../images/director.png';
 import {Link} from 'react-router-dom';
+import { saveAs } from "file-saver";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 // import { Carousel } from 'react-carousel-minimal';
 import {
@@ -30,6 +31,21 @@ import {
 
 function Header(){
 
+  const saveFile = () => {
+    saveAs(
+      "Flyer A5 Fold_M.pdf",
+      "EIMT-BROCHURE.pdf"
+    );
+  };
+
+  const saveForm = () => {
+    saveAs(
+      "application_form.pdf",
+      "EIMT-Application-Form.pdf"
+    );
+  };
+
+  
   const data = [
     {
       image: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/GoldenGateBridge-001.jpg/1200px-GoldenGateBridge-001.jpg",
@@ -86,7 +102,7 @@ function Header(){
                   <Link style={{ textDecoration: 'none', color: 'white' }} to="/contact"><p className="nav_p">Contact</p></Link>
               </div>
               <div className="col-lg-2 col-xl-2 col-sm-6 col-md-8 login_details_new">
-                 <button className="register">APPLY NOW</button>  
+                 <button className="register" onClick={saveForm}>APPLY NOW</button>  
               </div>
               </section>
                     ):null}
@@ -103,7 +119,7 @@ function Header(){
                   <Link style={{ textDecoration: 'none', color: 'white' }} to="/contact"><p className="nav_p">Contact</p></Link>
               </div>
               <div className="col-lg-2 col-xl-2 col-sm-6 col-md-8 login_details_new">
-                 <button className="register">APPLY NOW</button> 
+                 <button className="register" onClick={saveForm}>APPLY NOW</button> 
               </div>
               </section>
               ):null}
@@ -114,11 +130,11 @@ function Header(){
                   <Link style={{ textDecoration: 'none', color: '#494949' }} to="/contact"><p className="nav_p">Contact</p></Link>
               </div>
               <div className="col-lg-2 col-xl-3 col-md-6 col-sm-2 search">
-              <input type="text" placeholder="&#xf3ee; Search...." className="search_bar"/>
+              <input type="text" placeholder="&#128269; Search...." className="search_bar"/>
               
               </div>
               <div className="col-lg-2 col-xl-2 col-sm-6 col-md-8 login_details">
-                <button className="register">APPLY NOW</button>
+                <button className="register" onClick={saveForm}>APPLY NOW</button>
               </div>
               
            </div>
@@ -134,7 +150,7 @@ function Header(){
         alt='...'
       >
         {/* <h5>First slide label</h5> */}
-        <button type="button" className="bro_btn">DOWNLOAD BROCHURE</button>
+      <button type="button" onClick={saveFile} className="bro_btn">DOWNLOAD BROCHURE</button>
       </MDBCarouselItem>
       <MDBCarouselItem
         className='w-100 d-block'
@@ -143,7 +159,7 @@ function Header(){
         alt='...'
       >
         {/* <h5>Second slide label</h5> */}
-        <button type="button" className="bro_btn">DOWNLOAD BROCHURE</button>
+        <button type="button" onClick={saveFile} className="bro_btn">DOWNLOAD BROCHURE</button>
       </MDBCarouselItem>
     </MDBCarousel>
 
@@ -182,7 +198,7 @@ function Header(){
           </div>
         </div> */}
         <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 example1">
-            <h5>Welocme to our website. &nbsp;ADMISSION STARTED ..... HURRY UP ... APPLY NOW --<a> click here</a></h5>
+            <h5>Welocme to our website. &nbsp;ADMISSION STARTED ..... HURRY UP ... APPLY NOW --<a href="application_form.pdf" download="EIMT-Application-Form.pdf"> click here</a></h5>
         </div>
 
         <div className="what_head">
