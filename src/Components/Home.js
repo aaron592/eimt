@@ -33,14 +33,14 @@ function Header(){
 
   const saveFile = () => {
     saveAs(
-      "Flyer A5 Fold_M.pdf",
+      "https://master--iridescent-profiterole-2ab773.netlify.app/Flyer A5 Fold_M.pdf",
       "EIMT-BROCHURE.pdf"
     );
   };
 
   const saveForm = () => {
     saveAs(
-      "application_form.pdf",
+      "https://master--iridescent-profiterole-2ab773.netlify.app/application_form.pdf",
       "EIMT-Application-Form.pdf"
     );
   };
@@ -198,7 +198,7 @@ function Header(){
           </div>
         </div> */}
         <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 example1">
-            <h5>Welocme to our website. &nbsp;ADMISSION STARTED ..... HURRY UP ... APPLY NOW --<a href="application_form.pdf" download="EIMT-Application-Form.pdf"> click here</a></h5>
+            <h5>Welocme to our website. &nbsp;ADMISSION STARTED ..... HURRY UP ... APPLY NOW --<a href="https://master--iridescent-profiterole-2ab773.netlify.app/application_form.pdf" download="EIMT-Application-Form.pdf"> click here</a></h5>
         </div>
 
         <div className="what_head">
