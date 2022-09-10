@@ -81,6 +81,40 @@
     justify-content: center;
 }
 
+@media (min-width: 100px ){
+    .course_container{
+        padding-top:50px;
+        padding-bottom:50px;
+    }
+    .course_container1{
+        width:95%;
+        display: flex;
+        height:auto;
+    }
+
+    .course_img_cont{
+        height: auto;
+        width:47%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .course_img_cont>img{
+        height:110px;
+        border-radius:8px;
+    }
+    .course_details_cont{
+        height:auto;
+        overflow: hidden;
+    }
+    
+
+    .course_header_tag{
+        /* padding-top:10px; */
+    }
+}
+
 @media (min-width: 375px ) {
     .course_container{
         padding-top:50px;

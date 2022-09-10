@@ -179,6 +179,51 @@
     padding:10px;
 }
 
+@media (min-width: 100px ){
+    .contact{
+        flex-direction: column;
+        align-items:space-evenly;
+        justify-content:center;
+     }
+ 
+     .contact_tabs{
+         width:85%;
+         margin-bottom:25px;
+     }
+ 
+     .contact_form_div{
+         width:90%;
+     }
+ 
+     .contact_form_div1{
+         width:100%;
+     }
+ 
+     .contact_build{
+         width:100%;
+         margin-bottom:10px;
+     }
+ 
+     .contact_build>div>h6{
+         display:none;
+     }
+ 
+     .flex-row{ display: flex !important;
+         flex-direction: column !important;
+     }
+ 
+     .d-flex{
+         display: flex !important;
+         flex-direction: column !important;
+     
+     }
+ 
+     .contact_form_div2{
+         margin-top:20px;
+         width:100%;
+     }
+}
+
 @media (min-width: 375px ) {
     .contact{
        flex-direction: column;

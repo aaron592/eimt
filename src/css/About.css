@@ -219,6 +219,87 @@
     font-weight: 450;
 }
 
+@media (min-width: 100px ){
+    
+    .about_msg>img{
+        object-fit: cover;
+        opacity:0.35;
+        
+    }
+
+    .vision_details{
+        width:90%;
+        letter-spacing: 1px;
+        text-align: justify;
+    }
+
+    .new_slider{
+        margin-top:35px;
+        display:flex;
+        flex-direction: column;
+        align-items:center;
+        justify-content:center;
+        /* background-color:red;  */
+
+    }
+    .new_slider>h1{
+        padding-top:10px;
+        padding-bottom:20px;
+        /* background-color:#b4d5fd; */
+    }
+    
+    .sliderimg{
+        width: 50%;
+        /* background-color:red;  */
+        height: 200px;
+        object-fit: center;
+        border-radius: 10px;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+       }
+
+      .ins_logo{
+        display: none
+      }
+
+      .about_eimt_div{
+        /* flex-direction: column!important; */
+        width:90%;
+        border-radius: 5px;
+        box-shadow: rgba(218, 218, 218, 0.48) 6px 2px 16px 0px, rgba(224, 223, 223, 0.8) -6px -2px 16px 0px;;
+        
+
+      }
+
+      .about_eimt_img{
+        width:100%;
+      }
+
+      .about_eimt_details>h4{
+        text-align: center;
+      }
+      .about_eimt_details>p{
+        padding-left:10px;
+        padding-right:10px;
+      }
+      .about_eimt_details{
+        width:100%;
+        text-align: contain;
+        height:auto;
+        text-align: justify;
+      }
+
+      .flex-row{ display: flex !important;
+        flex-direction: column !important;
+    }
+
+    .d-flex{
+        display: flex !important;
+        flex-direction: column !important;
+    
+    }
+  
+}
+
 @media (min-width: 375px ) {
 
     .about_msg>img{
