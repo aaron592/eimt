@@ -4,8 +4,10 @@ import 'slick-carousel/slick/slick.css';
 import "slick-carousel/slick/slick-theme.css";
 import { Nav, Navbar } from 'react-bootstrap';
 import '../css/Header.css';
+import eimt from '../images/eimt.png'
 import banner_1 from '../images/Banner_1.png';
 import banner_2 from '../images/Banner_2.png';
+import banner_3 from '../images/banner_3.png';
 import logo from '../images/logo.png';
 import bannerImage from '../images/banner.gif';
 import {useEffect ,useState} from 'react';
@@ -86,8 +88,8 @@ function Header(){
       <section>
         <div className="container-fluid">
            <div className="row">
-              <div className="col-lg-1 col-xl-2 col-md-3 col-sm-6  logo">
-                  <img className="logo_img" src={logo} alt="logo" style={{height:"90%"}}/>
+              <div className="col-lg-2 col-xl-3 col-md-3 col-sm-6  logo">
+                  <img className="logo_img" src={eimt} alt="logo" style={{height:"100%"}}/>
                   <button className="menu_sm" onClick={()=>{setMenu(true)}}>☰</button>
               </div>
               {menubar===true?(
@@ -156,6 +158,15 @@ function Header(){
         className='w-100 d-block'
         itemId={2}
         src={banner_2}
+        alt='...'
+      >
+        {/* <h5>Second slide label</h5> */}
+        <button type="button" onClick={saveFile} className="bro_btn">DOWNLOAD BROCHURE</button>
+      </MDBCarouselItem>
+      <MDBCarouselItem
+        className='w-100 d-block'
+        itemId={3}
+        src={banner_3}
         alt='...'
       >
         {/* <h5>Second slide label</h5> */}

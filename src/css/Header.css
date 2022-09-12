@@ -42,6 +42,7 @@ body{
 .logo{
     height:90px;
     /* background-color:blue; */
+    
     display:flex;
     align-items:center;
     justify-content:center;
@@ -49,6 +50,7 @@ body{
 
 .logo_img{
     height: auto;
+    padding-right:10px;
 }
 
 .toast{
@@ -62,7 +64,7 @@ body{
     /* background-color:blue; */
     display:flex;
     align-items:center;
-    justify-content:flex-start;
+    justify-content:flex-end;
 }
 
 .search_bar{
@@ -91,7 +93,7 @@ body{
     /* background-color:red; */
     display:flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-between;
     font-family:'Candara';
     text-decoration: none;
 }
@@ -122,6 +124,26 @@ body{
     display:flex;
     align-items: center;
     justify-content: space-around;
+}
+
+.logo_p{
+    font-size:13px;
+    padding-bottom: 0px;
+    padding-top:0px;
+    text-align:center;
+}
+
+.logo_p1{
+    text-align:center;
+    font-weight: bold;
+}
+
+.logo_text{
+    text-align:center;
+    /* background-color:red; */
+    line-height: 0.8;
+    margin-top:10px;
+    /* height:30px; */
 }
 
 .login{
@@ -956,7 +978,7 @@ marquee{
     }
 
     .logo_img{
-        background-color: lightgrey;
+        /* background-color: lightgrey; */
     }
 
     .menu_sm{
@@ -1932,6 +1954,7 @@ color:#889c0b;
         display:flex;
         color:#494949;
         text-decoration: none;
+        
         /* background-color:red; */
     }
 
