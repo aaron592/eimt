@@ -273,6 +273,11 @@
 
       .about_eimt_img{
         width:100%;
+        height:70%;
+      }
+
+      .about_eimt_img>img{
+        height:70%;
       }
 
       .about_eimt_details>h4{
@@ -354,6 +359,11 @@
 
       .about_eimt_img{
         width:100%;
+        height:70%;
+      }
+
+      .about_eimt_img>img{
+        height:70%;
       }
 
       .about_eimt_details>h4{
