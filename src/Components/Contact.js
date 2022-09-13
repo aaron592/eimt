@@ -9,6 +9,9 @@ import facebook from '../images/facebook.png';
 import twitter from '../images/twitter.png';
 import youtube from '../images/youtube.png';
 import about_img from '../images/preview.jpg';
+import eimt from '../images/eimt.png';
+import { saveAs } from "file-saver";
+
 
 
 function Contact(){
@@ -18,6 +21,13 @@ function Contact(){
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
         `
       }, []);
+
+      const saveForm = () => {
+        saveAs(
+          "https://master--iridescent-profiterole-2ab773.netlify.app/application_form.pdf",
+          "EIMT-Application-Form.pdf"
+        );
+      };
     
       let [menubar,setMenu] = useState(false);
       let [menubar1,setMenu1] = useState(false);
@@ -53,8 +63,8 @@ function Contact(){
         <section>
         <div className="container-fluid">
            <div className="row">
-              <div className="col-lg-1 col-xl-2 col-md-3 col-sm-6  logo">
-                  <img className="logo_img" src={logo} alt="logo"/>
+              <div className="col-lg-2 col-xl-3 col-md-3 col-sm-6  logo">
+                  <img className="logo_img" src={eimt} alt="logo" style={{height:"100%"}}/>
                   <button className="menu_sm" onClick={()=>{setMenu(true)}}>☰</button>
               </div>
               {menubar===true?(
@@ -69,37 +79,39 @@ function Contact(){
                   <Link style={{ textDecoration: 'none', color: 'white' }} to="/contact"><p className="nav_p">Contact</p></Link>
               </div>
               <div className="col-lg-2 col-xl-2 col-sm-6 col-md-8 login_details_new">
-                 <button className="register">APPLY NOW</button>  
+                 <button className="register" onClick={saveForm}>APPLY NOW</button>  
               </div>
               </section>
                     ):null}
-              <div className="col-lg-2 col-xl-3 col-md-6 col-sm-2 search">
-                <input type="text" placeholder="&#128269; Search for anything...." className="search_bar"/>
-              </div>
+              
               <div className="col-lg-2 col-xl-3 col-md-3 col-sm-2 menu_div">
                 <button className="menu" onClick={()=>{setMenu1(true)}}>☰</button>
               </div>
               {menubar1===true?(
                 <section className="cover" onClick={()=>{setMenu1(false)}}>
                 <div className="col-xl-4 col-sm-6 col-md-8 nav_details_new">
-                <Link style={{ textDecoration: 'none', color: 'white' }} to="/"><p className="nav_p">Home</p></Link>
+                  <Link style={{ textDecoration: 'none', color: 'white' }} to="/"><p className="nav_p">Home</p></Link>
                   <Link style={{ textDecoration: 'none', color: 'white' }} to="/about"><p className="nav_p">About</p></Link>
                   <Link style={{ textDecoration: 'none', color: 'white' }} to="/courses"><p className="nav_p">Courses</p></Link>
                   <Link style={{ textDecoration: 'none', color: 'white' }} to="/contact"><p className="nav_p">Contact</p></Link>
               </div>
               <div className="col-lg-2 col-xl-2 col-sm-6 col-md-8 login_details_new">
-                 <button className="register">APPLY NOW</button> 
+                 <button className="register" onClick={saveForm}>APPLY NOW</button> 
               </div>
               </section>
               ):null}
               <div className="col-xl-4 col-sm-6 col-md-8 nav_details">
-              <Link style={{ textDecoration: 'none', color: 'white' }} to="/"><p className="nav_p">Home</p></Link>
-                  <Link style={{ textDecoration: 'none', color: 'white' }} to="/about"><p className="nav_p">About</p></Link>
-                  <Link style={{ textDecoration: 'none', color: 'white' }} to="/courses"><p className="nav_p">Courses</p></Link>
-                  <Link style={{ textDecoration: 'none', color: 'white' }} to="/contact"><p className="nav_p">Contact</p></Link>
+                  <Link style={{ textDecoration: 'none', color: '#494949' }} to="/"><p className="nav_p">Home</p></Link>
+                  <Link style={{ textDecoration: 'none', color: '#494949' }} to="/about"><p className="nav_p">About</p></Link>
+                  <Link style={{ textDecoration: 'none', color: '#494949' }} to="/courses"><p className="nav_p">Courses</p></Link>
+                  <Link style={{ textDecoration: 'none', color: '#494949' }} to="/contact"><p className="nav_p">Contact</p></Link>
+              </div>
+              <div className="col-lg-2 col-xl-3 col-md-6 col-sm-2 search">
+              <input type="text" placeholder="&#128269; Search...." className="search_bar"/>
+              
               </div>
               <div className="col-lg-2 col-xl-2 col-sm-6 col-md-8 login_details">
-                <button className="register">APPLY NOW</button>
+                <button className="register" onClick={saveForm}>APPLY NOW</button>
               </div>
               
            </div>

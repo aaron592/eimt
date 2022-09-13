@@ -152,7 +152,7 @@ function Header(){
         alt='...'
       >
         {/* <h5>First slide label</h5> */}
-      <button type="button" onClick={saveFile} className="bro_btn">DOWNLOAD BROCHURE</button>
+      {/* <button type="button" onClick={saveFile} className="bro_btn">DOWNLOAD BROCHURE</button> */}
       </MDBCarouselItem>
       <MDBCarouselItem
         className='w-100 d-block'
@@ -161,7 +161,7 @@ function Header(){
         alt='...'
       >
         {/* <h5>Second slide label</h5> */}
-        <button type="button" onClick={saveFile} className="bro_btn">DOWNLOAD BROCHURE</button>
+        {/* <button type="button" onClick={saveFile} className="bro_btn">DOWNLOAD BROCHURE</button> */}
       </MDBCarouselItem>
       <MDBCarouselItem
         className='w-100 d-block'
@@ -170,7 +170,7 @@ function Header(){
         alt='...'
       >
         {/* <h5>Second slide label</h5> */}
-        <button type="button" onClick={saveFile} className="bro_btn">DOWNLOAD BROCHURE</button>
+        {/* <button type="button" onClick={saveFile} className="bro_btn">DOWNLOAD BROCHURE</button> */}
       </MDBCarouselItem>
     </MDBCarousel>
 
@@ -209,9 +209,13 @@ function Header(){
           </div>
         </div> */}
         <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 example1">
-            <h5>Welocme to our website. &nbsp;ADMISSION STARTED ..... HURRY UP ... APPLY NOW --<a href="https://master--iridescent-profiterole-2ab773.netlify.app/application_form.pdf" download="EIMT-Application-Form.pdf"> click here</a></h5>
+             <h5><a href="https://master--iridescent-profiterole-2ab773.netlify.app/Flyer A5 Fold_M.pdf" download="EIMT-BROCHURE.pdf">Download Brochure</a> &nbsp;&nbsp;WELCOME TO OUR WEBSITE. &nbsp;ADMISSION STARTED ..... HURRY UP ... APPLY NOW --<a href="https://master--iridescent-profiterole-2ab773.netlify.app/application_form.pdf" download="EIMT-Application-Form.pdf"> ..Click here..</a></h5>
         </div>
-
+        <div className="eimt_heading_cont">
+           <div className="eimt_heading">
+              <h5><span style={{color:"#C70039"}}>EIMT</span> aims the transformation of a student to professional, Our courses are based on helping students from various background to find a job through our professional training and working professionals to upgrade their job to next level. Providing multilingual trainings we also aim them to find better jobs in different countries .</h5>
+           </div>
+         </div>  
         <div className="what_head">
           <h2>&#127891; What We Do</h2>
         </div>
@@ -237,6 +241,8 @@ function Header(){
              </div>
            </div>
         </div>
+
+
 
         <div className="new_slide" max-width="720px" >
            <h2 className="slide_head">Popular Courses</h2>

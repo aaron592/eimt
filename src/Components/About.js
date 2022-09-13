@@ -4,6 +4,7 @@ import "react-alice-carousel/lib/alice-carousel.css";
 import '../css/Header.css';
 import '../css/About.css';
 import logo from '../images/logo.png';
+import eimt from '../images/eimt.png'
 import {useEffect ,useState} from 'react';
 import logo1 from '../images/logo1.jpeg';
 import logo2 from '../images/logo2.jpeg';
@@ -14,6 +15,8 @@ import facebook from '../images/facebook.png';
 import twitter from '../images/twitter.png';
 import youtube from '../images/youtube.png';
 import about_gif from '../images/about.gif';
+import { saveAs } from "file-saver";
+
 
 function About(){
   
@@ -24,7 +27,13 @@ function About(){
         `
       }, []);
 
-      
+      const saveForm = () => {
+        saveAs(
+          "https://master--iridescent-profiterole-2ab773.netlify.app/application_form.pdf",
+          "EIMT-Application-Form.pdf"
+        );
+      };
+
       let [menubar,setMenu] = useState(false);
       let [menubar1,setMenu1] = useState(false);
     
@@ -32,8 +41,8 @@ function About(){
     <section>
    <div className="container-fluid">
            <div className="row">
-              <div className="col-lg-1 col-xl-2 col-md-3 col-sm-6  logo">
-                  <img className="logo_img" src={logo} alt="logo" style={{height:"90%"}}/>
+              <div className="col-lg-2 col-xl-3 col-md-3 col-sm-6  logo">
+                  <img className="logo_img" src={eimt} alt="logo" style={{height:"100%"}}/>
                   <button className="menu_sm" onClick={()=>{setMenu(true)}}>☰</button>
               </div>
               {menubar===true?(
@@ -48,7 +57,7 @@ function About(){
                   <Link style={{ textDecoration: 'none', color: 'white' }} to="/contact"><p className="nav_p">Contact</p></Link>
               </div>
               <div className="col-lg-2 col-xl-2 col-sm-6 col-md-8 login_details_new">
-                 <button className="register">APPLY NOW</button>  
+                 <button className="register" onClick={saveForm}>APPLY NOW</button>  
               </div>
               </section>
                     ):null}
@@ -65,7 +74,7 @@ function About(){
                   <Link style={{ textDecoration: 'none', color: 'white' }} to="/contact"><p className="nav_p">Contact</p></Link>
               </div>
               <div className="col-lg-2 col-xl-2 col-sm-6 col-md-8 login_details_new">
-                 <button className="register">APPLY NOW</button> 
+                 <button className="register" onClick={saveForm}>APPLY NOW</button> 
               </div>
               </section>
               ):null}
@@ -80,12 +89,13 @@ function About(){
               
               </div>
               <div className="col-lg-2 col-xl-2 col-sm-6 col-md-8 login_details">
-                <button className="register">APPLY NOW</button>
+                <button className="register" onClick={saveForm}>APPLY NOW</button>
               </div>
               
            </div>
           
         </div>
+
     <div className="col-lg-12 col-xl-12 about_msg">
        <img src={about_img}/>
        <span className="col-lg-12 col-xl-12 overlay">

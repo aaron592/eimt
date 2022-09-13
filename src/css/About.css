@@ -5,6 +5,7 @@
 }
 
 .about_msg{
+    padding-top:90px;
     height:50vh;
     background-color: #2c7d1c;
     display:flex;

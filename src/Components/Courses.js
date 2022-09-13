@@ -13,11 +13,20 @@ import facebook from '../images/facebook.png';
 import twitter from '../images/twitter.png';
 import youtube from '../images/youtube.png';
 import about_img from '../images/preview.jpg';
+import eimt from '../images/eimt.png';
+import { saveAs } from "file-saver";
 
 
 function Courses(){
 
   let [courses,setCourses]= useState([]);
+
+  const saveForm = () => {
+    saveAs(
+      "https://master--iridescent-profiterole-2ab773.netlify.app/application_form.pdf",
+      "EIMT-Application-Form.pdf"
+    );
+  };
 
   useEffect(()=>{
       fetch("https://eimt-backend.herokuapp.com/courses")
@@ -58,8 +67,8 @@ function Courses(){
         <section>
        <div className="container-fluid">
            <div className="row">
-              <div className="col-lg-1 col-xl-2 col-md-3 col-sm-6  logo">
-                  <img className="logo_img" src={logo} alt="logo" style={{height:"90%"}}/>
+              <div className="col-lg-2 col-xl-3 col-md-3 col-sm-6  logo">
+                  <img className="logo_img" src={eimt} alt="logo" style={{height:"100%"}}/>
                   <button className="menu_sm" onClick={()=>{setMenu(true)}}>☰</button>
               </div>
               {menubar===true?(
@@ -74,7 +83,7 @@ function Courses(){
                   <Link style={{ textDecoration: 'none', color: 'white' }} to="/contact"><p className="nav_p">Contact</p></Link>
               </div>
               <div className="col-lg-2 col-xl-2 col-sm-6 col-md-8 login_details_new">
-                 <button className="register">APPLY NOW</button>  
+                 <button className="register" onClick={saveForm}>APPLY NOW</button>  
               </div>
               </section>
                     ):null}
@@ -91,7 +100,7 @@ function Courses(){
                   <Link style={{ textDecoration: 'none', color: 'white' }} to="/contact"><p className="nav_p">Contact</p></Link>
               </div>
               <div className="col-lg-2 col-xl-2 col-sm-6 col-md-8 login_details_new">
-                 <button className="register">APPLY NOW</button> 
+                 <button className="register" onClick={saveForm}>APPLY NOW</button> 
               </div>
               </section>
               ):null}
@@ -106,12 +115,13 @@ function Courses(){
               
               </div>
               <div className="col-lg-2 col-xl-2 col-sm-6 col-md-8 login_details">
-                <button className="register">APPLY NOW</button>
+                <button className="register" onClick={saveForm}>APPLY NOW</button>
               </div>
               
            </div>
           
         </div>
+
         <div className="col-lg-12 col-xl-12 about_msg">
        <img src={about_img}/>
        <span className="col-lg-12 col-xl-12 overlay">
