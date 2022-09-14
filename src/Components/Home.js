@@ -209,16 +209,34 @@ function Header(){
           </div>
         </div> */}
         <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 example1">
-             <h5><a href="https://master--iridescent-profiterole-2ab773.netlify.app/Flyer A5 Fold_M.pdf" download="EIMT-BROCHURE.pdf">Download Brochure</a> &nbsp;&nbsp;WELCOME TO OUR WEBSITE. &nbsp;ADMISSION STARTED ..... HURRY UP ... APPLY NOW --<a href="https://master--iridescent-profiterole-2ab773.netlify.app/application_form.pdf" download="EIMT-Application-Form.pdf"> ..Click here..</a></h5>
+             <h5>WELCOME TO OUR WEBSITE. &nbsp;ADMISSION STARTED ..... HURRY UP ... APPLY NOW --<a href="https://master--iridescent-profiterole-2ab773.netlify.app/application_form.pdf" download="EIMT-Application-Form.pdf"> ..Click here..</a></h5>
         </div>
         <div className="eimt_heading_cont">
            <div className="eimt_heading">
               <h5><span style={{color:"#C70039"}}>EIMT</span> aims the transformation of a student to professional, Our courses are based on helping students from various background to find a job through our professional training and working professionals to upgrade their job to next level. Providing multilingual trainings we also aim them to find better jobs in different countries .</h5>
+              <button type="button" onClick={saveFile} className="bro_btn">DOWNLOAD BROCHURE</button>
            </div>
          </div>  
-        <div className="what_head">
-          <h2>&#127891; What We Do</h2>
-        </div>
+
+
+         <div className="d-flex flex-row vision_mission_container">
+            <div className="slanding1">
+               <h2>Vision</h2>
+               <p>To attain the best academic standards possible for all students
+to help them realise their full potential and to provide
+them with the skills they need to contribute positively
+to society as productive, moral, responsible, creative and
+compassionate citizens</p>
+            </div>
+            <div className="slanding2">
+               <h2>Mission</h2>
+               <p>EBENEZER INSTITUTE OF MODERN TECHNOLOGY'S Mission
+is to advance excellence in technical career and academic
+studies so that graduates are ready to enter the workforce
+and maintain their competitiveness on worldwide scale.</p>
+            </div>
+         </div>
+
 
         <div className="d-flex flex-row prin_tab">
            <div className="d-flex flex-row prin_div">
