@@ -48,7 +48,7 @@ body{
     padding: 1em 5em 1em 1em;
     overflow: hidden;
     color: #fff;
-    background-color: rgb(216, 216, 216);
+    background-color: rgb(232, 232, 232);
     transform: skew(-15deg);
     display:flex;
     flex-direction: column;
@@ -536,7 +536,7 @@ marquee{
 
 .new_slide{
     overflow: hidden;
-    background-color:#b4d5fd;
+    /* background-color:#b4d5fd; */
     height:70vh;
     margin-top:50px;
     
@@ -579,7 +579,7 @@ marquee{
     background-color:rgb(255, 255, 255);
     border-radius: 10px;
     overflow: hidden;
-    box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
+    /* box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px; */
 
 }
 
@@ -629,7 +629,7 @@ marquee{
 }
 
 .contact_div{
-    height:50vh;
+    height:35vh;
     /* background-color:red; */
     display:flex;
     justify-content: center;
@@ -1011,9 +1011,10 @@ marquee{
      }
  
      .course_1{
-         width:3%;
+         width:4%;
          overflow: hidden;
          height:auto;
+         border:1px solid lightgrey;
  
      }
      /* .contact_tab>h2{
@@ -1104,7 +1105,7 @@ marquee{
         padding: 1em 5em 1em 1em;
         overflow: hidden;
         color: #fff;
-        background-color: rgb(216, 216, 216);
+        background-color: rgb(232, 232, 232);
         transform: skew(-10deg);
         display:flex;
         flex-direction: column;
@@ -1382,6 +1383,7 @@ marquee{
         width:3%;
         overflow: hidden;
         height:auto;
+        border:1px solid lightgrey; 
 
     }
     /* .contact_tab>h2{
@@ -1471,7 +1473,7 @@ marquee{
         padding: 1em 5em 1em 1em;
         overflow: hidden;
         color: #fff;
-        background-color: rgb(216, 216, 216);
+        background-color: rgb(232, 232, 232);
         transform: skew(-10deg);
         display:flex;
         flex-direction: column;
@@ -1703,7 +1705,7 @@ marquee{
     }
 
     .contact_div{
-        height:50vh;
+        height:35vh;
         /* background-color:red; */
         display:flex;
         justify-content: center;
@@ -1737,8 +1739,9 @@ marquee{
     }
 
     .course_1{
-        width:2%;
+        width:3%;
         height:auto;
+        border:1px solid lightgrey;
 
     }
     .eimt_heading{
@@ -1984,7 +1987,7 @@ marquee{
     .d-flex{display:flex!important;}
 
     .contact_div{
-        height:50vh;
+        height:35vh;
         /* background-color:red; */
         display:flex;
         justify-content: center;
@@ -2019,7 +2022,7 @@ marquee{
     
 .new_slide{
     overflow: hidden;
-    background-color:#b4d5fd;
+    /* background-color:#b4d5fd; */
     height:70vh;
    margin-top:50px;
     display:inline-block;
@@ -2027,7 +2030,8 @@ marquee{
 }
 
 .slide_head{
-    padding-left:20px;
+text-align:center;
+    /* padding-left:20px; */
     padding-top:20px;
     font-family: 'Segoe UI';
     font-weight:500;
@@ -2046,7 +2050,7 @@ marquee{
 
 .courses_1{
     width:100%;
-    height:50vh;
+    /* height:50vh; */
     /* background-color:white; */
     padding-bottom:20px;
 }
@@ -2062,7 +2066,8 @@ marquee{
     background-color:rgb(255, 255, 255);
     border-radius: 10px;
     overflow: hidden;
-    box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
+    /* box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px; */
+    border:1px solid lightgrey;
 
 }
 
@@ -2134,6 +2139,7 @@ marquee{
 
 .regular{
     padding-left:10px;
+    font-size:20px;
 }
 
 .msg_left{
@@ -2146,10 +2152,11 @@ marquee{
 }
 
 .img_right{
-    width:25%;
+    width:27%;
     height:90%;
     /* background-color:green; */
     border-radius:10px;
+    
 
 }
 
@@ -2185,7 +2192,7 @@ color:#889c0b;
     width:100%;
     object-fit: cover;
     border-radius:10px;
-    box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(205, 205, 205, 0.8) -6px -2px 16px 0px;
+    /* box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(205, 205, 205, 0.8) -6px -2px 16px 0px; */
 
 }
 .eimt_heading{
@@ -2241,7 +2248,7 @@ color:#889c0b;
     padding: 1em 5em 1em 1em;
     overflow: hidden;
     color: #fff;
-    background-color: rgb(216, 216, 216);
+    background-color: rgb(232, 232, 232);
     transform: skew(-15deg);
     display:flex;
     flex-direction: column;
@@ -2492,7 +2499,7 @@ color:#889c0b;
     .d-flex{display:flex!important;}
 
     .contact_div{
-        height:50vh;
+        height:35vh;
         /* background-color:red; */
         display:flex;
         justify-content: center;
@@ -2527,7 +2534,7 @@ color:#889c0b;
     
 .new_slide{
     overflow: hidden;
-    background-color:#b4d5fd;
+    /* background-color:#b4d5fd; */
     height:70vh;
    margin-top:50px;
     display:inline-block;
@@ -2554,7 +2561,7 @@ color:#889c0b;
 
 .courses_1{
     width:100%;
-    height:50vh;
+    /* height:50vh; */
     /* background-color:white; */
     padding-bottom:20px;
 }
@@ -2570,7 +2577,8 @@ color:#889c0b;
     background-color:rgb(255, 255, 255);
     border-radius: 10px;
     overflow: hidden;
-    box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
+    border:1px solid lightgrey;
+    /* box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px; */
 
 }
 
@@ -2752,7 +2760,7 @@ color:#889c0b;
     padding: 1em 5em 1em 1em;
     overflow: hidden;
     color: #fff;
-    background-color: rgb(216, 216, 216);
+    background-color: rgb(232, 232, 232);
     transform: skew(-15deg);
     display:flex;
     flex-direction: column;

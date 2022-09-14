@@ -123,27 +123,6 @@ We encourage mutual respect and positive thinking. We are always willing to prov
       </div>
     </div>
 
-    <div className="vision">
-      <h2>Vision</h2>
-      <div className="vision_details">
-        <p>To attain the best academic standards possible for all students
-to help them realise their full potential and to provide
-them with the skills they need to contribute positively
-to society as productive, moral, responsible, creative and
-compassionate citizens</p>
-      </div>
-    </div>
-
-    <div className="vision">
-      <h2>Mision</h2>
-      <div className="vision_details">
-        <p>EBENEZER INSTITUTE OF MODERN TECHNOLOGY'S Mission
-is to advance excellence in technical career and academic
-studies so that graduates are ready to enter the workforce
-and maintain their competitiveness on worldwide scale.</p>
-      </div>
-    </div>
-
 
     <section className="new_slider">
       <h1>Our Team</h1>
