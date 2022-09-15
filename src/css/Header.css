@@ -773,6 +773,13 @@ marquee{
     color:#C70039;
 }
 
+.whatsapp_float{
+    position:fixed;
+    z-index:10;
+    bottom:20px;
+    right:20px;
+}
+
 @media (min-width: 100px ){
     .d-block{
         height:250px;
@@ -1083,17 +1090,33 @@ marquee{
         overflow: hidden;
         color: #fff;
         background-color: rgb(16, 152, 220);
-        transform: skew(-10deg);
+        transform: skew(0deg);
         display:flex;
         flex-direction: column;
         align-items: center;
         justify-content:space-evenly;
     }
     
+    .slanding1:after{
+        content: " ";
+        position: absolute;
+        display: block;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        background: rgb(16, 152, 220);
+        transform-origin: top right;
+        transform: skew(-8deg, 0deg);
+    }
+    .slanding>h2{
+        text-align: center;
+    }
     .slanding1>p{
         text-align:justify;
-        width:100%;
-        padding-left:35px;
+        width:130%;
+        padding-left:60px;
     }
     
     .slanding2{
@@ -1106,11 +1129,25 @@ marquee{
         overflow: hidden;
         color: #fff;
         background-color: rgb(232, 232, 232);
-        transform: skew(-10deg);
         display:flex;
         flex-direction: column;
         align-items: center;
         justify-content:space-evenly;
+        transform: skew(0deg);
+    }
+
+    .slanding2:after{
+        content: " ";
+        position: absolute;
+        display: block;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        background: rgb(232, 232, 232);
+        transform-origin: bottom right;
+        transform: skew(-8deg, 0deg);
         
     }
     .slanding2>h2{
@@ -1119,9 +1156,16 @@ marquee{
     
     .slanding2>p{
         text-align:justify;
-        width:100%;
-        padding-left:35px;
+        width:130%;
+        padding-left:60px;
         color:rgb(59, 59, 59);
+    }
+    
+    .whatsapp_float{
+        position:fixed;
+        z-index:10;
+        bottom:20px;
+        right:20px;
     }
 }
 
@@ -1451,17 +1495,33 @@ marquee{
         overflow: hidden;
         color: #fff;
         background-color: rgb(16, 152, 220);
-        transform: skew(-10deg);
+        transform: skew(0deg);
         display:flex;
         flex-direction: column;
         align-items: center;
         justify-content:space-evenly;
     }
     
+    .slanding1:after{
+        content: " ";
+        position: absolute;
+        display: block;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        background: rgb(16, 152, 220);
+        transform-origin: top right;
+        transform: skew(-8deg, 0deg);
+    }
+    .slanding>h2{
+        text-align: center;
+    }
     .slanding1>p{
         text-align:justify;
-        width:100%;
-        padding-left:35px;
+        width:130%;
+        padding-left:60px;
     }
     
     .slanding2{
@@ -1474,11 +1534,25 @@ marquee{
         overflow: hidden;
         color: #fff;
         background-color: rgb(232, 232, 232);
-        transform: skew(-10deg);
         display:flex;
         flex-direction: column;
         align-items: center;
         justify-content:space-evenly;
+        transform: skew(0deg);
+    }
+
+    .slanding2:after{
+        content: " ";
+        position: absolute;
+        display: block;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        background: rgb(232, 232, 232);
+        transform-origin: bottom right;
+        transform: skew(-8deg, 0deg);
         
     }
     .slanding2>h2{
@@ -1487,8 +1561,8 @@ marquee{
     
     .slanding2>p{
         text-align:justify;
-        width:100%;
-        padding-left:35px;
+        width:130%;
+        padding-left:60px;
         color:rgb(59, 59, 59);
     }
     
@@ -2211,7 +2285,7 @@ color:#889c0b;
 .vision_mission_container{
     width:100%;
     /* background-color:red; */
-    display:flex;
+    display:flex !important;
     align-items: center;
     justify-content:center;
     overflow:hidden;
@@ -2220,40 +2294,72 @@ color:#889c0b;
 }
 
 .slanding1{
-    width:45%;
+    width:50%;
     height:40vh;
     position: relative;
     display: inline-block;
     padding: 1em 5em 1em 1em;
     overflow: hidden;
     color: #fff;
-    background-color: rgb(16, 152, 220);
-    transform: skew(-15deg);
+    background-color: white;
+    transform: skew(0deg);
     display:flex;
     flex-direction: column;
     align-items: center;
     justify-content:space-evenly;
+    padding-right:30px;
+}
+
+.slanding1:after{
+    content: " ";
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    background: rgb(16, 152, 220);
+    transform-origin: top right;
+    transform: skew(-8deg, 0deg);
 }
 
 .slanding1>p{
     text-align:center;
+    padding-left: 0px;
+    width:90%;
 }
 
 .slanding2{
     color:rgb(59, 59, 59);
-    width:45%;
+    width:50%;
     height:40vh;
     position: relative;
     display: inline-block;
     padding: 1em 5em 1em 1em;
     overflow: hidden;
     color: #fff;
-    background-color: rgb(232, 232, 232);
-    transform: skew(-15deg);
+    background-color: white;
+    transform: skew(0deg);
     display:flex;
     flex-direction: column;
     align-items: center;
     justify-content:space-evenly;
+    transform: skew(0deg);
+    padding-left:45px;
+}
+.slanding2:after{
+    content: " ";
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    background: rgb(232, 232, 232);
+    transform-origin: bottom right;
+    transform: skew(-8deg, 0deg);
     
 }
 .slanding2>h2{
@@ -2263,7 +2369,12 @@ color:#889c0b;
 .slanding2>p{
     text-align:center;
     color:rgb(59, 59, 59);
+   padding-left: 0px;
+    width:103%;
+    padding-right:0px;
+    /* background-color:red; */
 }
+
 
 
     
@@ -2732,19 +2843,33 @@ color:#889c0b;
 }
 
 .slanding1{
-    width:45%;
+    width:50%;
     height:40vh;
     position: relative;
     display: inline-block;
     padding: 1em 5em 1em 1em;
     overflow: hidden;
     color: #fff;
-    background-color: rgb(16, 152, 220);
-    transform: skew(-15deg);
+    background-color: white;
+    transform: skew(0deg);
     display:flex;
     flex-direction: column;
     align-items: center;
     justify-content:space-evenly;
+}
+
+.slanding1:after{
+    content: " ";
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    background: rgb(16, 152, 220);
+    transform-origin: top right;
+    transform: skew(-8deg, 0deg);
 }
 
 .slanding1>p{
@@ -2753,19 +2878,34 @@ color:#889c0b;
 
 .slanding2{
     color:rgb(59, 59, 59);
-    width:45%;
+    width:50%;
     height:40vh;
     position: relative;
     display: inline-block;
     padding: 1em 5em 1em 1em;
     overflow: hidden;
     color: #fff;
-    background-color: rgb(232, 232, 232);
-    transform: skew(-15deg);
+    background-color: white;
+    transform: skew(0deg);
     display:flex;
     flex-direction: column;
     align-items: center;
     justify-content:space-evenly;
+    transform: skew(0deg);
+    padding-left:45px;
+}
+.slanding2:after{
+    content: " ";
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    background: rgb(232, 232, 232);
+    transform-origin: bottom right;
+    transform: skew(-8deg, 0deg);
     
 }
 .slanding2>h2{
@@ -2774,6 +2914,7 @@ color:#889c0b;
 
 .slanding2>p{
     text-align:center;
+    width:90%;
     color:rgb(59, 59, 59);
 }
 

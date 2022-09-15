@@ -143,6 +143,9 @@ function Header(){
           
         </div>
 
+        <div className="whatsapp_float">
+          <a href="https://wa.me/918590745911" target="blank"><img src="https://mrgultimus2.in/wp-content/uploads/2022/01/whatsapp.png" width="180px" className="whatsapp_float_btn"/></a>
+        </div>
         <MDBCarousel showControls showIndicators className="h-500">
       <MDBCarouselItem
         className='w-100 d-block'
