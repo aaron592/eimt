@@ -15,8 +15,14 @@ import { saveAs } from "file-saver";
 
 
 function Contact(){
-    
+   
+  const [loading, setLoading] = useState(false);
+
     useEffect(() => {
+      setLoading(true);
+      setTimeout(() => {
+        setLoading(false);
+      }, 2000);
         document.head.innerHTML+=`
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
         `
@@ -61,6 +67,11 @@ function Contact(){
 
     return(
         <section>
+        { loading ? (
+        <div className="loader-container">
+      	  <div className="spinner"></div>
+        </div>
+      ) : (<div>
         <div className="container-fluid">
            <div className="row">
               <div className="col-lg-2 col-xl-3 col-md-3 col-sm-6  logo">
@@ -145,7 +156,7 @@ function Contact(){
                   <div><h2>&#127970;</h2></div>
                   <div>
                     <h6>Office Address</h6>
-                    <p>SECOND FLOOR, ASHIS BUILDING, MARINE DRIVE HIGH COURT JUNCTION, ERNAKULAM 682031</p>
+                    <p>Ebenezer Villa, House No. 16/209A, Piraroor P.O, Kalady<br></br>683574</p>
                   </div>
                 </div>
                 <div className="contact_build">
@@ -206,7 +217,7 @@ function Contact(){
                       <h6>Branches</h6>
                       <p>ERNAKULAM, KALADY, KALLUMALA, UAE</p>
                       <h6>Head Office</h6>
-                      <p>SECOND FLOOR, ASHIS BUILDING, MARINE DRIVE HIGH COURT JUNCTION, ERNAKULAM 682031</p>
+                      <p>Ebenezer Villa, House No. 16/209A, Piraroor P.O, Kalady<br></br>683574</p>
                   </div>
              </div>
 
@@ -242,8 +253,7 @@ function Contact(){
               <p className="footer_head">Locations</p>
               <p>ERNAKULAM, KALADY, KALLUMALA, UAE</p>
               <p className="footer_head">Head Office:</p>
-              <p>SECOND FLOOR, ASHIS BUILDING, MARINE DRIVE
-HIGH COURT JUNCTION, ERNAKULAM<br></br>682031</p>
+              <p>Ebenezer Villa, House No. 16/209A, Piraroor P.O, Kalady<br></br>683574</p>
               </div>
               <div className="col-lg-flex col-xl-flex footer_details_2">
               <p className="footer_head">Quick Links</p>
@@ -272,6 +282,7 @@ HIGH COURT JUNCTION, ERNAKULAM<br></br>682031</p>
         <div className="col-lg-12 col-xl-12 col-md-12 col-sm-12 rights">
           <p>© 2022 Copyright. Designed by <a href="https://luc.to/aaron" >ATJ</a></p>
         </div>
+        </div>)}
         </section>
     );
 }

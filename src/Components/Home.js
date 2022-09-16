@@ -33,6 +33,8 @@ import {
 
 function Header(){
 
+  const [loading, setLoading] = useState(false);
+
   const saveFile = () => {
     saveAs(
       "https://master--iridescent-profiterole-2ab773.netlify.app/Flyer A5 Fold_M.pdf",
@@ -75,6 +77,11 @@ function Header(){
   };
 
   useEffect(() => {
+
+    setLoading(true);
+    setTimeout(() => {
+      setLoading(false);
+    }, 2000);
     document.head.innerHTML+=`
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, shrink-to-fit=no, user-scalable=0" />
     `
@@ -86,8 +93,12 @@ function Header(){
   
     return(
       <section>
-        <div className="container-fluid">
-           <div className="row">
+      { loading ? (
+        <div className="loader-container">
+      	  <div className="spinner"></div>
+        </div>
+      ) : ( <div><div className="container-fluid">
+        <div className="row">
               <div className="col-lg-2 col-xl-3 col-md-3 col-sm-6  logo">
                   <img className="logo_img" src={eimt} alt="logo" style={{height:"100%"}}/>
                   <button className="menu_sm" onClick={()=>{setMenu(true)}}>☰</button>
@@ -172,8 +183,7 @@ function Header(){
         src={banner_3}
         alt='...'
       >
-        {/* <h5>Second slide label</h5> */}
-        {/* <button type="button" onClick={saveFile} className="bro_btn">DOWNLOAD BROCHURE</button> */}
+        
       </MDBCarouselItem>
     </MDBCarousel>
 
@@ -366,7 +376,7 @@ and maintain their competitiveness on worldwide scale.</p>
               <p className="footer_head">Locations</p>
               <p>ERNAKULAM, KALADY, KALLUMALA, UAE</p>
               <p className="footer_head">Head Office:</p>
-              <p>SECOND FLOOR, ASHIS BUILDING, MARINE DRIVE HIGH COURT JUNCTION, ERNAKULAM <br></br>682031</p>
+              <p>Ebenezer Villa, House No. 16/209A, Piraroor P.O, Kalady<br></br>683574</p>
               </div>
               <div className="col-lg-flex col-xl-flex footer_details_2">
               <p className="footer_head">Quick Links</p>
@@ -394,7 +404,9 @@ and maintain their competitiveness on worldwide scale.</p>
         </div>
         <div className="col-lg-12 col-xl-12 col-md-12 col-sm-12 rights">
           <p>© 2022 Copyright. Designed by <a href="https://luc.to/aaron" > ATJ</a></p>
-        </div>
+        </div></div>)}
+        
+      
       </section>
     );
 }
