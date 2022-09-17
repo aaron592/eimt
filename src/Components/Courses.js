@@ -20,6 +20,7 @@ import { saveAs } from "file-saver";
 function Courses(){
 
   let [courses,setCourses]= useState([]);
+  let [store,setStore]= useState([]);
   const [loading, setLoading] = useState(false);
 
   const saveForm = () => {
@@ -30,6 +31,7 @@ function Courses(){
   };
 
   useEffect(()=>{
+    
     setLoading(true);
       setTimeout(() => {
         setLoading(false);
@@ -38,6 +40,7 @@ function Courses(){
       .then((response)=>response.json())
       .then((courseData)=>{
           setCourses(courseData);
+          setStore(courseData);
       })
       .catch((err)=>{
           console.log(err);
@@ -45,9 +48,8 @@ function Courses(){
 
   },[])
 
-
   function filterData(course){
-    const updatedData = courses.filter((cour)=>{
+      let updatedData = courses.filter((cour)=>{
       return cour.course === course;
     })
     setCourses(updatedData);
@@ -66,6 +68,19 @@ function Courses(){
     
       let [menubar,setMenu] = useState(false);
       let [menubar1,setMenu1] = useState(false);
+
+      
+      
+      function readValue(value){
+            courses=store;
+            setCourses(courses);
+            const updatedData = courses.filter((cour)=>{
+            return cour.course === value;
+        })
+        setCourses(updatedData);
+      }
+      
+      
 
      
     return(
@@ -116,7 +131,14 @@ function Courses(){
               ):null}
               <div className="col-xl-4 col-sm-6 col-md-8 nav_details">
                   <Link style={{ textDecoration: 'none', color: '#494949' }} to="/"><p className="nav_p">Home</p></Link>
-                  <Link style={{ textDecoration: 'none', color: '#494949' }} to="/about"><p className="nav_p">About</p></Link>
+                  <p className="dropdown">
+                  <span>About ⮟</span>
+                  <div class="dropdown-content">
+                  <Link style={{ textDecoration: 'none', color: '#494949' }} to="/about"> <p className="drop_p">About Us</p></Link>
+                      <p>Board</p>
+                      <p>Certification</p>
+                  </div>
+                  </p>
                   <Link style={{ textDecoration: 'none', color: '#494949' }} to="/courses"><p className="nav_p">Courses</p></Link>
                   <Link style={{ textDecoration: 'none', color: '#494949' }} to="/contact"><p className="nav_p">Contact</p></Link>
               </div>
@@ -145,7 +167,7 @@ function Courses(){
     </div>
 
 
-        <div className="filter_container">
+        {/* <div className="filter_container">
            <button onClick={()=>filterData('Programming')}>Programming</button>
            <button onClick={()=>filterData('Graphic Designing')}>Graphic Designing</button>
            <button onClick={()=>filterData('Networking')}>Networking</button>
@@ -155,9 +177,17 @@ function Courses(){
            <button onClick={()=>filterData('Hotel Management')}>Hotel Management</button>
            <button onClick={()=>filterData('Fire & Safety')}>Fire & Safety</button>
            <button onClick={()=>filterData('Aviation')}>Aviation</button>
-        </div>
+        </div> */}
         <div className="course_header_tag">
            <h2>&#128366; Courses</h2>
+           <div>
+           <select class="classic" onChange={(event)=>{readValue(event.target.value)}}>
+  <option value="">Select Any Course</option>
+  <option value="Programming">Programming Courses</option>
+  <option value="Aviation">Aviation Courses</option>
+  <option value="Hotel Management">Hotel Management Courses</option>
+</select>
+           </div>
         </div>
         <div className="course_container">
           {

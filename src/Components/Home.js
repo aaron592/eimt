@@ -3,6 +3,7 @@ import Slider from "react-slick";
 import 'slick-carousel/slick/slick.css';
 import "slick-carousel/slick/slick-theme.css";
 import { Nav, Navbar } from 'react-bootstrap';
+
 import '../css/Header.css';
 import eimt from '../images/eimt.png'
 import banner_1 from '../images/Banner_1.png';
@@ -110,7 +111,14 @@ function Header(){
                      </div>
                      <div className="col-xl-4 col-sm-6 col-md-8 nav_details_new" onClick={()=>{setMenu(true)}}>
                      <Link style={{ textDecoration: 'none', color: 'white' }} to="/"><p className="nav_p">Home</p></Link>
-                  <Link style={{ textDecoration: 'none', color: 'white' }} to="/about"><p className="nav_p">About</p></Link>
+                     <p className="dropdown" onClick={()=>{setMenu(true)}}>
+                  <span onClick={()=>{setMenu(true)}}>About ⮟</span>
+                  <div class="dropdown-content" onClick={()=>{setMenu(true)}}>
+                  <Link style={{ textDecoration: 'none', color: '#494949' }} to="/about"> <p className="drop_p" onClick={()=>{setMenu(true)}}>About Us</p></Link>
+                      <p>Board</p>
+                      <p >Certification</p>
+                  </div>
+                  </p>
                   <Link style={{ textDecoration: 'none', color: 'white' }} to="/courses"><p className="nav_p">Courses</p></Link>
                   <Link style={{ textDecoration: 'none', color: 'white' }} to="/contact"><p className="nav_p">Contact</p></Link>
               </div>
@@ -127,7 +135,14 @@ function Header(){
                 <section className="cover" onClick={()=>{setMenu1(false)}}>
                 <div className="col-xl-4 col-sm-6 col-md-8 nav_details_new">
                   <Link style={{ textDecoration: 'none', color: 'white' }} to="/"><p className="nav_p">Home</p></Link>
-                  <Link style={{ textDecoration: 'none', color: 'white' }} to="/about"><p className="nav_p">About</p></Link>
+                  <p className="dropdown">
+                  <span>About ⮟</span>
+                  <div class="dropdown-content">
+                  <Link style={{ textDecoration: 'none', color: '#494949' }} to="/about"> <p className="drop_p">About Us</p></Link>
+                      <p>Board</p>
+                      <p>Certification</p>
+                  </div>
+                  </p>
                   <Link style={{ textDecoration: 'none', color: 'white' }} to="/courses"><p className="nav_p">Courses</p></Link>
                   <Link style={{ textDecoration: 'none', color: 'white' }} to="/contact"><p className="nav_p">Contact</p></Link>
               </div>
@@ -138,7 +153,14 @@ function Header(){
               ):null}
               <div className="col-xl-4 col-sm-6 col-md-8 nav_details">
                   <Link style={{ textDecoration: 'none', color: '#494949' }} to="/"><p className="nav_p">Home</p></Link>
-                  <Link style={{ textDecoration: 'none', color: '#494949' }} to="/about"><p className="nav_p">About</p></Link>
+                  <p className="dropdown">
+                  <span>About ⮟</span>
+                  <div class="dropdown-content">
+                  <Link style={{ textDecoration: 'none', color: '#494949' }} to="/about"> <p className="drop_p">About Us</p></Link>
+                      <p>Board</p>
+                      <p>Certification</p>
+                  </div>
+                  </p>
                   <Link style={{ textDecoration: 'none', color: '#494949' }} to="/courses"><p className="nav_p">Courses</p></Link>
                   <Link style={{ textDecoration: 'none', color: '#494949' }} to="/contact"><p className="nav_p">Contact</p></Link>
               </div>
@@ -257,7 +279,7 @@ and maintain their competitiveness on worldwide scale.</p>
                  <img src={principal} />
              </div>
              <div className="msg_left">
-                 <div className="regular"><h1>&#10077;</h1>We take the responsibility of EIMT for the future of the students to create an educational sector that invokes the moral values ​​of the past and shapes the future of the present. EIMT has faculty and dedicated members with global perspective and experience.<h6>- Mrs. Sheenamol Joseph</h6></div>
+                 <div className="regular"><h3>Message From Our Director</h3><h1>&#10077;</h1>We take the responsibility of EIMT for the future of the students to create an educational sector that invokes the moral values ​​of the past and shapes the future of the present. EIMT has faculty and dedicated members with global perspective and experience.<h6>- Mrs. Sheenamol Joseph</h6></div>
              </div>
            </div>
         </div>
@@ -265,7 +287,7 @@ and maintain their competitiveness on worldwide scale.</p>
         <div className="d-flex flex-row  prin_tab">
            <div className="d-flex flex-row prin_div">
              <div className="msg_left">
-                 <div className="regular"><h1>&#10077;</h1>We see it as EIMT's responsibility to build an educational sector inspired by yesterday as a promise for tomorrow. Selfless service and dedication sets us apart.We encourage mutual respect and positive thinking. We are always willing to provide assistance and guidance to the job opportunities worldwide.<h6>- Bp.Rev.Dr.Simon Peter</h6></div>
+                 <div className="regular"><h3>Message From Our Principal</h3><h1>&#10077;</h1>We see it as EIMT's responsibility to build an educational sector inspired by yesterday as a promise for tomorrow. Selfless service and dedication sets us apart.We encourage mutual respect and positive thinking. We are always willing to provide assistance and guidance to the job opportunities worldwide.<h6>- Bp.Rev.Dr.Simon Peter</h6></div>
              </div>
              <div className="img_right">
                  <img src={director} />

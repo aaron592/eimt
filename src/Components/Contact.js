@@ -113,7 +113,14 @@ function Contact(){
               ):null}
               <div className="col-xl-4 col-sm-6 col-md-8 nav_details">
                   <Link style={{ textDecoration: 'none', color: '#494949' }} to="/"><p className="nav_p">Home</p></Link>
-                  <Link style={{ textDecoration: 'none', color: '#494949' }} to="/about"><p className="nav_p">About</p></Link>
+                  <p className="dropdown">
+                  <span>About ⮟</span>
+                  <div class="dropdown-content">
+                  <Link style={{ textDecoration: 'none', color: '#494949' }} to="/about"> <p className="drop_p">About Us</p></Link>
+                      <p>Board</p>
+                      <p>Certification</p>
+                  </div>
+                  </p>
                   <Link style={{ textDecoration: 'none', color: '#494949' }} to="/courses"><p className="nav_p">Courses</p></Link>
                   <Link style={{ textDecoration: 'none', color: '#494949' }} to="/contact"><p className="nav_p">Contact</p></Link>
               </div>
