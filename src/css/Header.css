@@ -991,6 +991,7 @@ marquee{
      .footer_details_4{
          width:100%;
          justify-content:space-evenly;
+         height:17vh;
      }
  
      .flex-row{ display: flex !important;
@@ -1397,6 +1398,7 @@ marquee{
     .footer_details_4{
         width:100%;
         justify-content:space-evenly;
+        height:17vh;
     }
 
     .flex-row{ display: flex !important;
@@ -1452,8 +1454,8 @@ marquee{
 
     .course_1{
         width:3%;
-        overflow: hidden;
         height:auto;
+        overflow: hidden;
         border:1px solid lightgrey; 
 
     }
@@ -1478,10 +1480,11 @@ marquee{
     }
 
     .msg_left{
-        width:90%;
+        height: auto;
     }
     .regular{
         width:100%;
+        height:auto;
     }
 
     .img_right{
@@ -1641,6 +1644,20 @@ marquee{
     .d-block{
         height:450px;
     }
+
+    .menu{
+            border:1px solid black;
+            background-color:#c6ddf9;
+            color:black;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            padding-left:10px;
+            padding-right:10px;
+            position:relative; 
+            display:flex;
+            border-radius:5px;
+    
+    }
     .menu_sm{display:none;}
     .row{
         display:flex;
@@ -1711,7 +1728,7 @@ marquee{
     }
     
     .prin_div{
-        width:70%;
+        width:50%;
         height:auto;
         background-color:white;
         box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(205, 205, 205, 0.8) -6px -2px 16px 0px;
@@ -1789,6 +1806,7 @@ marquee{
     }
     
     .bro_btn{
+        width:auto;
         padding-top:10px;
         padding-bottom:10px;
         padding-left:20px;
@@ -1851,6 +1869,97 @@ marquee{
         
     }
 
+    .slanding1{
+        height:auto;
+    }
+
+    .slanding1>p{
+        padding-top:15px;
+        text-align:center;
+        width:100%;
+    }
+    .slanding2{
+        height:auto;
+    }
+
+    .slanding2>p{
+        padding-top:15px;
+        text-align:center;
+        width:100%;
+    }
+
+    .new_slide{
+        height:auto;
+    }
+
+    .slide_1{
+        height:auto;
+    }
+
+    .courses_1{
+        height:auto;
+    }
+    .course_1{
+        height:30vh;
+        width:1.5%
+
+    }
+    
+    .footer{
+        background-color:#093450;
+         padding-top:20px;
+         padding-left:20px;
+         /* background-color:blue; */
+         box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
+         height:auto;
+     }
+ 
+     .footer_details{
+         display:flex;
+         flex-direction:column;
+         justify-content:space-evenly;
+         width:100%;
+         color:white;
+     }
+ 
+     .footer_details_1{
+         width:100%;
+         /* background-color:red; */
+         height:auto;
+     }
+ 
+     .footer_details_2{
+         width:100%;
+         /* margin-bottom:20px; */
+         height:auto; 
+     }
+ 
+     .social{
+         display:flex;
+         align-items: flex-start;
+         justify-content:space-evenly;
+     }
+     
+ 
+     .footer_details_4{
+         width:100%;
+         justify-content:space-evenly;
+         height:auto;
+     }
+ 
+     .flex-row{ display: flex !important;
+         flex-direction: column !important;
+     }
+ 
+     .d-flex{
+         display: flex !important;
+         flex-direction: column !important;
+     
+     }
+ 
+     .footer_logo{
+         width:100%;
+     }
   }
 
 
