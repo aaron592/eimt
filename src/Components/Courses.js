@@ -69,6 +69,9 @@ function Courses(){
       let [menubar,setMenu] = useState(false);
       let [menubar1,setMenu1] = useState(false);
 
+      let [cour,courModal] = useState(false);
+
+      let [load,setLoadData] = useState({});
       
       
       function readValue(value){
@@ -80,8 +83,18 @@ function Courses(){
         setCourses(updatedData);
       }
       
+      function courseModal(id){
+        fetch(`https://eimt-backend.herokuapp.com/course/sub/${id}`)
+        .then((response)=>response.json())
+        .then((data)=>{
+        // console.log(data);
+        setLoadData(data);
+        })
+        .catch((err)=>{
+        console.log(err);
+        })
+      }
       
-
      
     return(
         <section>
@@ -132,11 +145,11 @@ function Courses(){
               <div className="col-xl-4 col-sm-6 col-md-8 nav_details">
                   <Link style={{ textDecoration: 'none', color: '#494949' }} to="/"><p className="nav_p">Home</p></Link>
                   <p className="dropdown">
-                  <span>About ⮟</span>
+                  <span className="nav_p">About ⮟</span>
                   <div class="dropdown-content">
-                  <Link style={{ textDecoration: 'none', color: '#494949' }} to="/about"> <p className="drop_p">About Us</p></Link>
-                      <p>Board</p>
-                      <p>Certification</p>
+                  <Link style={{ textDecoration: 'none', color: '#494949' }} to="/about"> <p className="nav_p drop_p">About Us</p></Link>
+                      <p className="nav_p">Board</p>
+                      <p className="nav_p">Certification</p>
                   </div>
                   </p>
                   <Link style={{ textDecoration: 'none', color: '#494949' }} to="/courses"><p className="nav_p">Courses</p></Link>
@@ -153,6 +166,30 @@ function Courses(){
            </div>
           
         </div>
+
+{
+  cour===true?
+  (
+
+    <div className="cour_modal_container">
+          <div className="cour_modal">
+           <div className="close_cont">
+              <button onClick={()=>{courModal(false)}}>&#10006;</button>
+           </div>
+           <div className="d-flex flex-row cour_m">
+           <div className="cour_img">
+              <img src={load.image} width="100%" height="100%"/>
+           </div>
+          <div className="cour_details">
+               <h3>{load.name}</h3>
+               <p>{load.description}</p>
+                <p><span>Course type:</span> {load.course}</p>
+          </div>
+           </div>
+          </div>
+        </div>
+  ):null
+}
 
         <div className="col-lg-12 col-xl-12 about_msg">
        <img src={about_img}/>
@@ -193,12 +230,19 @@ function Courses(){
           {
             courses.map((course,index)=>{
                return(
-                <div className="course_container1" key={index}>
+                <div className="course_container1" key={index} onClick={()=>{
+                  courseModal(course._id)
+                  courModal(true)
+                  }}>
               <div className="course_img_cont">
               <img src={course.image} alt={course.name} />
               </div>
               <div className="course_details_cont">
-                 <h6>{course.name}</h6>
+                 <h6 onClick={()=>{
+                  courseModal(course._id)
+                  courModal(true)
+                  }}>{course.name}</h6>
+                  <button onClick={()=>{courModal(true)}} className="view_more">VIEW DETAILS</button>
                  <p>{course.description}</p>
               </div>
            </div>
@@ -224,10 +268,10 @@ function Courses(){
               </div>
               <div className="col-lg-flex col-xl-flex footer_details_2">
               <p className="footer_head">Quick Links</p>
-              <Link style={{ textDecoration: 'none', color: 'white' }} to="/"><p>Home</p></Link>
-                <Link style={{ textDecoration: 'none', color: 'white' }} to="/about"><p>About</p></Link>
+              <Link style={{ textDecoration: 'none', color: 'black' }} to="/"><p>Home</p></Link>
+                <Link style={{ textDecoration: 'none', color: 'black' }} to="/about"><p>About</p></Link>
                 <p>Courses</p>
-                <Link style={{ textDecoration: 'none', color: 'white' }} to="/contact"> <p>Contact</p></Link>
+                <Link style={{ textDecoration: 'none', color: 'black' }} to="/contact"> <p>Contact</p></Link>
               </div>
               <div className="footer_details_3">
               <p className="footer_head">Courses</p>

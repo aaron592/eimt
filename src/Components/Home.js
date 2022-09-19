@@ -111,9 +111,9 @@ function Header(){
                      </div>
                      <div className="col-xl-4 col-sm-6 col-md-8 nav_details_new" onClick={()=>{setMenu(true)}}>
                      <Link style={{ textDecoration: 'none', color: 'white' }} to="/"><p className="nav_p">Home</p></Link>
-                     <p className="dropdown" onClick={()=>{setMenu(true)}}>
-                  <span onClick={()=>{setMenu(true)}}>About ⮟</span>
-                  <div class="dropdown-content" onClick={()=>{setMenu(true)}}>
+                     <p className="dropdown" >
+                  <span >About ⮟</span>
+                  <div class="dropdown-content" >
                   <Link style={{ textDecoration: 'none', color: '#494949' }} to="/about"> <p className="drop_p" onClick={()=>{setMenu(true)}}>About Us</p></Link>
                       <p>Board</p>
                       <p >Certification</p>
@@ -154,11 +154,11 @@ function Header(){
               <div className="col-xl-4 col-sm-6 col-md-8 nav_details">
                   <Link style={{ textDecoration: 'none', color: '#494949' }} to="/"><p className="nav_p">Home</p></Link>
                   <p className="dropdown">
-                  <span>About ⮟</span>
+                  <span className="nav_p">About ⮟</span>
                   <div class="dropdown-content">
-                  <Link style={{ textDecoration: 'none', color: '#494949' }} to="/about"> <p className="drop_p">About Us</p></Link>
-                      <p>Board</p>
-                      <p>Certification</p>
+                  <Link style={{ textDecoration: 'none', color: '#494949' }} to="/about"> <p className="nav_p drop_p">About Us</p></Link>
+                      <p className="nav_p">Board</p>
+                      <p className="nav_p">Certification</p>
                   </div>
                   </p>
                   <Link style={{ textDecoration: 'none', color: '#494949' }} to="/courses"><p className="nav_p">Courses</p></Link>
@@ -402,10 +402,10 @@ and maintain their competitiveness on worldwide scale.</p>
               </div>
               <div className="col-lg-flex col-xl-flex footer_details_2">
               <p className="footer_head">Quick Links</p>
-                <p>Home</p>
-                <Link style={{ textDecoration: 'none', color: 'white' }} to="/about"><p>About</p></Link>
-                <Link style={{ textDecoration: 'none', color: 'white' }} to="/courses"><p>Courses</p></Link>
-                <Link style={{ textDecoration: 'none', color: 'white' }} to="/contact"><p>Contact</p></Link>
+                <p style={{ textDecoration: 'none', color: 'black' }}>Home</p>
+                <Link style={{ textDecoration: 'none', color: 'black' }} to="/about"><p>About</p></Link>
+                <Link style={{ textDecoration: 'none', color: 'black' }} to="/courses"><p>Courses</p></Link>
+                <Link style={{ textDecoration: 'none', color: 'black' }} to="/contact"><p>Contact</p></Link>
               </div>
               <div className="footer_details_3">
               <p className="footer_head">Courses</p>
