@@ -143,17 +143,68 @@ function Contact(){
              <div className="about_h1">
                <h1>Contact Us</h1>
              </div>
-             <div className="text_h">
-             <div className="text_head">Get in touch</div> 
-             <div className="text_head"> 
-               <span>&nbsp;and let us know how we can help you</span>
-             </div>
-             </div>
+             
           </div>
        </span>
     </div>
 
-      <div className="col-lg-12 col-xl-12 col-md-12 col-sm-12 contact_form">
+    <div className="contact_head">
+       <h2>Get In Touch</h2>
+       <p>For all enquiries, please contact us using the form below</p>
+       <div className="d-flex flex-row contact_divs_cont">
+          <div className="contact_div_cont1">
+             <h6>Head Office:</h6>
+             <p>Ebenezer Villa, House No. 16/209A,<br></br> Piraroor P.O, Kalady<br></br>683574</p>
+          </div>
+          <div className="contact_div_cont1">
+              <h6>For general inquiries:</h6>
+              <p>+91 8590 745 911</p>
+              <p>+91 9744 914 308</p>
+          </div>
+          <div className="contact_div_cont1">
+          <h6>For email inquiries:</h6>
+          <p style={{color:"green"}}>Send us your query anytime!</p>
+          <p>admission@ebenezer-imt.org</p>
+          </div>
+       </div>
+    </div>
+
+    <div className="contact_form_cont">
+        <h2>Send Us Mail</h2>
+        <div className="d-flex flex-row contact_form_container">
+           <div className="contact_form_container1">
+           <input type="text" placeholder="First Name" onChange={(event)=>{
+                          readValue("username",event.target.value);}}/>
+               <input type="email" placeholder="Your Email Address" onChange={(event)=>{
+                          readValue("email",event.target.value);
+                      }
+                      }/>
+               <input type="text" placeholder="Phone" onChange={(event)=>{
+                          readValue("phone",event.target.value);
+                      }
+                      }/>
+
+           </div>
+           <div className="contact_form_container2">
+           <textarea type="text" placeholder="Message" onChange={(event)=>{
+                          readValue("msg",event.target.value);
+                      }
+                      }></textarea>
+                        {
+                          messages!==null?(
+                          <div className="toast_div">
+                          {messages}
+                          {/* <img src="https://www.pngall.com/wp-content/uploads/2016/07/Success-PNG-Image.png"/> */}
+                          </div>
+                        ):null
+                      }
+               <button onClick={()=>{addForm();}}>Submit</button>
+           </div>
+
+        </div>
+
+    </div>
+      {/* <div className="col-lg-12 col-xl-12 col-md-12 col-sm-12 contact_form">
          <div className="d-flex flex-row contact_form_div">
              <div className="contact_form_div1">
                 <h6>CONTACT US</h6>
@@ -202,7 +253,7 @@ function Contact(){
                           messages!==null?(
                           <div className="toast_div">
                           {messages}
-                          {/* <img src="https://www.pngall.com/wp-content/uploads/2016/07/Success-PNG-Image.png"/> */}
+                          
                           </div>
                         ):null
                       }
@@ -210,9 +261,9 @@ function Contact(){
 
              </div>
          </div>
-      </div>
+      </div> */}
 
-
+{/* 
       <div className="col-lg-12 col-xl-12 col-md-12 col-sm-12 contact_divs">
         <div className="d-flex flex-row contact">
           <div className="col-lg-3 col-xl-3 col-md-12 col-sm-12 contact_tabs">
@@ -245,7 +296,7 @@ function Contact(){
           </div>
           
        </div>
-      </div>      
+      </div>       */}
 
           <div className="map_container">
           <iframe width="100%" height="100%" id="gmap_canvas" src="https://maps.google.com/maps?q=Ashis%20Building%20,Marine%20Drive%20Hign%20Court%20JN,%20Ernakulam%20682031&t=&z=19&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>

@@ -1,4 +1,9 @@
-
+.override{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    height:20vh;
+}
 
 .filter_container{
     width:100%;

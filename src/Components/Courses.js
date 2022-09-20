@@ -15,6 +15,7 @@ import youtube from '../images/youtube.png';
 import about_img from '../images/preview.jpg';
 import eimt from '../images/eimt.png';
 import { saveAs } from "file-saver";
+import PacmanLoader from "react-spinners/PacmanLoader";
 
 
 function Courses(){
@@ -22,6 +23,8 @@ function Courses(){
   let [courses,setCourses]= useState([]);
   let [store,setStore]= useState([]);
   const [loading, setLoading] = useState(false);
+
+  const [isLoading, isSetLoading] = useState(false)
 
   const saveForm = () => {
     saveAs(
@@ -36,10 +39,14 @@ function Courses(){
       setTimeout(() => {
         setLoading(false);
       }, 2000);
+
+      isSetLoading(true);
+
       fetch("https://eimt-backend.herokuapp.com/courses")
       .then((response)=>response.json())
       .then((courseData)=>{
           setCourses(courseData);
+          isSetLoading(false);
           setStore(courseData);
       })
       .catch((err)=>{
@@ -94,6 +101,11 @@ function Courses(){
         console.log(err);
         })
       }
+      const overide = `
+      display: block;
+      margin: 0 auto;
+      border-color: red;
+    `;
       
      
     return(
@@ -226,6 +238,15 @@ function Courses(){
 </select>
            </div>
         </div>
+
+        {
+          isLoading===true?
+          (
+            <div className="override">
+            <PacmanLoader color={'grey'} isLoading={isLoading} css={{overide}} size={20} />
+            </div>
+          ):(
+            
         <div className="course_container">
           {
             courses.map((course,index)=>{
@@ -251,8 +272,8 @@ function Courses(){
           }
           
         </div>
-
-        
+          )
+        }
 
         <div className="col-lg-12 col-xl-12 col-md-12 col-sm-12 footer">
             <div className="d-flex flex-row footer_details" id="footer_detail">
