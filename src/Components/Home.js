@@ -272,8 +272,44 @@ and maintain their competitiveness on worldwide scale.</p>
             </div>
          </div>
 
+         <div className="d-flex flex-row test_container">
+               <div className="test_cont1">
+                 <p></p>
+                 <h2>Message From Our Director & Principal</h2>
+                 <button className="register">Read More</button>
+               </div>
 
-        <div className="d-flex flex-row prin_tab">
+            <div className="test_cont2">
+               <div className="test_img">
+                  <img src={principal} />
+               </div>
+               <div className="test_text">
+                   <h1>&#10077;</h1>
+                   <p>We take the responsibility of EIMT for the future of the students to create an educational sector that invokes the moral values ​​of the past and shapes the future of the present. EIMT has faculty and dedicated members with global perspective and experience.</p>
+               </div>
+               <div className="test_head">
+                   <h6>Mrs. Sheenamol Joseph</h6>
+                   <p>Director</p>
+               </div>
+            </div>
+            <div className="test_cont2">
+            <div className="test_img">
+                  <img src={director} />
+               </div>
+               <div className="test_text">
+                   <h1>&#10077;</h1>
+                   <p>We see it as EIMT's responsibility to build an educational sector inspired by yesterday as a promise for tomorrow. Selfless service and dedication sets us apart.We encourage mutual respect and positive thinking. We are always willing to provide assistance and guidance to the job opportunities worldwide.</p>
+               </div>
+               <div className="test_head">
+                   <h6>Bp.Rev.Dr.Simon Peter</h6>
+                   <p>Principal</p>
+               </div>
+            </div>
+
+         </div>
+
+
+        {/* <div className="d-flex flex-row prin_tab">
            <div className="d-flex flex-row prin_div">
              <div className="img_right">
                  <img src={principal} />
@@ -293,7 +329,7 @@ and maintain their competitiveness on worldwide scale.</p>
                  <img src={director} />
              </div>
            </div>
-        </div>
+        </div> */}
 
 
 

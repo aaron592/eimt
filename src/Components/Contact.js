@@ -150,11 +150,11 @@ function Contact(){
 
     <div className="contact_head">
        <h2>Get In Touch</h2>
-       <p>For all enquiries, please contact us using the form below</p>
+       <p>To get in touch with us, feel free to mail or call and our team will get back to you at an earliest.</p>
        <div className="d-flex flex-row contact_divs_cont">
           <div className="contact_div_cont1">
              <h6>Head Office:</h6>
-             <p>Ebenezer Villa, House No. 16/209A,<br></br> Piraroor P.O, Kalady<br></br>683574</p>
+             <p>Ebenezer Villa, House No. 16/209A,Piraroor P.O, Kalady<br></br>683574</p>
           </div>
           <div className="contact_div_cont1">
               <h6>For general inquiries:</h6>
@@ -170,7 +170,8 @@ function Contact(){
     </div>
 
     <div className="contact_form_cont">
-        <h2>Send Us Mail</h2>
+        <h2>Contact Us</h2>
+        <p>For registration questions please get in touch using the contact form below.</p>
         <div className="d-flex flex-row contact_form_container">
            <div className="contact_form_container1">
            <input type="text" placeholder="First Name" onChange={(event)=>{
