@@ -2,12 +2,72 @@ import '../css/Header.css';
 import '../css/Admin.css';
 import logo from '../images/eimt_final.png';
 import {Link} from 'react-router-dom';
-import {useEffect ,useState, React} from 'react';
+import {useEffect ,useState, React,useRef} from 'react';
 import { PieChart, Pie} from 'recharts';
+import {Chart as ChartJS, BarElement,ArcElement,Tooltip,Legend ,CategoryScale, LinearScale} from 'chart.js';
+import {Bar,Doughnut} from 'react-chartjs-2';
+import { useNavigate } from 'react-router-dom';
+
+ChartJS.register(
+  CategoryScale,
+  LinearScale,
+  BarElement,
+  ArcElement,Tooltip,Legend
+)
 
 function Admin(){
-
   
+  let navigate = useNavigate();
+  let token=useRef(JSON.parse(localStorage.getItem("admin")).token);
+  // console.log(token.current)
+  
+  const [chart, setChart] = useState([])
+
+  let courseUrl = "https://eimt-backend.herokuapp.com/courses"
+// console.log(chart.filter(x => x.course === 'Hotel Management').length);
+   var data2= {
+    labels: ['Programming','Aviation','Hotel Management','Dubbing'],
+    datasets: [{
+        label: '5 of Votes',
+        data : [chart.filter(x => x.course === 'Programming').length,chart.filter(x => x.course === 'Aviation').length,chart.filter(x => x.course === 'Hotel Management').length,chart.filter(x => x.course === 'Dubbing').length],
+        backgroundColor: [
+            'rgba(255, 99, 132, 0.2)',
+            'rgba(54, 162, 235, 0.2)',
+            'rgba(255, 206, 86, 0.2)',
+            'rgba(75, 192, 192, 0.2)',
+            'rgba(153, 102, 255, 0.2)',
+            'rgba(255, 159, 64, 0.2)'
+        ],
+        borderColor: [
+            'rgba(255, 99, 132, 1)',
+            'rgba(54, 162, 235, 1)',
+            'rgba(255, 206, 86, 1)',
+            'rgba(75, 192, 192, 1)',
+            'rgba(153, 102, 255, 1)',
+            'rgba(255, 159, 64, 1)'
+        ],
+        borderWidth: 1
+    }]
+}
+ var options= {
+  maintainAspectRatio: false,
+  scales: {
+      y: {
+          beginAtZero: true
+      }
+  }, 
+  legend:{
+    labels:{
+      fontSize: 26
+    }
+  }
+}
+
+const logout = () => {
+  localStorage.removeItem('admin');
+  navigate('/login');
+  
+};
 
     let newItems={};
 
@@ -25,7 +85,14 @@ function Admin(){
    
 
     useEffect(() => {
-        fetch("https://eimt-backend.herokuapp.com/data")
+
+        readValue();
+        fetch("https://eimt-backend.herokuapp.com/data",{
+          method:"GET",
+          headers:{
+              "Authorization": `Bearer ${token.current}`
+          }
+      })
         .then((response)=>response.json())
         .then((data)=>{
             // console.log(data);
@@ -35,15 +102,33 @@ function Admin(){
             console.log(err);
         })
 
-        fetch("https://eimt-backend.herokuapp.com/courses")
-      .then((response)=>response.json())
-      .then((courseData)=>{
-          setCourses(courseData);
-      })
-      .catch((err)=>{
-          console.log(err);
-      })
-      }, []);
+        const fetchCourses = async()=>{
+          await fetch(`${courseUrl}`,{
+            method: 'GET',
+            headers:{
+              'Content-Type': 'application/json',
+              'Access-Control-Allow-Origin': '*'
+            }
+          }).then((response)=>{
+            response.json().then((json)=>{
+              setChart(json);
+            })
+          }).catch(error=>{
+            console.log(error);
+          })
+        }
+
+        fetchCourses();
+
+      //   fetch("https://eimt-backend.herokuapp.com/courses")
+      // .then((response)=>response.json())
+      // .then((courseData)=>{
+      //     setCourses(courseData);
+      // })
+      // .catch((err)=>{
+      //     console.log(err);
+      // })
+      }, [courseUrl]);
     
       let [menubar,setMenu] = useState(false);
       let [menubar1,setMenu1] = useState(false);
@@ -85,7 +170,7 @@ function Admin(){
                      
                      
               <div className="col-lg-2 col-xl-2 col-sm-6 col-md-8 login_details_new">
-                <button className="register_new">Logout</button>
+                <button className="register_new" onClick={()=>{logout()}}>Logout</button>
               </div>
               </section>
                     ):null}
@@ -103,7 +188,7 @@ function Admin(){
               ):null}
               
               <div className="col-lg-2 col-xl-2 col-sm-6 col-md-8 login_details">
-                <button className="register">Logout</button>
+                <button className="register" onClick={()=>{logout()}}>Logout</button>
               </div>
               
            </div>
@@ -140,11 +225,20 @@ function Admin(){
 
         <div className="col-lg-12 col-xl-12 col-md-12 col-sm-12 admin_panel">
            <div className="col-lg-2 col-xl-2 col-md-12 col-sm-12 course_nut">
-           <PieChart width={100} height={100}>
-          <Pie data={data} dataKey="students" outerRadius={50} innerRadius={25} fill="#900C3F" />
-        </PieChart>
+               <Bar 
+               data={data2}
+               height={100}
+               options={options}
+               />
            </div>
            <div className="col-lg-2 col-xl-2 col-md-12 col-sm-12 course_nut">
+               <Doughnut
+                 data={data2}
+               height={100}
+               options={options}
+               />
+           </div>
+           <div className="col-lg-2 col-xl-2 col-md-12 col-sm-12 course_nut1">
            <div className="">
             <h3>&#x1f441;</h3>
            </div>

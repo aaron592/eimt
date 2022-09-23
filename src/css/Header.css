@@ -2,6 +2,15 @@ body{
     background-color:#ffffff;
 }
 
+.aos-animate {
+    opacity: 1;
+    transform: translateZ(0);
+    transition-duration: 1s;
+}
+
+body[data-aos-duration="400"] [data-aos] {
+    transition-duration: 1s;
+}
 
 .loader-container {
     width: 100%;
@@ -608,7 +617,7 @@ marquee{
 .new_slide{
     overflow: hidden;
     /* background-color:#b4d5fd; */
-    height:70vh;
+    height:auto;
     margin-top:50px;
     
 }
@@ -1261,96 +1270,105 @@ marquee{
         display:none
     }
            
-.test_container{
-    width:100%;
-    height:auto;
-    padding-top: 10px;
-    padding-bottom:10px;
-    background-color:rgb(241, 241, 248);
-    display:flex;
-    flex-direction:column;
-    justify-content:space-evenly;
-    align-items:center;
-    /* background-image: url('https://www.ipec.org.in/wp-content/uploads/2021/05/banner-images.png'); */
-}
-
-.test_cont1{
-    width:90%;
-    padding-bottom: 30px;
-    /* background-color:#EF6666; */
-    border-radius: 10px;
-
-    display: flex;
-    flex-direction: column;
-    align-items:center;
-    justify-content:center;
-}
-.test_cont1>h2{
-    text-align:center;
-    /* color:white */
-}
-.test_cont2{
-    margin-bottom:20px;
-    width:90%;
-    height:auto;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    background-color:rgb(255, 244, 221);
-    border-radius:15px;
-    box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(205, 205, 205, 0.8) -6px -2px 16px 0px;
-
-}
-.test_img{
-    width:100%;
-    height:15vh;
-    background-color:rgb(255, 244, 221);
-    display:flex;
-    align-items:center;
-    justify-content:center;
-}
-.test_img>img{
-    width:26%;
-    height:95%;
-    border-radius: 100%;
-    padding-top:2px;
-    padding-bottom:2px;
-}
-.test_text>h1{
-    padding-left:25px;
-    color:#f60;
-}
-.test_text>p{
-    padding-left:22px;
-    padding-right:22px;
-    text-align: center;
-    font-weight: bold;
-}
-.test_text{
-    width:100%;
-    padding-bottom:10px;
-    height:auto;
-    /* background-color:green; */
-}
-.test_head{
-    padding-top:10px;
-    padding-bottom:10px;
-    width:100%;
-    height:auto;
-    /* background-color:yellow; */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     
-    border-top: 1px solid rgb(209, 209, 209);
-    border-image: linear-gradient(to right,to top,to bottom, rgb(255, 206, 206) 50%, transparent 50%) 100% 1;
-}
-.test_head>h6{
-    color:#174e74;
-    font-weight: bold;
-}
-.test_head>p{
-    color:grey;
-}
+    .test_container{
+        width:100%;
+        padding-top: 10px;
+        padding-bottom:50px;
+        background-color:rgb(241, 241, 248);
+        display:flex;
+        flex-direction: column;
+        justify-content:center;
+        align-items:center;
+        /* background-image: url('https://www.ipec.org.in/wp-content/uploads/2021/05/banner-images.png'); */
+    }
+    
+    .test_main{
+        width:100%;
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content:center;
+    
+    }
+    
+    .test_cont1{
+        width:80%;
+        padding-bottom: 50px;
+        /* background-color:#EF6666; */
+        border-radius: 10px;
+    
+        display: flex;
+        align-items:center;
+        justify-content:center;
+    }
+    .test_cont1>h2{
+        text-align:center;
+        text-decoration: underline #EF6666;
+        /* color:white */
+    }
+    .test_cont2{
+        width:90%;
+        height:auto;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        margin-bottom:15px;
+        background-color:rgb(255, 249, 235);
+        border-radius:15px;
+        box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(205, 205, 205, 0.8) -6px -2px 16px 0px;
+    
+    }
+    .test_img{
+        width:100%;
+        height:15vh;
+        background-color:rgb(255, 244, 221);
+        display:flex;
+        align-items:center;
+        justify-content:center;
+    }
+    .test_img>img{
+        width:26%;
+        height:95%;
+        border-radius: 100%;
+        padding-top:2px;
+        padding-bottom:2px;
+    }
+    .test_text>h1{
+        padding-left:25px;
+        color:#f60;
+    }
+    .test_text>p{
+        padding-left:25px;
+        padding-right:25px;
+        text-align: center;
+        font-weight: bold;
+    }
+    .test_text{
+        width:100%;
+        padding-bottom:10px;
+        height:auto;
+        /* background-color:green; */
+    }
+    .test_head{
+        padding-top:10px;
+        padding-bottom:10px;
+        width:100%;
+        height:auto;
+        /* background-color:yellow; */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+        border-top: 1px solid rgb(209, 209, 209);
+        border-image: linear-gradient(to right,to top,to bottom, rgb(255, 206, 206) 50%, transparent 50%) 100% 1;
+    }
+    .test_head>h6{
+        color:#174e74;
+        font-weight: bold;
+    }
+    .test_head>p{
+        color:grey;
+    }
 }
 
 
@@ -1758,96 +1776,104 @@ marquee{
     }
     
         
-.test_container{
-    width:100%;
-    height:auto;
-    padding-top: 10px;
-    padding-bottom:10px;
-    background-color:rgb(241, 241, 248);
-    display:flex;
-    flex-direction:column;
-    justify-content:space-evenly;
-    align-items:center;
-    /* background-image: url('https://www.ipec.org.in/wp-content/uploads/2021/05/banner-images.png'); */
-}
-
-.test_cont1{
-    width:90%;
-    padding-bottom: 30px;
-    /* background-color:#EF6666; */
-    border-radius: 10px;
-
-    display: flex;
-    flex-direction: column;
-    align-items:center;
-    justify-content:center;
-}
-.test_cont1>h2{
-    text-align:center;
-    /* color:white */
-}
-.test_cont2{
-    margin-bottom:20px;
-    width:90%;
-    height:auto;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    background-color:rgb(255, 244, 221);
-    border-radius:15px;
-    box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(205, 205, 205, 0.8) -6px -2px 16px 0px;
-
-}
-.test_img{
-    width:100%;
-    height:15vh;
-    background-color:rgb(255, 244, 221);
-    display:flex;
-    align-items:center;
-    justify-content:center;
-}
-.test_img>img{
-    width:26%;
-    height:95%;
-    border-radius: 100%;
-    padding-top:2px;
-    padding-bottom:2px;
-}
-.test_text>h1{
-    padding-left:25px;
-    color:#f60;
-}
-.test_text>p{
-    padding-left:22px;
-    padding-right:22px;
-    text-align: center;
-    font-weight: bold;
-}
-.test_text{
-    width:100%;
-    padding-bottom:10px;
-    height:auto;
-    /* background-color:green; */
-}
-.test_head{
-    padding-top:10px;
-    padding-bottom:10px;
-    width:100%;
-    height:auto;
-    /* background-color:yellow; */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    .test_container{
+        width:100%;
+        padding-top: 10px;
+        padding-bottom:50px;
+        background-color:rgb(241, 241, 248);
+        display:flex;
+        flex-direction: column;
+        justify-content:center;
+        align-items:center;
+        /* background-image: url('https://www.ipec.org.in/wp-content/uploads/2021/05/banner-images.png'); */
+    }
     
-    border-top: 1px solid rgb(209, 209, 209);
-    border-image: linear-gradient(to right,to top,to bottom, rgb(255, 206, 206) 50%, transparent 50%) 100% 1;
-}
-.test_head>h6{
-    color:#174e74;
-    font-weight: bold;
-}
-.test_head>p{
-    color:grey;
-}
+    .test_main{
+        width:100%;
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content:center;
+    
+    }
+    
+    .test_cont1{
+        width:80%;
+        padding-bottom: 50px;
+        /* background-color:#EF6666; */
+        display: flex;
+        align-items:center;
+        justify-content:center;
+
+    }
+    .test_cont1>h2{
+        text-align:center;
+        /* color:white */
+        text-decoration: underline #EF6666;
+
+    }
+    .test_cont2{
+        width:90%;
+        height:auto;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        margin-bottom: 15px;
+        background-color:rgb(255, 249, 235);
+        border-radius:15px;
+        box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(205, 205, 205, 0.8) -6px -2px 16px 0px;
+    
+    }
+    .test_img{
+        width:100%;
+        height:15vh;
+        background-color:rgb(255, 244, 221);
+        display:flex;
+        align-items:center;
+        justify-content:center;
+    }
+    .test_img>img{
+        width:26%;
+        height:95%;
+        border-radius: 100%;
+        padding-top:2px;
+        padding-bottom:2px;
+    }
+    .test_text>h1{
+        padding-left:25px;
+        color:#f60;
+    }
+    .test_text>p{
+        padding-left:25px;
+        padding-right:25px;
+        text-align: center;
+        font-weight: bold;
+    }
+    .test_text{
+        width:100%;
+        padding-bottom:10px;
+        height:auto;
+        /* background-color:green; */
+    }
+    .test_head{
+        padding-top:10px;
+        padding-bottom:10px;
+        width:100%;
+        height:auto;
+        /* background-color:yellow; */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+        border-top: 1px solid rgb(209, 209, 209);
+        border-image: linear-gradient(to right,to top,to bottom, rgb(255, 206, 206) 50%, transparent 50%) 100% 1;
+    }
+    .test_head>h6{
+        color:#174e74;
+        font-weight: bold;
+    }
+    .test_head>p{
+        color:grey;
+    }
 }
 
 
@@ -1891,6 +1917,15 @@ marquee{
 
 
   @media screen  and (min-width: 560px ) and (max-width:999px) {
+    .flex-row{ display: flex !important;
+        flex-direction: column !important;
+    }
+
+    .d-flex{
+        display: flex !important;
+        flex-direction: column !important;
+    
+    }
     .d-block{
         height:450px;
     }
@@ -2211,28 +2246,34 @@ marquee{
         display:flex;
     }
     
-       
     .test_container{
         width:100%;
-        height:auto;
         padding-top: 10px;
-        padding-bottom:10px;
-        background-color:rgb(241, 241, 248);
+        padding-bottom:50px;
+        /* background-color:rgb(241, 241, 248); */
         display:flex;
-        flex-direction:column;
-        justify-content:space-evenly;
+        flex-direction: column;
+        justify-content:center;
         align-items:center;
         /* background-image: url('https://www.ipec.org.in/wp-content/uploads/2021/05/banner-images.png'); */
     }
     
+    .test_main{
+        width:100%;
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content:center;
+    
+    }
+    
     .test_cont1{
-        width:90%;
-        padding-bottom: 30px;
+        width:80%;
+        padding-bottom: 50px;
         /* background-color:#EF6666; */
         border-radius: 10px;
     
         display: flex;
-        flex-direction: column;
         align-items:center;
         justify-content:center;
     }
@@ -2241,12 +2282,12 @@ marquee{
         /* color:white */
     }
     .test_cont2{
-        margin-bottom:20px;
-        width:90%;
+        width:45%;
+        margin-left:15px;
         height:auto;
         padding-top: 20px;
         padding-bottom: 20px;
-        background-color:rgb(255, 244, 221);
+        background-color:rgb(255, 249, 235);
         border-radius:15px;
         box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(205, 205, 205, 0.8) -6px -2px 16px 0px;
     
@@ -2271,8 +2312,8 @@ marquee{
         color:#f60;
     }
     .test_text>p{
-        padding-left:22px;
-        padding-right:22px;
+        padding-left:25px;
+        padding-right:25px;
         text-align: center;
         font-weight: bold;
     }
@@ -2302,15 +2343,8 @@ marquee{
     .test_head>p{
         color:grey;
     }
-    .flex-row{
-        display:flex;
-        flex-direction: column !important;
-    }
-    
-    .d-flex{
-        display:flex;
-        flex-direction: column !important;
-    }
+        
+  
   }
 
 
@@ -2378,6 +2412,12 @@ marquee{
         padding-left: 0px;
     }
     
+    [data-aos^=fade][data-aos^=fade].aos-animate {
+        opacity: 1;
+        transform: translateZ(0);
+        transition-duration: 1s;
+    }
+
     .banner_1{
         height:85vh;
         background-color:#6DAFFE;
@@ -2546,7 +2586,8 @@ marquee{
         flex-direction: row !important;
     }
 
-    .d-flex{display:flex!important;}
+    .d-flex{display:flex!important;
+        flex-direction: row !important;}
 
     .contact_div{
         height:35vh;
@@ -2882,43 +2923,47 @@ color:#889c0b;
     transform:skew(-10deg);
     display:flex;
 }
+
 .test_container{
     width:100%;
-    padding-top: 50px;
+    padding-top: 30px;
     padding-bottom:50px;
-    background-color:rgb(241, 241, 248);
+    /* background-color:rgb(241, 241, 248); */
     display:flex;
-    justify-content:space-evenly;
+    flex-direction: column;
+    justify-content:center;
     align-items:center;
     /* background-image: url('https://www.ipec.org.in/wp-content/uploads/2021/05/banner-images.png'); */
 }
 
+.test_main{
+    width:100%;
+    display:flex;
+    align-items: center;
+    justify-content:space-evenly;
+
+}
+
 .test_cont1{
-    width:25%;
-    padding-top: 20px;
-    padding-left:10px;
-    padding-right:10px;
-    padding-bottom: 20px;
+    width:80%;
+    padding-bottom: 50px;
     /* background-color:#EF6666; */
     border-radius: 10px;
 
     display: flex;
-    flex-direction: column;
     align-items:center;
     justify-content:center;
 }
 .test_cont1>h2{
-    text-decoration: underline #EF6666;
     text-align:center;
-    padding-bottom: 20px;
     /* color:white */
 }
 .test_cont2{
     width:30%;
-    height:auto;
+    height:65vh;
     padding-top: 20px;
     padding-bottom: 20px;
-    background-color:rgb(255, 247, 229);
+    background-color:rgb(255, 249, 235);
     border-radius:15px;
     box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(205, 205, 205, 0.8) -6px -2px 16px 0px;
 
@@ -2977,11 +3022,17 @@ color:#889c0b;
 
 
 
+
     
   }
   
   
   @media (min-width: 1400px) {
+    [data-aos^=fade][data-aos^=fade].aos-animate {
+        opacity: 1;
+        transform: translateZ(0);
+        transition-duration: 1s;
+    }
     .menu_sm{display:none;}
 
     .menu_div{
@@ -3217,7 +3268,8 @@ color:#889c0b;
         flex-direction: row !important;
     }
 
-    .d-flex{display:flex!important;}
+    .d-flex{display:flex!important;
+        flex-direction: row !important;}
 
     .contact_div{
         height:35vh;
@@ -3548,19 +3600,27 @@ color:#889c0b;
 
 .test_container{
     width:100%;
-    padding-top: 50px;
+    padding-top: 30px;
     padding-bottom:50px;
-    background-color:rgb(241, 241, 248);
+    /* background-color:rgb(241, 241, 248); */
     display:flex;
-    justify-content:space-evenly;
+    flex-direction: column;
+    justify-content:center;
     align-items:center;
     /* background-image: url('https://www.ipec.org.in/wp-content/uploads/2021/05/banner-images.png'); */
 }
 
+.test_main{
+    width:80%;
+    display:flex;
+    align-items: center;
+    justify-content:space-evenly;
+
+}
+
 .test_cont1{
-    width:35%;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    width:40%;
+    padding-bottom: 50px;
     /* background-color:#EF6666; */
     border-radius: 10px;
 
@@ -3573,11 +3633,11 @@ color:#889c0b;
     /* color:white */
 }
 .test_cont2{
-    width:25%;
-    height:auto;
+    width:30%;
+    height:65vh;
     padding-top: 20px;
     padding-bottom: 20px;
-    background-color:rgb(255, 244, 221);
+    background-color:rgb(255, 249, 235);
     border-radius:15px;
     box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(205, 205, 205, 0.8) -6px -2px 16px 0px;
 

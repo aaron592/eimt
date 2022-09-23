@@ -11,7 +11,8 @@ import youtube from '../images/youtube.png';
 import about_img from '../images/preview.jpg';
 import eimt from '../images/eimt.png';
 import { saveAs } from "file-saver";
-
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 
 function Contact(){
@@ -23,6 +24,8 @@ function Contact(){
       setTimeout(() => {
         setLoading(false);
       }, 2000);
+
+      AOS.init();
         document.head.innerHTML+=`
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
         `
@@ -148,8 +151,8 @@ function Contact(){
        </span>
     </div>
 
-    <div className="contact_head">
-       <h2>Get In Touch</h2>
+    <div className="contact_head" data-aos="fade-up">
+       <h2 >Get In Touch</h2>
        <p>To get in touch with us, feel free to mail or call and our team will get back to you at an earliest.</p>
        <div className="d-flex flex-row contact_divs_cont">
           <div className="contact_div_cont1">
@@ -169,7 +172,7 @@ function Contact(){
        </div>
     </div>
 
-    <div className="contact_form_cont">
+    <div className="contact_form_cont" data-aos="fade-up">
         <h2>Contact Us</h2>
         <p>For registration questions please get in touch using the contact form below.</p>
         <div className="d-flex flex-row contact_form_container">
@@ -299,35 +302,35 @@ function Contact(){
        </div>
       </div>       */}
 
-          <div className="map_container">
+          <div className="map_container" data-aos="fade-up">
           <iframe width="100%" height="100%" id="gmap_canvas" src="https://maps.google.com/maps?q=Ashis%20Building%20,Marine%20Drive%20Hign%20Court%20JN,%20Ernakulam%20682031&t=&z=19&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
           </div>
            <div className="col-lg-12 col-xl-12 col-md-12 col-sm-12 footer">
             <div className="d-flex flex-row footer_details" id="footer_detail">
-              <div className=" footer_logo">
+              <div className=" footer_logo" data-aos="fade-bottom">
                 <img src={logo} />
                 <p><em>EIMT aims the transformation <br></br>of a student to professional.</em></p>
               </div>
-              <div className="footer_details_1">
+              <div className="footer_details_1" data-aos="fade-bottom">
               <p className="footer_head">Locations</p>
               <p>ERNAKULAM, KALADY, KALLUMALA, UAE</p>
               <p className="footer_head">Head Office:</p>
               <p>Ebenezer Villa, House No. 16/209A, Piraroor P.O, Kalady<br></br>683574</p>
               </div>
-              <div className="col-lg-flex col-xl-flex footer_details_2">
+              <div className="col-lg-flex col-xl-flex footer_details_2" data-aos="fade-bottom">
               <p className="footer_head">Quick Links</p>
                 <Link style={{ textDecoration: 'none', color: 'black' }} to="/"><p>Home</p></Link>
                 <Link style={{ textDecoration: 'none', color: 'black' }} to="/about"><p>About</p></Link>
                 <Link style={{ textDecoration: 'none', color: 'black' }} to="/courses"><p>Courses</p></Link>
                 <p>Contact</p>
               </div>
-              <div className="footer_details_3">
+              <div className="footer_details_3" data-aos="fade-bottom">
               <p className="footer_head">Courses</p>
               <p>Language</p>
               <p>Programming</p>
               <p>Musical</p>
               </div>
-              <div className="footer_details_4">
+              <div className="footer_details_4" data-aos="fade-bottom">
               <p className="footer_head">Connect Us</p>
               <p className="social">
               <img src={instagram}/>

@@ -445,6 +445,11 @@ select.classic:focus {
 }
 
 @media screen and (min-width: 1000px) and (max-width:1399px){
+    [data-aos^=fade][data-aos^=fade].aos-animate {
+        opacity: 1;
+        transform: translateZ(0);
+        transition-duration: 1s;
+    }
     .view_more{
         display: none;
     }
@@ -635,6 +640,11 @@ select.classic:focus {
 }
 
 @media (min-width: 1400px ) {
+    [data-aos^=fade][data-aos^=fade].aos-animate {
+        opacity: 1;
+        transform: translateZ(0);
+        transition-duration: 1s;
+    }
 
     .view_more{
         display: none;

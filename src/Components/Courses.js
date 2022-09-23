@@ -16,6 +16,8 @@ import about_img from '../images/preview.jpg';
 import eimt from '../images/eimt.png';
 import { saveAs } from "file-saver";
 import PacmanLoader from "react-spinners/PacmanLoader";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 
 function Courses(){
@@ -39,6 +41,9 @@ function Courses(){
       setTimeout(() => {
         setLoading(false);
       }, 2000);
+
+      
+      AOS.init();
 
       isSetLoading(true);
 
@@ -227,9 +232,9 @@ function Courses(){
            <button onClick={()=>filterData('Fire & Safety')}>Fire & Safety</button>
            <button onClick={()=>filterData('Aviation')}>Aviation</button>
         </div> */}
-        <div className="course_header_tag">
+        <div className="course_header_tag" data-aos="fade-up">
            <h2>&#128366; Courses</h2>
-           <div>
+           <div data-aos="fade-up">
            <select class="classic" onChange={(event)=>{readValue(event.target.value)}}>
   <option value="">Select Any Course</option>
   <option value="Programming">Programming Courses</option>
@@ -247,11 +252,11 @@ function Courses(){
             </div>
           ):(
             
-        <div className="course_container">
+        <div className="course_container" >
           {
             courses.map((course,index)=>{
                return(
-                <div className="course_container1" key={index} onClick={()=>{
+                <div className="course_container1" data-aos="fade-up" key={index} onClick={()=>{
                   courseModal(course._id)
                   courModal(true)
                   }}>
@@ -277,30 +282,30 @@ function Courses(){
 
         <div className="col-lg-12 col-xl-12 col-md-12 col-sm-12 footer">
             <div className="d-flex flex-row footer_details" id="footer_detail">
-              <div className=" footer_logo">
+              <div className=" footer_logo" data-aos="fade-bottom">
                 <img src={logo} />
                 <p><em>EIMT aims the transformation <br></br>of a student to professional.</em></p>
               </div>
-              <div className="footer_details_1">
+              <div className="footer_details_1" data-aos="fade-bottom">
               <p className="footer_head">Locations</p>
               <p>ERNAKULAM, KALADY, KALLUMALA, UAE</p>
               <p className="footer_head">Head Office:</p>
               <p>Ebenezer Villa, House No. 16/209A, Piraroor P.O, Kalady<br></br>683574</p>
               </div>
-              <div className="col-lg-flex col-xl-flex footer_details_2">
+              <div className="col-lg-flex col-xl-flex footer_details_2" data-aos="fade-bottom">
               <p className="footer_head">Quick Links</p>
               <Link style={{ textDecoration: 'none', color: 'black' }} to="/"><p>Home</p></Link>
                 <Link style={{ textDecoration: 'none', color: 'black' }} to="/about"><p>About</p></Link>
                 <p>Courses</p>
                 <Link style={{ textDecoration: 'none', color: 'black' }} to="/contact"> <p>Contact</p></Link>
               </div>
-              <div className="footer_details_3">
+              <div className="footer_details_3" data-aos="fade-bottom">
               <p className="footer_head">Courses</p>
               <p>Language</p>
               <p>Programming</p>
               <p>Musical</p>
               </div>
-              <div className="footer_details_4">
+              <div className="footer_details_4" data-aos="fade-bottom">
               <p className="footer_head">Connect Us</p>
               <p className="social">
               <img src={instagram}/>

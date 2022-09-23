@@ -16,6 +16,8 @@ import twitter from '../images/twitter.png';
 import youtube from '../images/youtube.png';
 import about_gif from '../images/about.gif';
 import { saveAs } from "file-saver";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 
 function About(){
@@ -27,6 +29,9 @@ function About(){
       setTimeout(() => {
         setLoading(false);
       }, 2000);
+
+       AOS.init();
+
         document.head.innerHTML+=`
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
         `
@@ -125,7 +130,7 @@ function About(){
     </div>
     
     <div className="about_eimt">
-      <div className="d-flex flex-row about_eimt_div">
+      <div className="d-flex flex-row about_eimt_div" data-aos="fade-up">
         <div className="about_eimt_img">
           <img src={about_gif}/>
         </div>
@@ -150,7 +155,7 @@ We encourage mutual respect and positive thinking. We are always willing to prov
       </AliceCarousel> 
     </section>
 
-    <div className="col-lg-12 col-xl-12 col-md-12 col-sm-12 ins_logo">
+    <div className="col-lg-12 col-xl-12 col-md-12 col-sm-12 ins_logo" data-aos="fade-up">
            <h2>Our Team</h2>
            <section className="customer-logos slider">
               <div className="slide logo1"><img className="logo_1" src={logo1} /></div>
@@ -161,30 +166,30 @@ We encourage mutual respect and positive thinking. We are always willing to prov
         
         <div className="col-lg-12 col-xl-12 col-md-12 col-sm-12 footer">
             <div className="d-flex flex-row footer_details" id="footer_detail">
-              <div className=" footer_logo">
+              <div className=" footer_logo" data-aos="fade-bottom">
                 <img src={logo} />
                 <p><em>EIMT aims the transformation <br></br>of a student to professional.</em></p>
               </div>
-              <div className="footer_details_1">
+              <div className="footer_details_1" data-aos="fade-bottom">
               <p className="footer_head">Locations</p>
               <p>ERNAKULAM, KALADY, KALLUMALA, UAE</p>
               <p className="footer_head">Head Office:</p>
               <p>Ebenezer Villa, House No. 16/209A, Piraroor P.O, Kalady<br></br>683574</p>
               </div>
-              <div className="col-lg-flex col-xl-flex footer_details_2">
+              <div className="col-lg-flex col-xl-flex footer_details_2" data-aos="fade-bottom">
               <p className="footer_head">Quick Links</p>
               <Link style={{ textDecoration: 'none', color: 'black' }} to="/"><p>Home</p></Link>
                 <p>About</p>
                 <Link style={{ textDecoration: 'none', color: 'black' }} to="/courses"><p>Courses</p></Link>
                 <Link style={{ textDecoration: 'none', color: 'black' }} to="/contact"><p>Contact</p></Link>
               </div>
-              <div className="footer_details_3">
+              <div className="footer_details_3" data-aos="fade-bottom">
               <p className="footer_head">Courses</p>
               <p>Language</p>
               <p>Programming</p>
               <p>Musical</p>
               </div>
-              <div className="footer_details_4">
+              <div className="footer_details_4" data-aos="fade-bottom">
               <p className="footer_head">Connect Us</p>
               <p className="social">
               <img src={instagram}/>

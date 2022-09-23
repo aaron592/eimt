@@ -26,6 +26,9 @@ import {
   MDBCarousel,
   MDBCarouselItem,
 } from 'mdb-react-ui-kit';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
 // const Carousel = require('react-responsive-carousel').Carousel;
 // import '//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css';
 
@@ -83,6 +86,9 @@ function Header(){
     setTimeout(() => {
       setLoading(false);
     }, 2000);
+
+    AOS.init();
+
     document.head.innerHTML+=`
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, shrink-to-fit=no, user-scalable=0" />
     `
@@ -247,15 +253,15 @@ function Header(){
              <h5>WELCOME TO OUR WEBSITE. &nbsp;ADMISSION STARTED ..... HURRY UP ... APPLY NOW --<a href="https://master--iridescent-profiterole-2ab773.netlify.app/application_form.pdf" download="EIMT-Application-Form.pdf"> ..Click here..</a></h5>
         </div>
         <div className="eimt_heading_cont">
-           <div className="eimt_heading">
+           <div className="eimt_heading" data-aos="fade-up">
               <h5><span style={{color:"#C70039"}}>EIMT</span> aims the transformation of a student to professional, Our courses are based on helping students from various background to find a job through our professional training and working professionals to upgrade their job to next level. Providing multilingual trainings we also aim them to find better jobs in different countries .</h5>
               <button type="button" onClick={saveFile} className="bro_btn">DOWNLOAD BROCHURE</button>
            </div>
          </div>  
 
 
-         <div className="d-flex flex-row vision_mission_container">
-            <div className="slanding1">
+         <div className="d-flex flex-row vision_mission_container" data-aos="fade-up">
+            <div className="slanding1" >
                <h2>Vision</h2>
                <p>To attain the best academic standards possible for all students
 to help them realise their full potential and to provide
@@ -272,14 +278,14 @@ and maintain their competitiveness on worldwide scale.</p>
             </div>
          </div>
 
-         <div className="d-flex flex-row test_container">
-               <div className="test_cont1">
+         <div className="test_container">
+               <div className="test_cont1" data-aos="fade-up">
                  <p></p>
                  <h2>Message From Our Director & Principal</h2>
-                 <button className="register">Read More</button>
+                 {/* <button className="register">Read More</button> */}
                </div>
-
-            <div className="test_cont2">
+          <div className="d-flex flex-row test_main">
+            <div className="test_cont2 aos-animate" data-aos="fade-up" >
                <div className="test_img">
                   <img src={principal} />
                </div>
@@ -292,20 +298,20 @@ and maintain their competitiveness on worldwide scale.</p>
                    <p>Director</p>
                </div>
             </div>
-            <div className="test_cont2">
+            <div className="test_cont2" data-aos="fade-up">
             <div className="test_img">
                   <img src={director} />
                </div>
                <div className="test_text">
                    <h1>&#10077;</h1>
-                   <p>We see it as EIMT's responsibility to build an educational sector inspired by yesterday as a promise for tomorrow. Selfless service and dedication sets us apart.We encourage mutual respect and positive thinking. We are always willing to provide assistance and guidance to the job opportunities worldwide.</p>
+                   <p>We see it as EIMT's responsibility to build an educational sector inspired by yesterday as a promise for tomorrow. Selfless service and dedication sets us apart.We encourage mutual respect and positive thinking.<span>We are always willing to provide assistance and guidance to the job opportunities worldwide</span> </p>
                </div>
                <div className="test_head">
                    <h6>Bp.Rev.Dr.Simon Peter</h6>
                    <p>Principal</p>
                </div>
             </div>
-
+            </div>
          </div>
 
 
@@ -333,7 +339,7 @@ and maintain their competitiveness on worldwide scale.</p>
 
 
 
-        <div className="new_slide" max-width="720px" >
+        <div className="new_slide" max-width="" data-aos="fade-up">
            <h2 className="slide_head">Popular Courses</h2>
         <Slider {...settings}>
           <div className="slide_1">
@@ -418,38 +424,38 @@ and maintain their competitiveness on worldwide scale.</p>
       </div>
         
         <div className="contact_div">
-          <div className="d-flex flex-row contact_tab">
+          <div className="d-flex flex-row contact_tab" data-aos="fade-up">
            <h2>Are You Ready To Start Your <br></br>Course Now</h2>
            <Link style={{ textDecoration: 'none', color: 'white' }} to="/contact"><button className="contact_btn">Contact Us</button></Link>
           </div>
         </div>
 
-        <div className="col-lg-12 col-xl-12 col-md-12 col-sm-12 footer">
+        <div className="col-lg-12 col-xl-12 col-md-12 col-sm-12 footer" >
             <div className="d-flex flex-wrap footer_details" id="footer_detail">
-              <div className=" footer_logo">
+              <div className=" footer_logo" data-aos="fade-bottom">
                 <img src={logo} />
                 <p><em>EIMT aims the transformation <br></br>of a student to professional.</em></p>
               </div>
-              <div className="footer_details_1">
+              <div className="footer_details_1" data-aos="fade-bottom">
               <p className="footer_head">Locations</p>
               <p>ERNAKULAM, KALADY, KALLUMALA, UAE</p>
               <p className="footer_head">Head Office:</p>
               <p>Ebenezer Villa, House No. 16/209A, Piraroor P.O, Kalady<br></br>683574</p>
               </div>
-              <div className="col-lg-flex col-xl-flex footer_details_2">
+              <div className="col-lg-flex col-xl-flex footer_details_2" data-aos="fade-bottom">
               <p className="footer_head">Quick Links</p>
                 <p style={{ textDecoration: 'none', color: 'black' }}>Home</p>
                 <Link style={{ textDecoration: 'none', color: 'black' }} to="/about"><p>About</p></Link>
                 <Link style={{ textDecoration: 'none', color: 'black' }} to="/courses"><p>Courses</p></Link>
                 <Link style={{ textDecoration: 'none', color: 'black' }} to="/contact"><p>Contact</p></Link>
               </div>
-              <div className="footer_details_3">
+              <div className="footer_details_3" data-aos="fade-bottom">
               <p className="footer_head">Courses</p>
               <p>Language</p>
               <p>Programming</p>
               <p>Musical</p>
               </div>
-              <div className="footer_details_4">
+              <div className="footer_details_4" data-aos="fade-bottom">
               <p className="footer_head">Connect Us</p>
               <p className="social">
               <img src={instagram}/>

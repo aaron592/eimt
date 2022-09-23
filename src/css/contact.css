@@ -744,7 +744,11 @@
 
 
 @media (min-width: 1000px ){
-
+    [data-aos^=fade][data-aos^=fade].aos-animate {
+        opacity: 1;
+        transform: translateZ(0);
+        transition-duration: 1s;
+    }
     .text_h{
         display:flex;
         align-items: center;
@@ -1092,6 +1096,12 @@
 }
 
 @media (min-width: 1400px ){
+    [data-aos^=fade][data-aos^=fade].aos-animate {
+        opacity: 1;
+        transform: translateZ(0);
+        transition-duration: 1s;
+    }
+
     .flex-row{
         display:flex;
         flex-direction: row !important;

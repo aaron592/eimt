@@ -467,6 +467,11 @@
 }
 
 @media (min-width: 1200px) { 
+    [data-aos^=fade][data-aos^=fade].aos-animate {
+        opacity: 1;
+        transform: translateZ(0);
+        transition-duration: 1s;
+    }
     .about_msg>img{
         height:100%;
         width:100%;
@@ -587,6 +592,11 @@
 } 
 
 @media (min-width: 1400px ){
+    [data-aos^=fade][data-aos^=fade].aos-animate {
+        opacity: 1;
+        transform: translateZ(0);
+        transition-duration: 1s;
+    }
    .new_slider{
     display: none;
    }

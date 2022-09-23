@@ -1,8 +1,19 @@
+body{
+    /* background-color: rgb(114, 161, 185); */
+}
+
+.row{
+    position: fixed;
+    top:0px;
+}
+
+
 .admin_panel{
-    padding-top:20px;
+    
+    margin-top:90px;
     padding-bottom:20px;
     height:40vh;
-    /* background-color:red; */
+    background-color:rgb(219, 157, 119);
     display: flex;
     align-items: center;
     justify-content:space-evenly;
@@ -10,10 +21,11 @@
 
 
 .course_nut{
-    height:20vh;
+    height:30vh;
+    width:28%;
     background-color:white;
     border-radius:10px;
-    box-shadow: rgba(218, 218, 218, 0.48) 6px 2px 16px 0px, rgba(224, 223, 223, 0.8) -6px -2px 16px 0px;
+    box-shadow: rgba(143, 143, 143, 0.48) 6px 2px 16px 0px, rgba(104, 103, 103, 0.8) -6px -2px 16px 0px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -23,34 +35,54 @@
 
 }
 
+.course_nut1{
+    height:20vh;
+    width:13%;
+    background-color:white;
+    border-radius:10px;
+    box-shadow: rgba(143, 143, 143, 0.48) 6px 2px 16px 0px, rgba(104, 103, 103, 0.8) -6px -2px 16px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    text-align:center;
+    padding-left: 10px;
+}
+
 .contact_count{
     /* background-color: red; */
     width:80%;
 }
 
 .add_btn{
+    width:8%;
     height:20vh;
     border-radius:10px;
     display:flex;
     justify-content:flex-end;
+    /* background-color: red; */
 }
 
 .add_btn>button{
     height:40px;
+    width:auto;
     border: 1px solid rgb(50, 196, 50);
-    color:rgb(50, 196, 50);
-    background-color:white;
+    color:white;
+    font-weight:bold;
+    background-color:rgb(46, 129, 46);
     border-radius:5px;
     padding-left:10px;
     padding-right:10px;
 }
 
 .add_btn>button:hover{
-    background-color:rgb(50, 196, 50);
-    color:white;
+    background-color:white;
+    color:Black;
 }
 
 .data_container{
+    background-color:rgb(219, 157, 119);
+
     width:100%;
     padding-top:20px;
     padding-bottom: 20px;
