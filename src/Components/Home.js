@@ -467,7 +467,7 @@ and maintain their competitiveness on worldwide scale.</p>
             </div>
         </div>
         <div className="col-lg-12 col-xl-12 col-md-12 col-sm-12 rights">
-          <p>© 2022 Copyright. Designed by <a href="https://luc.to/aaron" > ATJ</a></p>
+          <p>© 2022 <Link to="/login">Copyright</Link>. Designed by <a href="https://luc.to/aaron" > ATJ</a></p>
         </div></div>)}
         
       
