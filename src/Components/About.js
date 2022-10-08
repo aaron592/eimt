@@ -192,10 +192,10 @@ We encourage mutual respect and positive thinking. We are always willing to prov
               <div className="footer_details_4" data-aos="fade-bottom">
               <p className="footer_head">Connect Us</p>
               <p className="social">
-              <img src={instagram}/>
-              <img src={facebook}/>
-              <img src={twitter}/>
-              <img src={youtube}/>
+              <a href="https://www.instagram.com/eimtindia/"><img src={instagram}/></a>
+               <a href="https://www.facebook.com/EIMTINDIAA/"><img src={facebook}/></a>
+               <a href="https://twitter.com/eimtindia"><img src={twitter}/></a>
+               <a href=""><img src={youtube}/></a>
               </p>
               </div>
             </div>
