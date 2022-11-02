@@ -161,8 +161,8 @@ function Contact(){
           </div>
           <div className="contact_div_cont1">
               <h6>For general inquiries:</h6>
-              <p>+91 8590 745 911</p>
-              <p>+91 9744 914 308</p>
+              <p>0479 2303004</p>
+              <p>+91 9633514295</p>
           </div>
           <div className="contact_div_cont1">
           <h6>For email inquiries:</h6>

@@ -5,11 +5,12 @@ import "slick-carousel/slick/slick-theme.css";
 import { Nav, Navbar } from 'react-bootstrap';
 
 import '../css/Header.css';
-import eimt from '../images/eimt.png'
-import banner_1 from '../images/banner_1.gif';
-import banner_2 from '../images/Banner_2.png';
-import banner_3 from '../images/banner_3.gif';
-import logo from '../images/logo.png';
+import eimt from '../images/logo.png'
+import banner_1 from '../images/banner.png';
+import banner_2 from '../images/banner_2.png';
+import banner_3 from '../images/banner_3.png';
+import banner_4 from '../images/banner_4.png';
+import logo from '../images/eimt_final.png';
 import bannerImage from '../images/banner.gif';
 import {useEffect ,useState} from 'react';
 import instagram from '../images/instagram.png';
@@ -18,6 +19,7 @@ import twitter from '../images/twitter.png';
 import youtube from '../images/youtube.png';
 import principal from '../images/principal.png';
 import director from '../images/director.png';
+import elc from '../images/elc.gif';
 import {Link} from 'react-router-dom';
 import { saveAs } from "file-saver";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -29,6 +31,7 @@ import {
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
+
 // const Carousel = require('react-responsive-carousel').Carousel;
 // import '//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css';
 
@@ -39,8 +42,11 @@ function Header(){
 
   const [loading, setLoading] = useState(false);
   const [msg,setMsg] = useState('director');
+  const [hcolor,setColor] = useState(null);
   const [msg1,setMsg1] = useState(null);
 
+  
+  
   const saveFile = () => {
     saveAs(
       "https://master--iridescent-profiterole-2ab773.netlify.app/Flyer A5 Fold_M.pdf",
@@ -93,6 +99,7 @@ function Header(){
 
     document.head.innerHTML+=`
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, shrink-to-fit=no, user-scalable=0" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous"></link>
     `
   }, []);
 
@@ -106,7 +113,20 @@ function Header(){
         <div className="loader-container">
       	  <div className="spinner"></div>
         </div>
-      ) : ( <div><div className="container-fluid">
+      ) : ( <div>
+        <div className="contact_nav">
+          <div className="contact_nav_det">
+            <div className="contact_nav_det_1">
+              <h6>&#x1F4E7; admission@ebenezer-imt.org</h6>
+              <h6>&#128222; +91 9633514295</h6>
+            </div>
+            <div className="contact_nav_det_2">
+              <button>FOR REGISTRATION</button>
+            </div>
+          </div>
+        </div>
+      <div className="container-fluid">
+        
         <div className="row">
               <div className="col-lg-2 col-xl-3 col-md-3 col-sm-6  logo" data-aos="fade-right">
                   <img className="logo_img" src={eimt} alt="logo" style={{height:"100%"}}/>
@@ -165,15 +185,23 @@ function Header(){
                   <span className="nav_p">About &#x25BE;</span>
                   <div class="dropdown-content">
                   <Link style={{ textDecoration: 'none', color: '#494949' }} to="/about"> <p className="nav_p drop_p">About Us</p></Link>
-                      <p className="nav_p">Board</p>
-                      <p className="nav_p">Certification</p>
+                      <p className="nav_p">Vision & Mission</p>
+                      <p className="nav_p">Our Team</p>
                   </div>
                   </p>
-                  <Link style={{ textDecoration: 'none', color: '#494949' }} to="/courses"><p className="nav_p">Courses</p></Link>
-                  <Link style={{ textDecoration: 'none', color: '#494949' }} to="/contact"><p className="nav_p">Contact</p></Link>
+                  <p className="dropdown">
+                    <span className="nav_p">Courses &#x25BE;</span>
+                    <div class="dropdown-content">
+                    <Link style={{ textDecoration: 'none', color: '#494949' }} to="/courses"><p className="nav_p">Technical courses</p></Link>
+                      <p className="nav_p">Language courses</p>
+                    </div>
+
+                  </p>
+                  <Link style={{ textDecoration: 'none', color: '#494949' }} to=""><p className="nav_p">Careers</p></Link>
+                  <Link style={{ textDecoration: 'none', color: '#494949' }} to="/contact"><p className="nav_p">Contact Us</p></Link>
               </div>
               <div className="col-lg-2 col-xl-3 col-md-6 col-sm-2 search" data-aos="fade-left">
-              <input type="text" placeholder="&#128269; Search...." className="search_bar"/>
+              <input type="text" placeholder="&#xf002; Search" className="search_bar fas"/>
               
               </div>
               {/* <div className="col-lg-2 col-xl-2 col-sm-6 col-md-8 login_details">
@@ -187,7 +215,7 @@ function Header(){
         <div className="whatsapp_float">
           <a href="https://wa.me/919633514295" target="blank"><img src="https://mrgultimus2.in/wp-content/uploads/2022/01/whatsapp.png" width="180px" className="whatsapp_float_btn"/></a>
         </div>
-        <MDBCarousel showControls showIndicators className="h-500">
+      <MDBCarousel showControls showIndicators className="h-500">
       <MDBCarouselItem
         className='w-100 d-block'
         itemId={1}
@@ -256,15 +284,20 @@ function Header(){
         </div> */}
         <div className="eimt_heading_cont d-flex flex-row">
            <div className="eimt_heading" data-aos="fade-up">
+             <div className="eimt_heading_cont_1">
               <h5><span style={{color:"#C70039"}}>EIMT</span> aims the transformation of a student to professional, Our courses are based on helping students from various background to find a job through our professional training and working professionals to upgrade their job to next level. Providing multilingual trainings we also aim them to find better jobs in different countries .</h5>
               <button type="button" onClick={saveFile} className="bro_btn">DOWNLOAD BROCHURE</button>
+             </div>
            </div>
            <div className="eimt_apply_cont" data-aos="fade-up">
                <h2>Admission Open</h2>
-               <button className="register">APPLY NOW</button>
+               <h4>2022 / 2023</h4>
+               <button className="register">ENROLL NOW</button>
            </div>
          </div>  
 
+
+{/* 
          <div className="d-flex flex-row vision_mission_container" data-aos="fade-up">
             <div className="slanding1" >
                <h2>Vision</h2>
@@ -281,7 +314,7 @@ is to advance excellence in technical career and academic
 studies so that graduates are ready to enter the workforce
 and maintain their competitiveness on worldwide scale.</p>
             </div>
-         </div>
+         </div> */}
 
         <div className="msg_heading" data-aos="fade-up"><h2>Message from the Management</h2></div>
          <div className="d-flex flex-row msg_container">
@@ -334,6 +367,20 @@ and maintain their competitiveness on worldwide scale.</p>
                </div>
              </div>:null
             }            
+         </div>
+
+         <div className="elc_content">
+            <div className="elc_content_tab">
+              <div className="elc_content_msg">
+                <p className="h2">We offer best courses having good scope in the future.</p>
+                <p className="p">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                <button className="btn_know">Know More</button>
+                <p className="p">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+              </div>
+              <div className="elc_content_img">
+                <img src={elc}/>
+              </div>
+            </div>
          </div>
 
          {/* <div className="test_container">
@@ -397,7 +444,7 @@ and maintain their competitiveness on worldwide scale.</p>
 
 
 
-        <div className="new_slide" max-width="" data-aos="fade-up">
+        {/* <div className="new_slide" max-width="" data-aos="fade-up">
            <h2 className="slide_head">Popular Courses</h2>
         <Slider {...settings}>
           <div className="slide_1">
@@ -479,7 +526,7 @@ and maintain their competitiveness on worldwide scale.</p>
           </div> 
           </div>
         </Slider>
-      </div>
+      </div> */}
         
         {/* <div className="contact_div">
           <div className="d-flex flex-row contact_tab" data-aos="fade-up">
@@ -519,7 +566,7 @@ and maintain their competitiveness on worldwide scale.</p>
                <a href="https://www.instagram.com/eimtindia/"><img src={instagram}/></a>
                <a href="https://www.facebook.com/EIMTINDIAA/"><img src={facebook}/></a>
                <a href="https://twitter.com/eimtindia"><img src={twitter}/></a>
-               <a href=""><img src={youtube}/></a>
+               <a href="https://www.youtube.com/channel/UCVbfYatZNxURs34xU3HyfLQ"><img src={youtube}/></a>
               </p>
               </div>
             </div>

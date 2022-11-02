@@ -5,7 +5,8 @@ import Course from './Components/Courses.js';
 import Admin from './Components/Admin.js';
 import Contact from './Components/Contact.js';
 import Login from './Components/Login.js';
-import {useEffect ,useState} from 'react';
+import Language from './Components/Language.js';
+import {useEffect} from 'react';
 import { BrowserRouter as Router , Routes, Route } from 'react-router-dom';
 
 
@@ -23,6 +24,7 @@ function App() {
              <Route path="/login" element={<Login/>} />
              <Route path="/admin" element={<Admin/>} />
              <Route path="/contact" element={<Contact/>} />
+             <Route path="/language_courses" element={<Language/>}/>
           </Routes>
        </Router>
     
