@@ -7,7 +7,7 @@ import { Nav, Navbar } from 'react-bootstrap';
 import '../css/Header.css';
 import eimt from '../images/logo.png'
 import banner_1 from '../images/banner.png';
-import banner_2 from '../images/banner_2.png';
+import banner_2 from '../images/banner2.png';
 import banner_3 from '../images/banner_3.png';
 import banner_4 from '../images/banner_4.png';
 import logo from '../images/eimt_final.png';
