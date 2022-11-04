@@ -316,20 +316,20 @@ and maintain their competitiveness on worldwide scale.</p>
             </div>
          </div> */}
 
-        <div className="msg_heading" data-aos="fade-up"><h2>Message from the Management</h2></div>
+        {/* <div className="msg_heading" data-aos="fade-up"><h2>Message from the Management</h2></div> */}
          <div className="d-flex flex-row msg_container">
-            <div className="msg_tab" data-aos="fade-right">
+            <div className="msg_tab" >
                 <div className="msg_tab1" onClick={()=>{
                   setMsg("director");
                   setMsg1(null);
                 }}>
-                   <h2>Director</h2>
+                   <h4>Message from our Director</h4>
                 </div>
                 <div className="msg_tab1" onClick={()=>{
                   setMsg1("principal")
                   setMsg(null)
                   }}>
-                   <h2>Principal</h2>
+                   <h4>Message from our Principal</h4>
                 </div>
             </div>
             
@@ -374,11 +374,11 @@ and maintain their competitiveness on worldwide scale.</p>
               <div className="elc_content_msg">
                 <p className="h2">We offer best courses having good scope in the future.</p>
                 <p className="p">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-                <button className="btn_know">Know More</button>
+                <Link to="/language_courses"><button className="btn_know">Know More</button></Link>
                 <p className="p">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
               </div>
               <div className="elc_content_img">
-                <img src={elc}/>
+              <Link className="elc_content_img_cont" to="/language_courses"><img className="elc_content_img1" src={elc}/></Link>
               </div>
             </div>
          </div>

@@ -1,40 +1,215 @@
-body{
-    /* background:linear-gradient(to top ,#C9D6FF,#f1f1f1); */
+.contact_nav{
+    top:0;
+}
+
+*::before, *::after {
+    box-sizing: border-box;
+}
+
+.lan_banner{
+    width:100%;
+    background-image: linear-gradient(to bottom, #e8eef9, #ffffff);
+    height:80vh;
+    margin-top:130px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.lan_banner>img{
+    width:90%;
+    height:70vh;
+    border-radius:10px;
+}
+
+.ac_team{
+    width:100%;
+    padding-top:10px;
+    padding-bottom:10px;
+    background-color:linear-gradient(to top, #e8eef9, #ffffff);
+    display: flex;
+    flex-direction: column;
+    align-items:center;
 
 }
-.lan_banner{
-    margin-top:90px;
+
+.h2{
+    font-size:30px;
+    font-weight: 600;
+    margin-bottom:30px;
+}
+
+.ac_team_mem{
+    width:90%;
+    padding-top:10px;
+    padding-bottom:10px;
+    /* background-color:yellow; */
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    row-gap: 10px;
+    column-gap: 10px;
+}
+
+.team{
+    width:45%;
+    /* background-color:blue; */
+    display: flex;
+}
+
+.team:hover{
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.team_img{
+    width:30%;
+    height:200px;
+    /* background-color:grey; */
+    
+    overflow:hidden;
+}
+
+.team_img>img{
     width:100%;
-    height:80vh;
-    /* background:linear-gradient(to top ,#C9D6FF,#f1f1f1); */
+    height:100%;
+    
+}
+
+.team_msg{
+    width:70%;
+    height:200px;
+    /* background-color:white; */
     display: flex;
     align-items: center;
     justify-content:center;
 }
 
-.lan_ban_img{
-    width:95%;
-    height:75vh;
-    border-radius: 15px;
-    /* background-color:red; */
+.team_msg_con::before{
+    content: "\A";
+    border-style: solid;
+    border-width: 10px 15px 10px 0;
+    border-color:  transparent #E5F1FF transparent transparent ;
+    position: fixed;
+    left: -15px;
+    top:50px;
+    
 }
 
-.lan_ban_img>img{
+.team_msg_con{
     width:100%;
-    height:100%;
-    border-radius: 15px;
+    height:200px;
+    background-color:#E5F1FF;
+    padding:15px;
+    
 }
 
-.footer{
-    margin-top:0px;
-    background-color: white;
+.team_msg_con>p{
+    text-align:justify;
+    color:rgb(77, 77, 77);
+
 }
 
-.rights{
-    background-color:rgb(241, 241, 241);
-    color:black
+.team_msg_con2{
+    width:100%;
+    height:200px;
+    background-color:#0a99ae24;
+    padding:15px;
+
 }
 
-.rights>p>a{
-    color:rgb(57, 57, 57)
+.team_msg_con2>p{
+    color:rgb(77, 77, 77);
+    text-align:justify;
+    
+}
+
+.team_msg_con2::before{
+    content: "\A";
+    border-style: solid;
+    border-width: 10px 0px 10px 15px;
+    border-color:  transparent transparent transparent #0a99ae24;
+    position: fixed;
+    right: -15px;
+    top:50px;
+    
+}
+
+.about_elc{
+    width:100%;
+    padding-top:30px;
+    padding-bottom:10px;
+    background-image: linear-gradient(to top, #f4f6fa, #ffffff);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.about_elc_p{
+    width:80%;
+    text-align:justify;
+    padding-top:10px;
+    padding-bottom:10px;
+}
+
+.elc_course{
+    width:100%;
+    padding-top:20px;
+    padding-bottom:10px;
+    background-image: linear-gradient(to top, #f3f4f6, #ffffff);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.elc_courses{
+    width:80%;
+    padding-top:10px;
+    padding-bottom:40px;
+    display: flex;
+    justify-content: space-evenly;
+    /* background-color: green; */
+}
+
+.elc_lan_course{
+    width:25%;
+    padding-top:10px;
+    padding-bottom:5px;
+    background-color:white;
+    border:1px solid #337ab7;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius:10px;
+}
+
+.elc_lan_course>img{
+    width:90%;
+    height:auto;
+    border-radius:10px;
+}
+
+.elc_lan_course>div>p{
+  text-align:left;
+  font-size: 18px;
+  color: #323B4B;
+  font-weight: 700;
+}
+
+.admi_div{
+    width:100%;
+    padding-top:35px;
+    padding-bottom:15px;
+    background: #E5F1FF;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content: space-evenly;
+}
+
+.admi_div1{
+    width:80%;
+    padding-bottom:10px;
+    display:flex;
+    align-items:center;
+    justify-content: center;
 }

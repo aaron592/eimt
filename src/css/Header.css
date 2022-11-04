@@ -999,18 +999,18 @@ marquee{
     padding-bottom:30px;
     padding-top:30px;
     display: flex;
-    justify-content:space-evenly;
+    justify-content:center;
 }
 
 .msg_tab{
-    width:40%;
-    /* padding-top:10px;
-    padding-bottom:10px; */
+    width:80%;
+    padding-top:10px;
+    padding-bottom:10px;
     /* background-color:green; */
     display:flex;
     flex-direction: column;
     align-items: center;
-    /* justify-content:space-evenly; */
+    justify-content:space-between;
 }
 
 .msg_tab_cont{
@@ -1046,7 +1046,9 @@ marquee{
 .msg_tab1{
     /* margin-bottom: 10px; */
     width: 100%;
-    height:10vh;
+    height:auto;
+    padding-top:10px;
+    padding-bottom:10px;
     margin-bottom:20px;
     background-color:#fff;
     box-shadow:0 12px 22px 0 rgb(0 0 0 / 7%);
@@ -1154,7 +1156,13 @@ marquee{
     justify-content: flex-end;
 }
 
-.elc_content_img>img{
+.elc_content_img_cont{
+    display:flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.elc_content_img1{
     width:70%;
     border-radius: 10px;
 }
