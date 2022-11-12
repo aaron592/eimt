@@ -121,7 +121,7 @@ function Header(){
               <h6>&#128222; +91 9633514295</h6>
             </div>
             <div className="contact_nav_det_2">
-              <button>FOR REGISTRATION</button>
+              <button><Link to='/registration'>FOR REGISTRATION</Link></button>
             </div>
           </div>
         </div>
@@ -292,7 +292,7 @@ function Header(){
            <div className="eimt_apply_cont" data-aos="fade-up">
                <h2>Admission Open</h2>
                <h4>2022 / 2023</h4>
-               <button className="register">ENROLL NOW</button>
+               <button className="register"><Link to='/registration'>ENROLL NOW</Link></button>
            </div>
          </div>  
 
