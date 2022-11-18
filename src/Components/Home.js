@@ -285,7 +285,7 @@ function Header(){
         <div className="eimt_heading_cont d-flex flex-row">
            <div className="eimt_heading" data-aos="fade-up">
              <div className="eimt_heading_cont_1">
-              <h5><span style={{color:"#C70039"}}>EIMT</span> aims the transformation of a student to professional, Our courses are based on helping students from various background to find a job through our professional training and working professionals to upgrade their job to next level. Providing multilingual trainings we also aim them to find better jobs in different countries .</h5>
+              <h5 style={{userSelect:"none"}}><span style={{color:"#C70039"}}>EIMT</span> aims the transformation of a student to professional, Our courses are based on helping students from various background to find a job through our professional training and working professionals to upgrade their job to next level. Providing multilingual trainings we also aim them to find better jobs in different countries .</h5>
               <button type="button" onClick={saveFile} className="bro_btn">DOWNLOAD BROCHURE</button>
              </div>
            </div>
