@@ -337,7 +337,7 @@ and maintain their competitiveness on worldwide scale.</p>
              msg==="director"?
              <div className="d-flex flex-row msg_tab_cont">
                <div className="msg_tab_img" data-aos="fade-right">
-                 <img src={principal}/>
+                 <img style={{pointerEvents:"none"}} src={principal}/>
                </div>
                <div className="msg_tab_details" data-aos="fade-left">
                 <div className="msg_tab_det_sub">
