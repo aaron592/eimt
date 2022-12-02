@@ -49,7 +49,7 @@ function Contact(){
       }
 
       function addForm(){
-        fetch("https://eimt-backend.herokuapp.com/submit",{
+        fetch("https://eimt-backend.onrender.com/submit",{
             method:"POST",
             headers:{
                 "Content-Type": "application/json"

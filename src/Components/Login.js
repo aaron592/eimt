@@ -13,7 +13,7 @@ function Login(){
   }
 
    function login(){
-      fetch("https://eimt-backend.herokuapp.com/admin/login",{
+      fetch("https://eimt-backend.onrender.com/admin/login",{
         method:"POST",
         headers:{
           "Content-Type": "application/json"

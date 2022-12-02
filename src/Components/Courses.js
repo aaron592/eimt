@@ -47,7 +47,7 @@ function Courses(){
 
       isSetLoading(true);
 
-      fetch("https://eimt-backend.herokuapp.com/courses")
+      fetch("https://eimt-backend.onrender.com/courses")
       .then((response)=>response.json())
       .then((courseData)=>{
           setCourses(courseData);
@@ -87,16 +87,17 @@ function Courses(){
       
       
       function readValue(value){
-            courses=store;
-            setCourses(courses);
-            const updatedData = courses.filter((cour)=>{
-            return cour.course === value;
-        })
-        setCourses(updatedData);
+              courses=store;
+              setCourses(courses);
+              const updatedData = courses.filter((cour)=>{
+              return cour.course === value;
+          })
+          setCourses(updatedData);
+        
       }
       
       function courseModal(id){
-        fetch(`https://eimt-backend.herokuapp.com/course/sub/${id}`)
+        fetch(`https://eimt-backend.onrender.com/course/sub/${id}`)
         .then((response)=>response.json())
         .then((data)=>{
         // console.log(data);
@@ -275,25 +276,86 @@ function Courses(){
         </div> */}
         <div className="course_header_tag" data-aos="fade-up">
            <h2>&#128366; Courses</h2>
-           <div data-aos="fade-up">
-           <select class="classic" onChange={(event)=>{readValue(event.target.value)}}>
-  <option value="">Select Any Course</option>
-  <option value="Programming">Programming Courses</option>
-  <option value="Aviation">Aviation Courses</option>
-  <option value="Hotel Management">Hotel Management Courses</option>
-</select>
-           </div>
+          
         </div>
 
         {
           isLoading===true?
           (
             <div className="override">
-            <PacmanLoader color={'grey'} isLoading={isLoading} css={{overide}} size={20} />
+            <h6 color={'grey'} isLoading={isLoading} css={{overide}} size={20} >Loading...</h6>
             </div>
           ):(
+      <div className="course_container_h">      
+        <div className="course_index">
+        <div data-aos="fade-up">
+           <select class="classic" onChange={(event)=>{readValue(event.target.value)}}>
+             <option value="">All Course</option>
+             <option value="Programming">Programming Courses</option>
+             <option value="Aviation">Aviation Courses</option>
+             <option value="Hotel Management">Hotel Management Courses</option>
+             <option value="Musical">Musical Courses</option>
+             <option value="GD">Graphic Designing</option>
+             <option value="NA">Network Administration</option>
+             <option value="FD">Fashion Designing</option>
+             <option value="DL">Diploma in Logistics & SCM</option>
+             </select>
+           </div>
+           <table>
+              <tbody>
+                <tr>
+                  <td style={{display: 'flex', flexDirection: 'column'}} onClick={()=>{}}>Programming Courses ▾
+                    <td>C & C++ Programming</td>
+                    <td>Python</td>
+                    <td>DBMS</td>
+                    <td>SQL</td>
+                    <td>Web Designing</td>
+                    <td>Artificial Intelligence</td>
+                    <td>C# .NET</td>
+                  </td>
+                  <td style={{display: 'flex', flexDirection: 'column'}} onClick={()=>{}}>Musical Courses ▾
+                    <td>Vocal Music</td>
+                    <td>Keyboard</td>
+                  </td>
+                  <td style={{display: 'flex', flexDirection: 'column'}} onClick={()=>{}}>Aviation Courses ▾
+                    <td>Aviation & Travel Tourism</td>
+                    <td>Aviation Security</td>
+                    <td>Aviation Operation</td>
+                    <td>Airport Management</td>
+                  </td>
+                  <td style={{display: 'flex', flexDirection: 'column'}} onClick={()=>{}}>Graphic Designing Courses ▾
+                    <td>Adobe Photoshop</td>
+                    <td>Adobe Illustrator</td>
+                    <td>3D Studio Max</td>
+                    <td>MAYA</td>
+                  </td>
+                  <td style={{display: 'flex', flexDirection: 'column'}} onClick={()=>{}}>Network Administration Courses ▾
+                    <td>Windows / Linux</td>
+                    <td>Network Engineering</td>
+                    <td>Network Security</td>
+                    <td>MAYA</td>
+                  </td>
+                  <td style={{display: 'flex', flexDirection: 'column'}} onClick={()=>{}}>Fashion Designing ▾
+                    <td>Fashion & Apparel Design</td>
+                    <td>Fashion Design & Technology</td>
+                  </td>
+                  <td style={{display: 'flex', flexDirection: 'column'}} onClick={()=>{}}>Logistics ▾
+                    <td>Diploma in Logistics & Supply Chain Management</td>
+                    <td>PG in Logistics & Supply Chain Management</td>
+                  </td>
+                  <td onClick={()=>{}}>Hotel Management and Tourism Administration</td>
+                  <td onClick={()=>{}}>Fire & Safety </td>
+                  <td onClick={()=>{}}>Health, Environment & Safety Engineering</td>
+                  <td onClick={()=>{}}>VFX & Compositing</td>
+                  <td onClick={()=>{}}>CBT</td>
+
+                </tr>
+              </tbody>
+            </table>
+        </div>
             
         <div className="course_container" >
+        
           {
             courses.map((course,index)=>{
                return(
@@ -317,6 +379,7 @@ function Courses(){
             })
           }
           
+        </div>
         </div>
           )
         }

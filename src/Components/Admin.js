@@ -23,7 +23,7 @@ function Admin(){
   
   const [chart, setChart] = useState([])
 
-  let courseUrl = "https://eimt-backend.herokuapp.com/courses"
+  let courseUrl = "https://eimt-backend.onrender.com/courses"
 // console.log(chart.filter(x => x.course === 'Hotel Management').length);
    var data2= {
     labels: ['Programming','Aviation','Hotel Management','Dubbing'],
@@ -87,7 +87,7 @@ const logout = () => {
     useEffect(() => {
 
         readValue();
-        fetch("https://eimt-backend.herokuapp.com/data",{
+        fetch("https://eimt-backend.onrender.com/data",{
           method:"GET",
           headers:{
               "Authorization": `Bearer ${token.current}`
@@ -134,7 +134,7 @@ const logout = () => {
       let [menubar1,setMenu1] = useState(false);
 
       function addItem(){
-        fetch(`https://eimt-backend.herokuapp.com/course`,{
+        fetch(`https://eimt-backend.onrender.com/course`,{
           method:"POST",
           headers:{
             "Content-Type": "application/json"
