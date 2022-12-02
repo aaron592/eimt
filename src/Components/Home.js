@@ -8,7 +8,7 @@ import '../css/Header.css';
 import eimt from '../images/logo.png'
 import banner_1 from '../images/banner.png';
 import banner_2 from '../images/banner2.png';
-import banner_3 from '../images/banner_3.png';
+import banner_3 from '../images/banner3.png';
 import banner_4 from '../images/banner_4.png';
 import logo from '../images/eimt_final.png';
 import bannerImage from '../images/banner.gif';
@@ -201,8 +201,8 @@ function Header(){
                   <Link style={{ textDecoration: 'none', color: '#494949' }} to="/contact"><p className="nav_p">Contact Us</p></Link>
               </div>
               <div className="col-lg-2 col-xl-3 col-md-6 col-sm-2 search" data-aos="fade-left">
-              <input type="text" placeholder="&#xf002; Search" className="search_bar fas"/>
-              
+              <input type="text" placeholder="Search..." className="search_bar fas"/>
+              {/* &#xf002; */}
               </div>
               {/* <div className="col-lg-2 col-xl-2 col-sm-6 col-md-8 login_details">
                 <button className="register" onClick={saveForm}>APPLY NOW</button>

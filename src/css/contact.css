@@ -1093,6 +1093,138 @@
           border-radius:5px;
       
       }
+
+      .contact_form_layout{
+        margin-top:50px;
+        width:100%;
+        padding-top:10px;
+        padding-bottom:10px;
+        /* background-color:red; */
+        display:flex;
+        align-items: center;
+        justify-content:center;
+    }
+    
+    .contact_f{
+        width:90%;
+        padding-top:10px;
+        padding-bottom:10px;
+        /* background-color:blue; */
+        display:flex;
+    }
+    
+    .contact_f1{
+        width:50%;
+        padding-top:10px;
+        padding-bottom:10px;
+        /* background-color:grey */
+    }
+    
+    .contact_f1>p{
+        margin-bottom: 25px;
+    }
+    .contact_f2{
+        width:50%;
+        padding-top:10px;
+        padding-bottom:10px;
+        /* background-color:white; */
+        display:flex;
+        justify-content:flex-end;
+    }
+    .contact_field{
+        width:80%;
+        padding-top:10px;
+        padding-bottom:10px;
+        /* background-color:green; */
+        
+    }
+    
+    .contact_name{
+        width:100%;
+        padding-top:10px;
+        padding-bottom:10px;
+        /* background-color:red; */
+        display:flex;
+        
+    }
+    
+    .contact_name1{
+        width:50%;
+        padding-top:10px;
+        padding-bottom:10px;
+        /* background-color:lightblue; */
+        display:flex;
+        flex-direction:column;
+        padding-left: 10px;
+        padding-right: 10px;
+    
+    }
+    
+    .contact_name1>label{
+        color:grey;
+    }
+    
+    .contact_name1>input{
+        border-radius:5px;
+        border:1px solid lightgrey;
+        height:50px;
+        text-indent: 10px;
+    }
+    .contact_name2{
+        width:50%;
+        padding-top:10px;
+        padding-bottom:10px;
+        /* background-color:rgb(30, 34, 36); */
+        display:flex;
+        flex-direction:column;
+        padding-left: 10px;
+        padding-right: 10px;
+    
+    }
+    .contact_name2>label{
+        color:grey;
+    }
+    
+    .contact_name2>input{
+        border-radius:5px;
+        border:1px solid lightgrey;
+        height:50px;
+        text-indent: 10px;
+    }
+    .contact_phone{
+        width:100%;
+        padding-top:10px;
+        padding-bottom:10px;
+        /* background-color:red; */
+        display:flex;
+        flex-direction: column;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .contact_phone>label{
+        color:grey;
+    }
+    .contact_phone>input{
+        border-radius:5px;
+        border:1px solid lightgrey;
+        height:50px;
+        text-indent: 10px;
+    }
+    .contact_phone>textarea{
+        border-radius:5px;
+        border:1px solid lightgrey;
+        text-indent: 10px;
+    }
+    .btn_submit{
+        margin-top:20px;
+        margin-left:10px;
+        width:25%;
+        height:50px;
+        border-radius: 10px;
+        background:#21AD2A;
+        border:none;
+        color:white;
+    }
 }
 
 @media (min-width: 1400px ){
@@ -1430,7 +1562,7 @@
     height:45px;
     border:none;
     background-color:rgb(222, 105, 105);
-    color:white;
+    color:white; 
     border-radius:5px;
 
 }
@@ -1438,5 +1570,137 @@
 .contact_form_cont>p{
     padding-top:15px;
 
+}
+
+.contact_form_layout{
+    margin-top:50px;
+    width:100%;
+    padding-top:10px;
+    padding-bottom:10px;
+    /* background-color:red; */
+    display:flex;
+    align-items: center;
+    justify-content:center;
+}
+
+.contact_f{
+    width:90%;
+    padding-top:10px;
+    padding-bottom:10px;
+    /* background-color:blue; */
+    display:flex;
+}
+
+.contact_f1{
+    width:50%;
+    padding-top:10px;
+    padding-bottom:10px;
+    /* background-color:grey */
+}
+
+.contact_f1>p{
+    margin-bottom: 25px;
+}
+.contact_f2{
+    width:50%;
+    padding-top:10px;
+    padding-bottom:10px;
+    /* background-color:white; */
+    display:flex;
+    justify-content:flex-end;
+}
+.contact_field{
+    width:80%;
+    padding-top:10px;
+    padding-bottom:10px;
+    /* background-color:green; */
+    
+}
+
+.contact_name{
+    width:100%;
+    padding-top:10px;
+    padding-bottom:10px;
+    /* background-color:red; */
+    display:flex;
+    
+}
+
+.contact_name1{
+    width:50%;
+    padding-top:10px;
+    padding-bottom:10px;
+    /* background-color:lightblue; */
+    display:flex;
+    flex-direction:column;
+    padding-left: 10px;
+    padding-right: 10px;
+
+}
+
+.contact_name1>label{
+    color:grey;
+}
+
+.contact_name1>input{
+    border-radius:5px;
+    border:1px solid lightgrey;
+    height:50px;
+    text-indent: 10px;
+}
+.contact_name2{
+    width:50%;
+    padding-top:10px;
+    padding-bottom:10px;
+    /* background-color:rgb(30, 34, 36); */
+    display:flex;
+    flex-direction:column;
+    padding-left: 10px;
+    padding-right: 10px;
+
+}
+.contact_name2>label{
+    color:grey;
+}
+
+.contact_name2>input{
+    border-radius:5px;
+    border:1px solid lightgrey;
+    height:50px;
+    text-indent: 10px;
+}
+.contact_phone{
+    width:100%;
+    padding-top:10px;
+    padding-bottom:10px;
+    /* background-color:red; */
+    display:flex;
+    flex-direction: column;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.contact_phone>label{
+    color:grey;
+}
+.contact_phone>input{
+    border-radius:5px;
+    border:1px solid lightgrey;
+    height:50px;
+    text-indent: 10px;
+}
+.contact_phone>textarea{
+    border-radius:5px;
+    border:1px solid lightgrey;
+    text-indent: 10px;
+}
+.btn_submit{
+    margin-top:20px;
+    margin-left:10px;
+    width:25%;
+    height:50px;
+    border-radius: 10px;
+    background:#21AD2A;
+    border:none;
+    color:white;
 }
 }

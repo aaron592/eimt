@@ -8,6 +8,7 @@ import manoj from '../images/Manoj.png';
 import anil from '../images/Anil.png';
 import simon from '../images/simon.png';
 import cbt from '../images/cbt.png';
+import lanBanner from '../images/lan_banner.jpeg';
 import instagram from '../images/instagram.png';
 import facebook from '../images/facebook.png';
 import twitter from '../images/twitter.png';
@@ -17,6 +18,7 @@ import lan from '../images/lan_banner.png';
 import lang from '../images/lang.png';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import principal from '../images/principal.png';
 
 
 
@@ -26,6 +28,28 @@ function Language(){
     let [menubar,setMenu] = useState(false);
     let [menubar1,setMenu1] = useState(false);
     const [loading, setLoading] = useState(false);
+
+    let[allcourses,setAllCourses]=useState(true);
+    let[lanCou,setlanCou]=useState(false);
+    let[ielts,setIelts]=useState(null);
+    
+
+    let lanCourses=[
+      {id:1,lanName:'Advanced English',tutor:'Allen Joseph',desc:'This program will help hone your skills and increase your confidence using the English language in both professional and individual settings.'},
+      {id:2,lanName:'Advanced Hindi',tutor:'Allen Joseph',desc:'Hindi is one of India’s official languages.This helps them be efficient in the language and at the same time, easy to travel anywhere in India.'},
+      {id:3,lanName:'German',tutor:'Allen Joseph',desc:'Its goal is to help students develop cultural and linguistic competence that allows them to feel comfortable thinking of themselves as users of German, in listening, reading, writing, and speaking. '},
+      {id:4,lanName:'Hebrew',tutor:'Allen Joseph',desc:' In this course the student learns: how to read and write using Modern Hebrew script; vocabulary related to immediate environment; basic morphological structures of verbs and nouns only in present tense; and basic grammar and the syntactic structures of simple sentences.'},
+      {id:5,lanName:'Spanish',tutor:'Allen Joseph',desc:'Is designed to develop listening, speaking, writing, and reading skills in Spanish as well as cultural competency in the Hispanic world.Students will learn the fundamental structures of the language by engaging in brief conversations.'},
+      {id:6,lanName:'French',tutor:'Allen Joseph',desc:'Introduces students to the culture and language of the French-speaking world. Students develop an ability to communicate in real-life situations by acquiring reading, writing, listening, and speaking skills.'},
+      {id:7,lanName:'Italian',tutor:'Allen Joseph',desc:'This course teaches the fundamentals of Italian grammar. Students are trained to pronounce Italian correctly, to acquire a small working vocabulary, which they use in conversation and writing, and to read simple Italian.'},
+      {id:8,lanName:'IELTS',tutor:'Allen Joseph',desc:'The IELTS course is for students from Intermediate to Advanced levels. It focuses on academic skills, with the goal of preparing students to successfully sit the IELTS test.'},
+      {id:9,lanName:'OET',tutor:'Allen Joseph',desc:'The Occupation English Test (OET) is an international English language test designed to assess the language communication skills of healthcare professionals who seek to register and practise in an English-speaking environment.'},
+      {id:10,lanName:'PTE',tutor:'Allen Joseph',desc:'The Pearson Test of English (PTE Academic) assesses the Speaking & Writing, Reading and Listening skills, skills of the candidates to ensure that they are capable of studying in the international environment, with a good grasp of the universal language of English.'},
+      {id:11,lanName:'Fluency',tutor:'Allen Joseph',desc:'The course focuses on fluency by having students practice speaking, listening, reading, and writing using high volumes of understandable English and constant repetition of words and phrases.'},
+      {id:12,lanName:'CBT',tutor:'Allen Joseph',desc:'Students will develop knowledge of various cognitive-behavioral models of common psychological disorders. Students will learn to develop a comprehensive cognitive-behavioral case conceptualization, which will inform treatment monitoring and planning.'}
+      
+    ]
+
 
     useEffect(() => {
 
@@ -42,6 +66,8 @@ function Language(){
     `
     },[])
 
+    
+    
    
 
     return(
@@ -138,7 +164,7 @@ function Language(){
                   <Link style={{ textDecoration: 'none', color: '#494949' }} to="/contact"><p className="nav_p">Contact Us</p></Link>
               </div>
               <div className="col-lg-2 col-xl-3 col-md-6 col-sm-2 search" data-aos="fade-left">
-              <input type="text" placeholder="&#xf002; Search" className="search_bar fas"/>
+              <input type="text" placeholder="Search...." className="search_bar fas"/>
               
               </div>
               {/* <div className="col-lg-2 col-xl-2 col-sm-6 col-md-8 login_details">
@@ -153,8 +179,15 @@ function Language(){
           <img src={lan}/>
         </div>    
 
-        <div className="ac_team">
-           <p className="h2">Academic Team</p>
+        <div className="lan_qa ">
+          <div className="lan_qa1 aos-item aos-init aos-animate">
+          <Link style={{ textDecoration: 'none', color: '#C8102E' }} to="/"><h6 style={{fontWeight:'300'}}>Home</h6></Link>
+            <h6 style={{color:'#666'}}>&nbsp;  &#8250; &nbsp;</h6>
+            <h6 style={{fontWeight:'300'}}>Language Courses</h6>
+          </div>
+        </div>
+
+        {/* <div className="ac_team">
            <div className="ac_team_mem">
              <div className="team">
                <div className="team_img">
@@ -199,6 +232,29 @@ function Language(){
               
              </div>
            </div>
+        </div> */}
+
+        <div className="elc_team">
+        <div className="d-flex flex-row msg_container">
+            <div className="msg_tab" >
+                <div className="msg_tab2">
+                   <h4>Message from our Director & Principal</h4>
+                </div>
+            </div>
+             <div className="d-flex flex-row msg_tab_cont">
+               <div className="msg_tab_img" data-aos="fade-right">
+                 <img style={{pointerEvents:"none"}} src={allen}/>
+               </div>
+               <div className="msg_tab_details" data-aos="fade-left">
+                <div className="msg_tab_det_sub">
+                  <h5>Mr. Allen Joseph</h5>
+                  <h6>Head of Language Study & Academics</h6>
+                  <p>We take the responsibility of EIMT for the future of the students to create an educational sector that invokes the moral values ​​of the past and shapes the future of the present. EIMT has faculty and dedicated members with global perspective and experience.</p>
+                </div>
+                
+               </div>
+             </div>
+         </div>
         </div>
 
         <div className="about_elc">
@@ -211,24 +267,127 @@ function Language(){
         <div className="elc_course">
           <p className="h2">Courses Offered</p>
           <div className="elc_courses">
-            <div className="elc_lan_course">
-              <img src={lang} />
-              <div>
-                <p>Language Courses</p>
-              </div>
+          <div className="elc_course1">
+            <table>
+              <tbody>
+                <tr>
+                  <td onClick={()=>{setAllCourses(true);setIelts(null);setlanCou(false)}}>All Courses</td>
+                  <td style={{display: 'flex', flexDirection: 'column'}} onClick={()=>{setlanCou(true);setIelts(null);setAllCourses(false)}}>Language Courses ▾
+                    <td>English</td>
+                    <td>Hindi</td>
+                    <td>German</td>
+                    <td>Hebrew</td>
+                    <td>French</td>
+                    <td>Spanish</td>
+                    <td>Italian</td>
+
+                  {/* <select>
+                    <option value="">Language Courses ▾</option>
+                    <option value="">English</option>
+                    <option value="">Hindi</option>
+                    <option value="">German</option>
+                    <option value="">Hebrew</option>
+                    <option value="">French</option>
+                    <option value="">Spanish</option>
+                    <option value="">Italian</option>
+                  </select> */}
+                  </td>
+                  <td onClick={()=>{setIelts('IELTS');setlanCou(false);setAllCourses(false)}}>IELTS</td>
+                  <td onClick={()=>{setIelts('OET');setlanCou(false);setAllCourses(false)}}>OET</td>
+                  <td onClick={()=>{setIelts('PTE');setlanCou(false);setAllCourses(false)}}>PTE</td>
+                  <td onClick={()=>{setIelts('Fluency');setlanCou(false);setAllCourses(false)}}>Fluency</td>
+                  <td onClick={()=>{setIelts('CBT');setlanCou(false);setAllCourses(false)}}>CBT</td>
+
+                </tr>
+              </tbody>
+            </table>
+            <div className="elc_cours">
+              <img src={lanBanner}/>
             </div>
-            <div className="elc_lan_course">
-              <img src="https://kcr.ie/wp-content/uploads/2017/12/OET-VS-IELTS-1.png" />
-              <div>
-                <p>IELTS & OET Training</p>
-              </div>
+          </div>
+          <div className="elc_course2">
+          {lanCourses.map((item, i) => (
+                allcourses===true?(
+                  <div key={i} className="elc_course2_div">
+                  <h4>{item.lanName}</h4>
+                  <p>Tutor: {item.tutor}</p>
+                  <p>{item.desc}</p>
+                  </div>):null
+        ))}
+          {lanCourses.map((item, i) => (
+                ielts===item.lanName?(
+                  <div key={i} className="elc_course2_div">
+                  <h4>{item.lanName}</h4>
+                  <p>Tutor: {item.tutor}</p>
+                  <p>{item.desc}</p>
+                  </div>):null
+        ))}
+        {lanCourses.map((item, i) => (
+          lanCou===true || item.lanName==='Advanced English' && item.lanName==='Advanced Hindi' && item.lanName==='Spanish' && item.lanName==='Hebrew')?(
+                  <div key={i} className="elc_course2_div">
+                  <h4>{item.lanName}</h4>
+                  <p>Tutor: {item.tutor}</p>
+                  <p>{item.desc}</p>
+                  </div>):null
+        )}
+    
+            
+            {/* <div className="elc_course2_div">
+               <h4>Advanced English </h4>
+               <p>Tutor: Allen Joseph</p>
+               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur maximus egestas gravida. Mauris pretium, ipsum nec malesuada feugiat, nibh purus auctor felis, quis aliquam libero nisl ut mi.</p>
             </div>
-            <div className="elc_lan_course">
-              <img src={cbt} />
-              <div>
-                <p>CBT & PTE Training</p>
-              </div>
+            <div className="elc_course2_div">
+               <h4>Advanced English </h4>
+               <p>Tutor: Allen Joseph</p>
+               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur maximus egestas gravida. Mauris pretium, ipsum nec malesuada feugiat, nibh purus auctor felis, quis aliquam libero nisl ut mi.</p>
             </div>
+            <div className="elc_course2_div">
+               <h4>Advanced English </h4>
+               <p>Tutor: Allen Joseph</p>
+               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur maximus egestas gravida. Mauris pretium, ipsum nec malesuada feugiat, nibh purus auctor felis, quis aliquam libero nisl ut mi.</p>
+            </div>
+            <div className="elc_course2_div">
+               <h4>Advanced English </h4>
+               <p>Tutor: Allen Joseph</p>
+               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur maximus egestas gravida. Mauris pretium, ipsum nec malesuada feugiat, nibh purus auctor felis, quis aliquam libero nisl ut mi.</p>
+            </div>
+            <div className="elc_course2_div">
+               <h4>Advanced English </h4>
+               <p>Tutor: Allen Joseph</p>
+               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur maximus egestas gravida. Mauris pretium, ipsum nec malesuada feugiat, nibh purus auctor felis, quis aliquam libero nisl ut mi.</p>
+            </div>
+            <div className="elc_course2_div">
+               <h4>Advanced English </h4>
+               <p>Tutor: Allen Joseph</p>
+               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur maximus egestas gravida. Mauris pretium, ipsum nec malesuada feugiat, nibh purus auctor felis, quis aliquam libero nisl ut mi.</p>
+            </div>
+            <div className="elc_course2_div">
+               <h4>Advanced English </h4>
+               <p>Tutor: Allen Joseph</p>
+               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur maximus egestas gravida. Mauris pretium, ipsum nec malesuada feugiat, nibh purus auctor felis, quis aliquam libero nisl ut mi.</p>
+            </div>
+            <div className="elc_course2_div">
+               <h4>Advanced English </h4>
+               <p>Tutor: Allen Joseph</p>
+               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur maximus egestas gravida. Mauris pretium, ipsum nec malesuada feugiat, nibh purus auctor felis, quis aliquam libero nisl ut mi.</p>
+            </div>
+            <div className="elc_course2_div">
+               <h4>Advanced English </h4>
+               <p>Tutor: Allen Joseph</p>
+               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur maximus egestas gravida. Mauris pretium, ipsum nec malesuada feugiat, nibh purus auctor felis, quis aliquam libero nisl ut mi.</p>
+            </div>
+            <div className="elc_course2_div">
+               <h4>Advanced English </h4>
+               <p>Tutor: Allen Joseph</p>
+               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur maximus egestas gravida. Mauris pretium, ipsum nec malesuada feugiat, nibh purus auctor felis, quis aliquam libero nisl ut mi.</p>
+            </div>
+            <div className="elc_course2_div">
+               <h4>Advanced English </h4>
+               <p>Tutor: Allen Joseph</p>
+               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur maximus egestas gravida. Mauris pretium, ipsum nec malesuada feugiat, nibh purus auctor felis, quis aliquam libero nisl ut mi.</p>
+            </div> */}
+          </div>
           </div>
         </div>
 

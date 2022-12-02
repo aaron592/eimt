@@ -6,8 +6,8 @@ body{
     width:100%;
     height:40px;
     background-color:rgb(247, 247, 247);
-    position: fixed;
-    z-index:20;
+    /* position: fixed; */
+    /* z-index:20; */
     margin:0px;
     display: flex;
     align-items: center;
@@ -44,7 +44,7 @@ body{
     height:40px;
     display:flex;
     align-items: center;
-    justify-content:center;
+    justify-content:right;
 }
 
 .contact_nav_det_2>button{
@@ -228,7 +228,7 @@ body[data-aos-duration="400"] [data-aos] {
 }
 
 .h-500{
-    padding-top:120px;
+    padding-top:90px;
     height:auto
 }
 
@@ -240,7 +240,7 @@ body[data-aos-duration="400"] [data-aos] {
     display:flex;
     align-items: center;
     justify-content: center;
-    position: fixed;
+    position: absolute;
     box-shadow:none;
     z-index:20;
     width:100%;
@@ -283,6 +283,12 @@ body[data-aos-duration="400"] [data-aos] {
     background:none;
     text-indent: 10px;
     border-radius:10px;
+    font-family: 'Segoe UI';
+}
+
+.search_bar::placeholder{
+    font-family: 'Segoe UI';
+    font-weight:400;
 }
 
 .search_btn{
@@ -580,13 +586,13 @@ marquee{
     padding-bottom:20px;
     padding-left:15px;
     padding-right:15px;
-    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    /* box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px; */
     height:200px;
     border-radius:5px;
 }
 
 .eimt_heading_cont_1>h5{
-    text-align:center;
+    text-align:left;
     font-family: 'Segoe UI';
     font-weight:350;
 }
@@ -855,7 +861,7 @@ marquee{
 }
 
 .footer{
-    margin-top:30px;
+    /* margin-top:30px; */
     height:auto;
     /* background-color:#6DAFFE; */
     align-items: center;
@@ -995,7 +1001,7 @@ marquee{
 .msg_container{
     width:100%;
     background-color:linear-gradient(to top, #e8eef9, #ffffff);
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    /* box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px; */
     padding-bottom:30px;
     padding-top:30px;
     display: flex;
@@ -1020,13 +1026,13 @@ marquee{
     padding-left:20px;
     padding-right:20px;
     /* background-color:red; */
-    border-top:1px solid #0285FF;
-    border-bottom:1px solid #0285FF;
+    /* border-top:1px solid #0285FF; */
+    /* border-bottom:1px solid #0285FF; */
     display:flex;
     align-items: center;
     justify-content:flex-start;
     border-radius: 10px;
-    box-shadow: 0px 16px 38px 0 rgb(0 0 0 / 6%);
+    /* box-shadow: 0px 16px 38px 0 rgb(0 0 0 / 6%); */
     background: #fff;
 }
 
@@ -1055,7 +1061,7 @@ marquee{
     /* background-color:yellow; */
     padding-left: 10px;
     border-radius:0px;
-    border-left:3px solid #1366ff;
+    border-left:3px solid #1366ff !important;
     display:flex;
     align-items: center;
     justify-content: flex-start;
@@ -1088,7 +1094,7 @@ marquee{
     width:65%;
     padding:15px;
     margin-left:30px;
-    background-color:#E5F1FF;
+    /* background-color:#E5F1FF; */
     border-bottom-left-radius:20px;
     border-bottom-right-radius:20px;
     border-top-right-radius: 20px;
@@ -1105,10 +1111,12 @@ marquee{
 }
 .msg_tab_det_sub>h5{
     font-weight: bold;
+    padding-bottom:15px;
 }
 
 .msg_tab_det_sub>h6{
     font-size: 13px;
+    padding-bottom:15px;
 }
 
 .msg_tab_det_sub>p{
@@ -1119,8 +1127,8 @@ marquee{
 
 .elc_content{
     width:100%;
-    background-image: linear-gradient(to top, #e8eef9, #ffffff);
-    padding-top: 20px;
+    /* background-image: linear-gradient(to top, #e8eef9, #ffffff); */
+    /* padding-top: 5px; */
     padding-bottom: 20px;
     display: flex;
     align-items: center;
@@ -1130,7 +1138,7 @@ marquee{
 .elc_content_tab{
     width:90%;
     /* background-color:yellow; */
-    padding-top: 20px;
+    /* padding-top: 20px; */
     padding-bottom: 20px;
     display: flex;
 }
@@ -1147,7 +1155,7 @@ marquee{
 }
 
 .elc_content_img{
-    width:40%;
+    width:45%;
     /* background-color:rgb(238, 238, 238); */
     padding-top: 20px;
     padding-bottom: 20px;
@@ -3007,7 +3015,7 @@ marquee{
     }
 
     .footer{
-        margin-top:30px;
+        /* margin-top:30px; */
         padding-top:20px;
         height:auto;
         /* background-color:#093450; */
@@ -3686,7 +3694,7 @@ color:#889c0b;
     border-bottom:1px solid rgb(171, 171, 171);
     /* border-image: linear-gradient(to bottom, #000 50%, transparent 50%) 100% 1; */
     border-image: linear-gradient(to right,to top,to bottom, rgb(255, 206, 206) 50%, transparent 50%) 100% 1;
-        margin-top:30px;
+        /* margin-top:30px; */
         padding-top:20px;
         height:auto;
         /* background-color:#093450 ; */
