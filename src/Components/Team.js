@@ -1,73 +1,45 @@
-import {Link} from 'react-router-dom';
-import '../css/Header.css';
-import '../css/Course.css';
-import '../css/About.css';
-import logo from '../images/eimt_final.png';
-import {useEffect ,useState} from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Slider from "react-slick";
 import 'slick-carousel/slick/slick.css';
 import "slick-carousel/slick/slick-theme.css";
+import { Nav, Navbar } from 'react-bootstrap';
+import {Link} from 'react-router-dom';
+import '../css/Header.css';
+import '../css/Team.css';
+import eimt from '../images/logo.png'
+import banner_1 from '../images/banner.png';
+import banner_2 from '../images/banner2.png';
+import banner_3 from '../images/banner3.png';
+import banner_4 from '../images/banner_4.png';
+import logo from '../images/eimt_final.png';
+import bannerImage from '../images/banner.gif';
+import {useEffect ,useState} from 'react';
 import instagram from '../images/instagram.png';
 import facebook from '../images/facebook.png';
 import twitter from '../images/twitter.png';
 import youtube from '../images/youtube.png';
+import '../css/About.css';
 import about_img from '../images/preview1.png';
-import eimt from '../images/logo.png'
-import { saveAs } from "file-saver";
-import PacmanLoader from "react-spinners/PacmanLoader";
-import AOS from 'aos';
-import 'aos/dist/aos.css';
+import allen from '../images/allen.png';
+import manoj from '../images/Manoj.png';
+import anil from '../images/Anil.png';
+import cbt from '../images/cbt.png';
+import {
+    MDBCarousel,
+    MDBCarouselItem,
+  } from 'mdb-react-ui-kit';
+  import AOS from 'aos';
+  import 'aos/dist/aos.css';
 
+function Team(){
+    const [loading, setLoading] = useState(false);
 
-function Courses(){
-
-  let [courses,setCourses]= useState([]);
-  let [store,setStore]= useState([]);
-  const [loading, setLoading] = useState(false);
-
-  const [isLoading, isSetLoading] = useState(false)
-
-  const saveForm = () => {
-    saveAs(
-      "https://master--iridescent-profiterole-2ab773.netlify.app/application_form.pdf",
-      "EIMT-Application-Form.pdf"
-    );
-  };
-
-  useEffect(()=>{
-    
-    setLoading(true);
-      setTimeout(() => {
-        setLoading(false);
-      }, 2000);
-
+    const captionStyle = {
+        fontSize: '2em',
+        fontWeight: 'bold',
+      }
       
-      AOS.init();
-
-      isSetLoading(true);
-
-      fetch("https://eimt-backend.onrender.com/courses")
-      .then((response)=>response.json())
-      .then((courseData)=>{
-          setCourses(courseData);
-          isSetLoading(false);
-          setStore(courseData);
-      })
-      .catch((err)=>{
-          console.log(err);
-      })
-
-  },[])
-
-  function filterData(course){
-      let updatedData = courses.filter((cour)=>{
-      return cour.course === course;
-    })
-    setCourses(updatedData);
-  }
-
-    var settings = {
+      var settings = {
         dots: true,
         autoplay:true,
         infinite: true,
@@ -77,50 +49,31 @@ function Courses(){
         overflow: false,
       };
 
+      useEffect(() => {
+
+        setLoading(true);
+        setTimeout(() => {
+          setLoading(false);
+        }, 2000);
     
+        AOS.init();
+    
+        document.head.innerHTML+=`
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, shrink-to-fit=no, user-scalable=0" />
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous"></link>
+        `
+      }, []);
+
       let [menubar,setMenu] = useState(false);
-      let [menubar1,setMenu1] = useState(false);
+  let [menubar1,setMenu1] = useState(false);
 
-      let [cour,courModal] = useState(false);
-
-      let [load,setLoadData] = useState({});
-      
-      
-      function readValue(value){
-              courses=store;
-              setCourses(courses);
-              const updatedData = courses.filter((cour)=>{
-              return cour.course === value;
-          })
-          setCourses(updatedData);
-        
-      }
-      
-      function courseModal(id){
-        fetch(`https://eimt-backend.onrender.com/course/sub/${id}`)
-        .then((response)=>response.json())
-        .then((data)=>{
-        // console.log(data);
-        setLoadData(data);
-        })
-        .catch((err)=>{
-        console.log(err);
-        })
-      }
-      const overide = `
-      display: block;
-      margin: 0 auto;
-      border-color: red;
-    `;
-      
-     
     return(
         <section>
         { loading ? (
         <div className="loader-container">
       	  <div className="spinner"></div>
         </div>
-      ) : (<div>
+      ) : ( <div>
         <div className="contact_nav">
           <div className="contact_nav_det">
             <div className="contact_nav_det_1">
@@ -132,7 +85,7 @@ function Courses(){
             </div>
           </div>
         </div>
-        <div className="container-fluid">
+      <div className="container-fluid">
         
         <div className="row">
               <div className="col-lg-2 col-xl-3 col-md-3 col-sm-6  logo" data-aos="fade-right">
@@ -219,39 +172,14 @@ function Courses(){
            </div>
           
         </div>
-
-{
-  cour===true?
-  (
-
-    <div className="cour_modal_container">
-          <div className="cour_modal">
-           <div className="close_cont">
-              <button onClick={()=>{courModal(false)}}>&#10006;</button>
-           </div>
-           <div className="d-flex flex-row cour_m">
-           <div className="cour_img">
-              <img src={load.image} width="100%" height="100%"/>
-           </div>
-          <div className="cour_details">
-               <h3>{load.name}</h3>
-               <p>{load.description}</p>
-                <p><span>Course type:</span> {load.course}</p>
-          </div>
-           </div>
-          </div>
-        </div>
-  ):null
-}
-
-        <div className="col-lg-12 col-xl-12 about_msg">
+        
+    <div className="col-lg-12 col-xl-12 about_msg">
        <img src={about_img}/>
        <span className="col-lg-12 col-xl-12 overlay">
           <div className="about_header">
-             <div className="about_h1">
-               <h1>Explore Our Courses</h1>
-             </div>
-             
+             {/* <div className="about_h1">
+               <h1>ABOUT</h1>
+             </div> */}
           </div>
        </span>
     </div>
@@ -259,132 +187,36 @@ function Courses(){
           <div className="lan_qa1 aos-item aos-init aos-animate">
           <Link style={{ textDecoration: 'none', color: '#C8102E' }} to="/"><h6 style={{fontWeight:'300'}}>Home</h6></Link>
             <h6 style={{color:'#666'}}>&nbsp;  &#8250; &nbsp;</h6>
-            <h6 style={{fontWeight:'300'}}>Technical Courses</h6>
+            <h6 style={{fontWeight:'300'}}>Our Team</h6>
           </div>
         </div>
-
-
-        {/* <div className="filter_container">
-           <button onClick={()=>filterData('Programming')}>Programming</button>
-           <button onClick={()=>filterData('Graphic Designing')}>Graphic Designing</button>
-           <button onClick={()=>filterData('Networking')}>Networking</button>
-           <button onClick={()=>filterData('Fashion Designing')}>Fashion Designing</button>
-           <button onClick={()=>filterData('Language')}>Language</button>
-           <button onClick={()=>filterData('Musical')}>Musical</button>
-           <button onClick={()=>filterData('Hotel Management')}>Hotel Management</button>
-           <button onClick={()=>filterData('Fire & Safety')}>Fire & Safety</button>
-           <button onClick={()=>filterData('Aviation')}>Aviation</button>
-        </div> */}
-        <div className="course_header_tag" data-aos="fade-up">
-           <h2>&#128366; Courses</h2>
-          
-        </div>
-
-        {
-          isLoading===true?
-          (
-            <div className="override">
-            <h6 color={'grey'} isLoading={isLoading} css={{overide}} size={20} >Loading...</h6>
-            </div>
-          ):(
-      <div className="course_container_h">      
-        <div className="course_index">
-        <div data-aos="fade-up">
-           <select class="classic" onChange={(event)=>{readValue(event.target.value)}}>
-             <option value="">All Course</option>
-             <option value="Programming">Programming Courses</option>
-             <option value="Aviation">Aviation Courses</option>
-             <option value="Hotel Management">Hotel Management Courses</option>
-             <option value="Musical">Musical Courses</option>
-             <option value="GD">Graphic Designing</option>
-             <option value="NA">Network Administration</option>
-             <option value="FD">Fashion Designing</option>
-             <option value="DL">Diploma in Logistics & SCM</option>
-             </select>
-           </div>
-           <table>
-              <tbody>
-                <tr>
-                  <td style={{display: 'flex', flexDirection: 'column'}} onClick={()=>{}}>Programming Courses ▾
-                    <td>C & C++ Programming</td>
-                    <td>Python</td>
-                    <td>DBMS</td>
-                    <td>SQL</td>
-                    <td>Web Designing</td>
-                    <td>Artificial Intelligence</td>
-                    <td>C# .NET</td>
-                  </td>
-                  <td style={{display: 'flex', flexDirection: 'column'}} onClick={()=>{}}>Musical Courses ▾
-                    <td>Vocal Music</td>
-                    <td>Keyboard</td>
-                  </td>
-                  <td style={{display: 'flex', flexDirection: 'column'}} onClick={()=>{}}>Aviation Courses ▾
-                    <td>Aviation & Travel Tourism</td>
-                    <td>Aviation Security</td>
-                    <td>Aviation Operation</td>
-                    <td>Airport Management</td>
-                  </td>
-                  <td style={{display: 'flex', flexDirection: 'column'}} onClick={()=>{}}>Graphic Designing Courses ▾
-                    <td>Adobe Photoshop</td>
-                    <td>Adobe Illustrator</td>
-                    <td>3D Studio Max</td>
-                    <td>MAYA</td>
-                  </td>
-                  <td style={{display: 'flex', flexDirection: 'column'}} onClick={()=>{}}>Network Administration Courses ▾
-                    <td>Windows / Linux</td>
-                    <td>Network Engineering</td>
-                    <td>Network Security</td>
-                    <td>MAYA</td>
-                  </td>
-                  <td style={{display: 'flex', flexDirection: 'column'}} onClick={()=>{}}>Fashion Designing ▾
-                    <td>Fashion & Apparel Design</td>
-                    <td>Fashion Design & Technology</td>
-                  </td>
-                  <td style={{display: 'flex', flexDirection: 'column'}} onClick={()=>{}}>Logistics ▾
-                    <td>Diploma in Logistics & Supply Chain Management</td>
-                    <td>PG in Logistics & Supply Chain Management</td>
-                  </td>
-                  <td onClick={()=>{}}>Hotel Management and Tourism Administration</td>
-                  <td onClick={()=>{}}>Fire & Safety </td>
-                  <td onClick={()=>{}}>Health, Environment & Safety Engineering</td>
-                  <td onClick={()=>{}}>VFX & Compositing</td>
-                  <td onClick={()=>{}}>CBT</td>
-
-                </tr>
-              </tbody>
-            </table>
-        </div>
+       
+        <div className="ac_team">
+        <h2>Our Team</h2>
+           <div className="ac_team_mem">
+             <div className="team">
+               <div className="team_img">
+                 <img src={anil} />
+               </div>
+               <div className="team_msg aos-item aos-init aos-animate">
+                <div className="team_msg_con">
+                <p><span style={{fontWeight:'500',color:'black'}}>Mr. Anil Joseph</span> is a Professional Civil Engg by training, specialized in Industrial Waste Engineering from University of Kerala and also holds a Masters in International Business Development from Southern New Hampshire University in Manchester, NH, USA. Ebenezer is fortunate to have him as our Chief Operations Officer.</p>
+                </div>
+               </div>
+             </div>
+             <div className="team">
+              <div className="team_img">
+                <img src={manoj} />
+               </div>
+               <div className="team_msg aos-item aos-init aos-animate">
+               <div className="team_msg_con">
+               <p><span style={{fontWeight:'500',color:'black'}}>Mr. Manoj Kumar</span> Kulashreshta is a dynamic IT professional with wide ranging experience. A Computer Science graduate from University of Greenwich, UK. He was formerly with organizations like BBC World Service UK, Bowaters Paper Co etc. Ebenezer is truly blessed to have an industry veteran like Mr.Manoj as our IT & Systems head.</p>
+               </div>
+               </div>
+             </div>
             
-        <div className="course_container" >
-        
-          {
-            courses.map((course,index)=>{
-               return(
-                <div className="course_container1" data-aos="fade-up" key={index} onClick={()=>{
-                  courseModal(course._id)
-                  courModal(true)
-                  }}>
-              <div className="course_img_cont">
-              <img src={course.image} alt={course.name} />
-              </div>
-              <div className="course_details_cont">
-                 <h6 onClick={()=>{
-                  courseModal(course._id)
-                  courModal(true)
-                  }}>{course.name}</h6>
-                  <button onClick={()=>{courModal(true)}} className="view_more">VIEW DETAILS</button>
-                 <p>{course.description}</p>
-              </div>
            </div>
-               )
-            })
-          }
-          
-        </div>
-        </div>
-          )
-        }
-
+        </div> 
         <div className="col-lg-12 col-xl-12 col-md-12 col-sm-12 footer" >
             <div className="d-flex flex-wrap footer_details" id="footer_detail">
               <div className=" footer_logo" data-aos="fade-bottom">
@@ -395,7 +227,7 @@ function Courses(){
               <p className="footer_head">Locations</p>
               <p>ERNAKULAM, KALADY, KALLUMALA, UAE</p>
               <p className="footer_head">Head Office:</p>
-              <p>Ebenezer Villa, House No. 16/209A,<br></br> Piraroor P.O, Kalady<br></br>683574</p>
+              <p>Second Floor, Ashis Building, Marine Drive<br></br> High Court Junction,<br></br>Kochi 682031</p>
               </div>
               <div className="col-lg-flex col-xl-flex footer_details_2" data-aos="fade-bottom">
               <p className="footer_head">Quick Links</p>
@@ -423,9 +255,13 @@ function Courses(){
         </div>
         <div className="col-lg-12 col-xl-12 col-md-12 col-sm-12 rights">
           <p>© 2022 <Link to="/login">Copyright</Link>. Designed by <a href="https://luc.to/aaron" > ATJ</a></p>
-        </div></div>)}
+        </div>
+
+
+        </div> )}
+
         </section>
-    )
+    );
 }
 
-export default Courses;
+export default Team;

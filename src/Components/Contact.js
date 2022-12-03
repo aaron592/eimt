@@ -79,7 +79,7 @@ function Contact(){
           <div className="contact_nav_det">
             <div className="contact_nav_det_1">
               <h6>&#x1F4E7; admission@ebenezer-imt.org</h6>
-              <h6>&#128222; +91 9633514295</h6>
+              <h6>&#128222; +91 8943303002</h6>
             </div>
             <div className="contact_nav_det_2">
               <button><Link to='/registration'>FOR REGISTRATION</Link></button>
@@ -146,20 +146,21 @@ function Contact(){
                   <span className="nav_p">About &#x25BE;</span>
                   <div class="dropdown-content">
                   <Link style={{ textDecoration: 'none', color: '#494949' }} to="/about"> <p className="nav_p drop_p">About Us</p></Link>
-                      <p className="nav_p">Vision & Mission</p>
-                      <p className="nav_p">Our Team</p>
+                  <Link style={{ textDecoration: 'none', color: 'white' }} to="/vision-mission"><p className="nav_p">Vision & Mission</p></Link>
+                      <Link style={{ textDecoration: 'none', color: 'white' }} to="/team"><p className="nav_p">Our Team</p></Link> 
                   </div>
                   </p>
                   <p className="dropdown">
                     <span className="nav_p">Courses &#x25BE;</span>
                     <div class="dropdown-content">
                     <Link style={{ textDecoration: 'none', color: '#494949' }} to="/courses"><p className="nav_p">Technical courses</p></Link>
-                      <p className="nav_p">Language courses</p>
+                    <Link style={{ textDecoration: 'none', color: '#494949' }} to="/language_courses"><p className="nav_p">Language courses</p></Link>  
                     </div>
 
                   </p>
                   <Link style={{ textDecoration: 'none', color: '#494949' }} to=""><p className="nav_p">Careers</p></Link>
                   <Link style={{ textDecoration: 'none', color: '#494949' }} to="/contact"><p className="nav_p">Contact Us</p></Link>
+                  <Link style={{ textDecoration: 'none', color: '#494949' }} to="/language_courses"><p className="nav_p">ELC</p></Link>
               </div>
               <div className="col-lg-2 col-xl-3 col-md-6 col-sm-2 search" data-aos="fade-left">
               <input type="text" placeholder="Search..." className="search_bar fas"/>

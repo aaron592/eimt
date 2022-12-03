@@ -81,7 +81,7 @@ function Language(){
           <div className="contact_nav_det">
             <div className="contact_nav_det_1">
               <h6>&#x1F4E7; admission@ebenezer-imt.org</h6>
-              <h6>&#128222; +91 9633514295</h6>
+              <h6>&#128222; +91 8943303002</h6>
             </div>
             <div className="contact_nav_det_2">
               <button>FOR REGISTRATION</button>
@@ -148,20 +148,21 @@ function Language(){
                   <span className="nav_p">About &#x25BE;</span>
                   <div class="dropdown-content">
                   <Link style={{ textDecoration: 'none', color: '#494949' }} to="/about"> <p className="nav_p drop_p">About Us</p></Link>
-                      <p className="nav_p">Vision & Mission</p>
-                      <p className="nav_p">Our Team</p>
+                  <Link style={{ textDecoration: 'none', color: 'white' }} to="/vision-mission"><p className="nav_p">Vision & Mission</p></Link>
+                  <Link style={{ textDecoration: 'none', color: 'white' }} to="/team"><p className="nav_p">Our Team</p></Link> 
                   </div>
                   </p>
                   <p className="dropdown">
                     <span className="nav_p">Courses &#x25BE;</span>
                     <div class="dropdown-content">
                     <Link style={{ textDecoration: 'none', color: '#494949' }} to="/courses"><p className="nav_p">Technical courses</p></Link>
-                      <p className="nav_p">Language courses</p>
+                    <Link style={{ textDecoration: 'none', color: '#494949' }} to="/language_courses"><p className="nav_p">Language courses</p></Link>
                     </div>
 
                   </p>
                   <Link style={{ textDecoration: 'none', color: '#494949' }} to=""><p className="nav_p">Careers</p></Link>
                   <Link style={{ textDecoration: 'none', color: '#494949' }} to="/contact"><p className="nav_p">Contact Us</p></Link>
+                  <Link style={{ textDecoration: 'none', color: '#494949' }} to="/language_courses"><p className="nav_p">ELC</p></Link>
               </div>
               <div className="col-lg-2 col-xl-3 col-md-6 col-sm-2 search" data-aos="fade-left">
               <input type="text" placeholder="Search...." className="search_bar fas"/>
@@ -247,7 +248,7 @@ function Language(){
                </div>
                <div className="msg_tab_details" data-aos="fade-left">
                 <div className="msg_tab_det_sub">
-                  <h5>Mr. Allen Joseph</h5>
+                  <h5>Mr. Allen Joseph (Ph.D)</h5>
                   <h6>Head of Language Study & Academics</h6>
                   <p>We take the responsibility of EIMT for the future of the students to create an educational sector that invokes the moral values ​​of the past and shapes the future of the present. EIMT has faculty and dedicated members with global perspective and experience.</p>
                 </div>
@@ -272,14 +273,19 @@ function Language(){
               <tbody>
                 <tr>
                   <td onClick={()=>{setAllCourses(true);setIelts(null);setlanCou(false)}}>All Courses</td>
-                  <td style={{display: 'flex', flexDirection: 'column'}} onClick={()=>{setlanCou(true);setIelts(null);setAllCourses(false)}}>Language Courses ▾
-                    <td>English</td>
-                    <td>Hindi</td>
-                    <td>German</td>
-                    <td>Hebrew</td>
-                    <td>French</td>
-                    <td>Spanish</td>
-                    <td>Italian</td>
+                  <td onClick={()=>{setIelts('IELTS');setlanCou(false);setAllCourses(false)}}>IELTS</td>
+                  <td onClick={()=>{setIelts('OET');setlanCou(false);setAllCourses(false)}}>OET</td>
+                  <td onClick={()=>{setIelts('PTE');setlanCou(false);setAllCourses(false)}}>PTE</td>
+                  <td onClick={()=>{setIelts('Fluency');setlanCou(false);setAllCourses(false)}}>Fluency</td>
+                  <td onClick={()=>{setIelts('CBT');setlanCou(false);setAllCourses(false)}}>CBT</td>
+                  <td style={{display: 'flex', flexDirection: 'column'}} >Language Courses ▾
+                    <td onClick={()=>{setIelts('Advanced English');setlanCou(false);setAllCourses(false)}}>English</td>
+                    <td onClick={()=>{setIelts('Advanced Hindi');setlanCou(false);setAllCourses(false)}}>Hindi</td>
+                    <td onClick={()=>{setIelts('German');setlanCou(false);setAllCourses(false)}}>German</td>
+                    <td onClick={()=>{setIelts('Hebrew');setlanCou(false);setAllCourses(false)}}>Hebrew</td>
+                    <td onClick={()=>{setIelts('French');setlanCou(false);setAllCourses(false)}}>French</td>
+                    <td onClick={()=>{setIelts('Spanish');setlanCou(false);setAllCourses(false)}}>Spanish</td>
+                    <td onClick={()=>{setIelts('Italian');setlanCou(false);setAllCourses(false)}}>Italian</td>
 
                   {/* <select>
                     <option value="">Language Courses ▾</option>
@@ -292,11 +298,6 @@ function Language(){
                     <option value="">Italian</option>
                   </select> */}
                   </td>
-                  <td onClick={()=>{setIelts('IELTS');setlanCou(false);setAllCourses(false)}}>IELTS</td>
-                  <td onClick={()=>{setIelts('OET');setlanCou(false);setAllCourses(false)}}>OET</td>
-                  <td onClick={()=>{setIelts('PTE');setlanCou(false);setAllCourses(false)}}>PTE</td>
-                  <td onClick={()=>{setIelts('Fluency');setlanCou(false);setAllCourses(false)}}>Fluency</td>
-                  <td onClick={()=>{setIelts('CBT');setlanCou(false);setAllCourses(false)}}>CBT</td>
 
                 </tr>
               </tbody>
@@ -394,9 +395,16 @@ function Language(){
         <div className="admi_div">
            <p className="h2">Admission Hotlines</p>
            <div className="admi_div1">
-             <p>Phone: (KL) +914792303002 &nbsp; (KL) +914792303004 &nbsp; (KL) +918943303002</p>
+             <p><span style={{fontWeight:'600',color:'black'}}>Phone:</span> (KL) +914792303002 &nbsp; (KL) +914792303004 &nbsp; (KL) +918943303002</p>
+           </div>
+           <div className="admi_div1">
+             <p><span style={{fontWeight:'600',color:'black'}}>Centre:</span> Nalumukku - Kallumala Rd, Kallumala, Akkanattukara Vardu, Mavelikara, Kerala 690110, India</p>
            </div>
         </div>
+        <div className="map_container" data-aos="fade-up">
+          <iframe width="100%" height="100%" id="gmap_canvas" src=" https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3938.0769446918302!2d76.55373481478817!3d9.237416293376473!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x1a8c2cafe77b213e!2zOcKwMTQnMTQuNyJOIDc2wrAzMycyMS4zIkU!5e0!3m2!1sen!2skw!4v1670065536412!5m2!1sen!2skw" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+          </div>
+       
         <div className="col-lg-12 col-xl-12 col-md-12 col-sm-12 footer" >
             <div className="d-flex flex-wrap footer_details" id="footer_detail">
               <div className=" footer_logo" data-aos="fade-bottom">

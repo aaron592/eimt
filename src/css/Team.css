@@ -1,0 +1,226 @@
+@media (min-width: 1000px ){
+    .ac_team{
+        width:100%;
+        padding-top:10px;
+        padding-bottom:10px;
+        background-color:linear-gradient(to top, #e8eef9, #ffffff);
+        display: flex;
+        flex-direction: column;
+        align-items:center;
+    
+    }
+    
+    .h2{
+        font-size:30px;
+        font-weight: 600;
+        margin-bottom:30px;
+    }
+    
+    .ac_team_mem{
+        width:100%;
+        padding-top:10px;
+        padding-bottom:10px;
+        /* background-color:yellow; */
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        row-gap: 10px;
+        column-gap: 10px;
+    }
+    
+    .team{
+        width:45%;
+        /* background-color:blue; */
+        display: flex;
+    }
+    
+    .team:hover{
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    }
+    
+    .team_img{
+        width:30%;
+        height:200px;
+        /* background-color:grey; */
+        
+        overflow:hidden;
+    }
+    
+    .team_img>img{
+        width:100%;
+        height:100%;
+        
+    }
+    
+    .team_msg{
+        width:70%;
+        height:200px;
+        /* background-color:white; */
+        display: flex;
+        align-items: center;
+        justify-content:center;
+    }
+    
+    .team_msg_con::before{
+        content: "\A";
+        border-style: solid;
+        border-width: 10px 15px 10px 0;
+        border-color:  transparent #E5F1FF transparent transparent ;
+        position: fixed;
+        left: -15px;
+        top:50px;
+        
+    }
+    
+    .team_msg_con{
+        width:100%;
+        height:200px;
+        background-color:#E5F1FF;
+        padding:15px;
+        
+    }
+    
+    .team_msg_con>p{
+        text-align:justify;
+        color:rgb(77, 77, 77);
+    
+    }
+    
+    .team_msg_con2{
+        width:100%;
+        height:200px;
+        background-color:#0a99ae24;
+        padding:15px;
+    
+    }
+    
+    .team_msg_con2>p{
+        color:rgb(77, 77, 77);
+        text-align:justify;
+        
+    }
+    
+    .team_msg_con2::before{
+        content: "\A";
+        border-style: solid;
+        border-width: 10px 0px 10px 15px;
+        border-color:  transparent transparent transparent #0a99ae24;
+        position: fixed;
+        right: -15px;
+        top:50px;
+        
+    }
+}
+@media (min-width: 1400px ){
+.ac_team{
+    width:100%;
+    padding-top:10px;
+    padding-bottom:10px;
+    background-color:linear-gradient(to top, #e8eef9, #ffffff);
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    margin-bottom: 30px;
+}
+
+.ac_team>h2{
+    font-size:30px;
+    font-weight: 600;
+    margin-bottom:30px;
+}
+
+.ac_team_mem{
+    width:85%;
+    padding-top:10px;
+    padding-bottom:10px;
+    /* background-color:yellow; */
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    row-gap: 10px;
+    column-gap: 10px;
+}
+
+.team{
+    width:45%;
+    /* background-color:blue; */
+    display: flex;
+}
+
+.team:hover{
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.team_img{
+    width:30%;
+    height:200px;
+    /* background-color:grey; */
+    
+    overflow:hidden;
+}
+
+.team_img>img{
+    width:100%;
+    height:100%;
+    
+}
+
+.team_msg{
+    width:70%;
+    height:200px;
+    /* background-color:white; */
+    display: flex;
+    align-items: center;
+    justify-content:center;
+}
+
+.team_msg_con::before{
+    content: "\A";
+    border-style: solid;
+    border-width: 10px 15px 10px 0;
+    border-color:  transparent #E5F1FF transparent transparent ;
+    position: fixed;
+    left: -15px;
+    top:50px;
+    
+}
+
+.team_msg_con{
+    width:100%;
+    height:200px;
+    background-color:#E5F1FF;
+    padding:15px;
+    
+}
+
+.team_msg_con>p{
+    text-align:justify;
+    color:rgb(77, 77, 77);
+
+}
+
+.team_msg_con2{
+    width:100%;
+    height:200px;
+    background-color:#0a99ae24;
+    padding:15px;
+
+}
+
+.team_msg_con2>p{
+    color:rgb(77, 77, 77);
+    text-align:justify;
+    
+}
+
+.team_msg_con2::before{
+    content: "\A";
+    border-style: solid;
+    border-width: 10px 0px 10px 15px;
+    border-color:  transparent transparent transparent #0a99ae24;
+    position: fixed;
+    right: -15px;
+    top:50px;
+    
+}
+}
