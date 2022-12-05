@@ -261,7 +261,7 @@ function Language(){
         <div className="about_elc">
             <p className="h2">What is ELC?</p>
             <div className="about_elc_p">
-              <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur.</p>
+              <p>Languages ought to be studied in the context of their particular cultures. If it is not an option, it should at least be taught by people who have experience in these situations or who are knowledgeable about the specific language's cultural and linguistic nuances. This is why at ELC we don't just teach a list of tips and tactics to pass the OET, IELTS, or any other kind of standardized test. What we mean by "advanced teaching approach" is that we teach our pupils to comprehend how and why native speakers use their language in the ways that they do. We guarantee you improved abilities and excellent performance on your first attempt.</p>
             </div>
         </div>
 

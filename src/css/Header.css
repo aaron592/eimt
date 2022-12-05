@@ -2,6 +2,42 @@ body{
     background-color:#fafbfc;
 }
 
+.elc_modal{
+    width:100%;
+    height:100vh;
+    background-color:rgba(236, 236, 236, 0.7);
+    position:fixed;
+    z-index: 80;
+    display:flex;
+    align-items: center;
+    justify-content:center;
+}
+
+.elc_page{
+    width:68%;
+    height:73vh;
+    background-color: rgba(180, 159, 159, 0.7);
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:space-evenly;
+    border-radius: 10px;
+}
+
+.elc_page>img{
+    width:90%;
+    height:90%;
+}
+
+.elc_redirect{
+    padding-left:10px;
+    padding-right:10px;
+    border:none;
+    background-color:#134E5E;
+    color:white;
+    font-weight:400;
+}
+
 .contact_nav{
     width:100%;
     height:40px;

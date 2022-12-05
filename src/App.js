@@ -6,7 +6,7 @@ import Admin from './Components/Admin.js';
 import Contact from './Components/Contact.js';
 import Login from './Components/Login.js';
 import Language from './Components/Language.js';
-import Registration from './Components/Registration.js'
+import Elc from './Components/Elc.js'
 import Team from './Components/Team.js';
 import Vision from './Components/Vision.js';
 import {useEffect} from 'react';
@@ -28,7 +28,7 @@ function App() {
              <Route path="/admin" element={<Admin/>} />
              <Route path="/contact" element={<Contact/>} />
              <Route path="/language_courses" element={<Language/>}/>
-             <Route path="/registration" element={<Registration/>} />
+             <Route path="/registration" element={<Elc/>} />
              <Route path="/team" element={<Team/>} />
              <Route path="/vision-mission" element={<Vision/>} />
           </Routes>

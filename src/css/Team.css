@@ -1,16 +1,16 @@
 @media (min-width: 1000px ){
     .ac_team{
         width:100%;
-        padding-top:10px;
+        padding-top:40px;
         padding-bottom:10px;
         background-color:linear-gradient(to top, #e8eef9, #ffffff);
         display: flex;
         flex-direction: column;
         align-items:center;
-    
+        margin-bottom: 80px;
     }
     
-    .h2{
+    .ac_team>h2{
         font-size:30px;
         font-weight: 600;
         margin-bottom:30px;
@@ -114,13 +114,13 @@
 @media (min-width: 1400px ){
 .ac_team{
     width:100%;
-    padding-top:10px;
+    padding-top:40px;
     padding-bottom:10px;
     background-color:linear-gradient(to top, #e8eef9, #ffffff);
     display: flex;
     flex-direction: column;
     align-items:center;
-    margin-bottom: 30px;
+    margin-bottom: 80px;
 }
 
 .ac_team>h2{

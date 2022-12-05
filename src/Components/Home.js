@@ -6,7 +6,8 @@ import { Nav, Navbar } from 'react-bootstrap';
 
 import '../css/Header.css';
 import eimt from '../images/logo.png'
-import elc_logo from '../images/elc.png'
+import elc_logo from '../images/elc.png';
+import elc_ad from '../images/lan_ad.jpeg'
 import banner_1 from '../images/banner.png';
 import banner_2 from '../images/banner2.png';
 import banner_3 from '../images/banner3.png';
@@ -45,6 +46,8 @@ function Header(){
   const [msg,setMsg] = useState('director');
   const [hcolor,setColor] = useState(null);
   const [msg1,setMsg1] = useState(null);
+
+  const [elcmodal,setelcModal] = useState(false);
 
   
   
@@ -96,6 +99,11 @@ function Header(){
       setLoading(false);
     }, 2000);
 
+    setelcModal(true)
+    setTimeout(() => {
+      setelcModal(false);
+    }, 15000);
+
     AOS.init();
 
     document.head.innerHTML+=`
@@ -115,6 +123,15 @@ function Header(){
       	  <div className="spinner"></div>
         </div>
       ) : ( <div>
+      {
+        elcmodal===true?(<div className="elc_modal" onClick={()=>{setelcModal(false)}}>
+               <div className="elc_page">
+                 <img src={elc_ad} />
+                 <div onClick={()=>{setelcModal(true)}}><Link style={{ textDecoration: 'none', color: '#494949' }} to="/language_courses"><button className="elc_redirect">Go to ELC &#8594;</button></Link></div>
+               </div>
+            </div>):null
+      }
+          
         <div className="contact_nav">
           <div className="contact_nav_det">
             <div className="contact_nav_det_1">
@@ -357,11 +374,11 @@ and maintain their competitiveness on worldwide scale.</p>
               
              <div className="d-flex flex-row msg_tab_cont">
                <div className="msg_tab_img" data-aos="fade-right">
-                 <img src={director}/>
+                 <img />
                </div>
                <div className="msg_tab_details" data-aos="fade-left">
                 <div className="msg_tab_det_sub">
-                  <h5>Bp.Rev.Dr.Simon Peter</h5>
+                  <h5>Mrs. Anitha John ( MA B.Ed )</h5>
                   <h6>Principal</h6>
                   <p>We see it as EIMT's responsibility to build an educational sector inspired by yesterday as a promise for tomorrow. Selfless service and dedication sets us apart.We encourage mutual respect and positive thinking. We are always willing to provide assistance and guidance to the job opportunities worldwide.</p>
                 </div>
@@ -375,9 +392,9 @@ and maintain their competitiveness on worldwide scale.</p>
             <div className="elc_content_tab">
               <div className="elc_content_msg">
                 <p className="h2">We offer best courses having good scope in the future.</p>
-                <p className="p">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                <p className="p">Languages ought to be studied in the context of their particular cultures. If it is not an option, it should at least be taught by people who have experience in these situations or who are knowledgeable about the specific language's cultural and linguistic nuances.</p>
                 <Link to="/language_courses"><button className="btn_know">Know More</button></Link>
-                <p className="p">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                <p className="p">This is why at ELC we don't just teach a list of tips and tactics to pass the OET, IELTS, or any other kind of standardized test. What we mean by "advanced teaching approach" is that we teach our pupils to comprehend how and why native speakers use their language in the ways that they do. We guarantee you improved abilities and excellent performance on your first attempt.</p>
               </div>
               <div className="elc_content_img">
               <Link className="elc_content_img_cont" to="/language_courses"><img className="elc_content_img1" src={elc}/></Link>

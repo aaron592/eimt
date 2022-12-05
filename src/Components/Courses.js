@@ -201,7 +201,7 @@ function Courses(){
                     <div class="dropdown-content">
                     <Link style={{ textDecoration: 'none', color: '#494949' }} to="/courses"><p className="nav_p">Technical courses</p></Link>
                     <Link style={{ textDecoration: 'none', color: '#494949' }} to="/language_courses"><p className="nav_p">Language courses</p></Link>  
-                    <Link style={{ textDecoration: 'none', color: '#494949' }} to="/language_courses"><p className="nav_p">ELC</p></Link>
+                    
                     </div>
 
                   </p>
