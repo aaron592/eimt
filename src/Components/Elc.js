@@ -39,6 +39,33 @@ function Elc(){
     let [menubar,setMenu] = useState(false);
     let [menubar1,setMenu1] = useState(false);
 
+    let newMovie={};
+
+      function readValue(property,value){
+          newMovie[property]=value;
+          console.log(newMovie[property]);
+      }
+      let [messages,setMessage] = useState(null);
+
+      function submitForm(){
+        fetch("https://eimt-backend.onrender.com/register",{
+            method:"POST",
+            headers:{
+                "Content-Type": "application/json"
+            },
+            body:JSON.stringify(newMovie)
+        })
+        .then((response)=>response.json())
+        .then((response)=>{
+            console.log(response.message);
+          
+        })
+        .catch((err)=>{
+            console.log(err);
+            console.log("error");
+        })
+      }
+
     return(
         <section>
         { loading ? (
@@ -66,51 +93,80 @@ function Elc(){
               </div>
               <div className="elc_form_body">
                  <div className="elc_form_body1">
-                   <input placeholder="Full name"/>
-                   <input placeholder="Email"/>
-                   <input placeholder="Phone number"/>
+                   <input type="text" placeholder="Full name" onChange={(event)=>{
+                          readValue("fullname",event.target.value);
+                      }
+                      } required/>
+                   <input type="email" placeholder="Email" onChange={(event)=>{
+                          readValue("email",event.target.value);
+                      }
+                      } required/>
+                   <input type="text" placeholder="Phone number" onChange={(event)=>{
+                          readValue("phone",event.target.value);
+                      }
+                      } required/>
 
                  </div>
                  <div className="elc_form_body2">
-                   <input placeholder="Address"/>
-                   <input placeholder="Education"/>
-                   <div className="gender">
+                   <input placeholder="Address" onChange={(event)=>{
+                          readValue("address",event.target.value);
+                      }
+                      } required/>
+                   <input placeholder="Education" onChange={(event)=>{
+                          readValue("education",event.target.value);
+                      }
+                      } required/>
+                   <div className="gender" >
                       <label>Gender:</label>
-                      <input type="radio"/><label>Male</label>
-                      <input type="radio"/><label>Female</label>
+                      <input type="radio" value="Male" name="gender" onChange={(event)=>{
+                          readValue("gender",event.target.value);
+                      }
+                      } required/><label>Male</label>
+                      <input type="radio" value="Female" name="gender" onChange={(event)=>{
+                          readValue("gender",event.target.value);
+                      }
+                      } required/><label>Female</label>
 
                    </div>
                  </div>
                  <div className="elc_form_body3">
                    <label>Which Course are you planning to apply to? IELTS/OET/ or any other?</label>
-                   <select>
-                      <option>Select Any Course</option>
-                      <option>IELTS</option>
-                      <option>OET</option>
-                      <option>Other</option>
+                   <select onChange={(event)=>{
+                          readValue("course",event.target.value);
+                      }
+                      } required>
+                      <option defaultValue >Select Any Course</option>
+                      <option value="IELTS">IELTS</option>
+                      <option value="OET">OET</option>
+                      <option value="Other">Other</option>
                    </select>
                  </div>
                  <div className="elc_form_body4">
                    <label>Have you taken any Standardized tests before?</label>
-                   <select>
-                      <option>Select Any Option</option>
-                      <option>Yes</option>
-                      <option>No</option>
+                   <select onChange={(event)=>{
+                          readValue("other",event.target.value);
+                      }
+                      } required>
+                      <option defaultValue>Select Any Option</option>
+                      <option value="yes">Yes</option>
+                      <option value="no">No</option>
                    </select>
                  </div>
                  <div className="elc_form_body5">
                    <label>How do you come to know about ELC?<br/>Friends/ Internet search/ Social media / faculty?</label>
-                   <select>
-                      <option>Select Any Option</option>
-                      <option>Friends</option>
-                      <option>Internet search</option>
-                      <option>Social media</option>
-                      <option>faculty</option>
+                   <select onChange={(event)=>{
+                          readValue("query",event.target.value);
+                      }} required>
+                      <option defaultValue>Select Any Option</option>
+                      <option value="Friends">Friends</option>
+                      <option value="Internet search">Internet search</option>
+                      <option value="Social media">Social media</option>
+                      <option value="faculty">faculty</option>
                    </select>
                  </div>
               </div>
               <div className="form_btn">
-                 <button >Submit</button>
+                 <button onClick={()=>{submitForm();}}>Submit</button>
               </div>
             </div>
           </div>

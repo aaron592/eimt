@@ -20,7 +20,7 @@ import facebook from '../images/facebook.png';
 import twitter from '../images/twitter.png';
 import youtube from '../images/youtube.png';
 import principal from '../images/principal.png';
-import director from '../images/director.png';
+import director from '../images/anitha.png';
 import elc from '../images/elc.gif';
 import {Link} from 'react-router-dom';
 import { saveAs } from "file-saver";
@@ -374,7 +374,7 @@ and maintain their competitiveness on worldwide scale.</p>
               
              <div className="d-flex flex-row msg_tab_cont">
                <div className="msg_tab_img" data-aos="fade-right">
-                 <img />
+                 <img src={director}/>
                </div>
                <div className="msg_tab_details" data-aos="fade-left">
                 <div className="msg_tab_det_sub">
