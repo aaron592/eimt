@@ -226,7 +226,7 @@ We encourage mutual respect and positive thinking. We are always willing to prov
               </div>
               <div className="footer_details_3" data-aos="fade-bottom">
               <p className="footer_head">Courses</p>
-              <p>Language</p>
+              <p><Link to="/language_courses" style={{color:'black'}}>Language</Link></p>
               <p>Programming</p>
               <p>Musical</p>
               </div>
@@ -242,7 +242,7 @@ We encourage mutual respect and positive thinking. We are always willing to prov
             </div>
         </div>
         <div className="col-lg-12 col-xl-12 col-md-12 col-sm-12 rights">
-          <p>© 2022 <Link to="/login">Copyright</Link>. Designed by <a href="https://luc.to/aaron" > ATJ</a></p>
+          <p>© 2022 <Link to="/login" style={{color:'white'}}>Copyright</Link>. Designed by <a href="https://luc.to/aaron" > ATJ</a></p>
         </div></div>)}
     </section>
    )

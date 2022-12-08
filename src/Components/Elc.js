@@ -9,6 +9,7 @@ import instagram from '../images/instagram.png';
 import facebook from '../images/facebook.png';
 import twitter from '../images/twitter.png';
 import youtube from '../images/youtube.png';
+import {useNavigate} from 'react-router-dom';
 import {
     MDBCarousel,
     MDBCarouselItem,
@@ -17,6 +18,7 @@ import {
   import 'aos/dist/aos.css';
 
 function Elc(){
+  const navigate = useNavigate();
 
     const [loading, setLoading] = useState(false);
 
@@ -26,7 +28,7 @@ function Elc(){
         setTimeout(() => {
           setLoading(false);
         }, 2000);
-    
+
         AOS.init();
     
         document.head.innerHTML+=`
@@ -38,15 +40,21 @@ function Elc(){
 
     let [menubar,setMenu] = useState(false);
     let [menubar1,setMenu1] = useState(false);
-
+    let [successmsg, setsuccessMsg] = useState(false);
+    let [errormsg, seterrorMsg] = useState(false);
     let newMovie={};
 
       function readValue(property,value){
           newMovie[property]=value;
           console.log(newMovie[property]);
       }
-      let [messages,setMessage] = useState(null);
 
+      let [messages,setMessage] = useState(null);
+      let [message1,setMessage1] = useState(null);
+      let [message2,setMessage2] = useState(null);
+      
+    
+      
       function submitForm(){
         fetch("https://eimt-backend.onrender.com/register",{
             method:"POST",
@@ -57,12 +65,31 @@ function Elc(){
         })
         .then((response)=>response.json())
         .then((response)=>{
-            console.log(response.message);
-          
+           if(response.success==true){
+            setMessage(response.message);
+            setsuccessMsg(true)
+            setTimeout(() => {
+              setsuccessMsg(false);
+            },5000);
+            setTimeout(() => {
+              navigate('/language_courses');
+            },5000);
+           }
+           else{
+            setMessage(response.message);
+            setMessage1(response.error);
+            setMessage2(response.text);
+            seterrorMsg(true)
+            setTimeout(() => {
+              seterrorMsg(false);
+            },10000);
+           }
+         
+         
+        
         })
         .catch((err)=>{
-            console.log(err);
-            console.log("error");
+          console.log(err);
         })
       }
 
@@ -82,21 +109,38 @@ function Elc(){
             </div>
           </div>
          </div>
-    
+         {successmsg===true?(
+          <div className="submit_alert">
+            <div className="submit_msg">
+              <p>{messages}</p>
+            </div>
+         </div>
+         ):null}
+         {errormsg===true?(
+          <div className="submit_alert">
+            <div className="submit_msg1">
+               <p>{message1}</p>
+               <p>{messages}</p>
+               <p>{message2}</p>
+               <p></p>
+            </div>
+         </div>
+         ):null}
+         
 
         <div className="elc_form">
           <div className="elc_form_1">
             <div className="elc_form_2">
               <div className="elc_form_head">
-                <img src={logo} width='8%'/>
+                <img src={logo} />
                 <h3>Application Form</h3>
               </div>
-              <div className="elc_form_body">
-                 <div className="elc_form_body1">
+              <div className=" elc_form_body">
+                 <div className="d-flex flex-row elc_form_body1">
                    <input type="text" placeholder="Full name" onChange={(event)=>{
                           readValue("fullname",event.target.value);
                       }
-                      } required/>
+                      } pattern="[A-Za-z0-9]+" required={true }/>
                    <input type="email" placeholder="Email" onChange={(event)=>{
                           readValue("email",event.target.value);
                       }
@@ -107,7 +151,7 @@ function Elc(){
                       } required/>
 
                  </div>
-                 <div className="elc_form_body2">
+                 <div className="d-flex flex-row elc_form_body2">
                    <input placeholder="Address" onChange={(event)=>{
                           readValue("address",event.target.value);
                       }
@@ -121,15 +165,15 @@ function Elc(){
                       <input type="radio" value="Male" name="gender" onChange={(event)=>{
                           readValue("gender",event.target.value);
                       }
-                      } required/><label>Male</label>
+                      } /><label>Male</label>
                       <input type="radio" value="Female" name="gender" onChange={(event)=>{
                           readValue("gender",event.target.value);
                       }
-                      } required/><label>Female</label>
+                      } /><label>Female</label>
 
                    </div>
                  </div>
-                 <div className="elc_form_body3">
+                 <div className="d-flex flex-row elc_form_body3">
                    <label>Which Course are you planning to apply to? IELTS/OET/ or any other?</label>
                    <select onChange={(event)=>{
                           readValue("course",event.target.value);
@@ -141,7 +185,7 @@ function Elc(){
                       <option value="Other">Other</option>
                    </select>
                  </div>
-                 <div className="elc_form_body4">
+                 <div className="d-flex flex-row elc_form_body4">
                    <label>Have you taken any Standardized tests before?</label>
                    <select onChange={(event)=>{
                           readValue("other",event.target.value);
@@ -152,7 +196,7 @@ function Elc(){
                       <option value="no">No</option>
                    </select>
                  </div>
-                 <div className="elc_form_body5">
+                 <div className="d-flex flex-row elc_form_body5">
                    <label>How do you come to know about ELC?<br/>Friends/ Internet search/ Social media / faculty?</label>
                    <select onChange={(event)=>{
                           readValue("query",event.target.value);
@@ -166,15 +210,17 @@ function Elc(){
                  </div>
               </div>
               <div className="form_btn">
-                 <button onClick={()=>{submitForm();}}>Submit</button>
+                 <button type="submit" onClick={()=>{submitForm();}}>Submit</button>
               </div>
             </div>
           </div>
-          <div className="elc_watermark">
-             <h6>powered by ATJ</h6>
+          
+        </div>
+        <div className="elc_watermark">
+             <h6>Powered by ATJ</h6>
           </div>
         </div>
-        </div>)
+        )
         }
         </section>
     )

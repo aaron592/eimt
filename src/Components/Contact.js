@@ -13,10 +13,11 @@ import about_img from '../images/preview1.png';
 import { saveAs } from "file-saver";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import {useNavigate} from 'react-router-dom';
 
 
 function Contact(){
-   
+  const navigate = useNavigate();
   const [loading, setLoading] = useState(false);
 
     useEffect(() => {
@@ -40,7 +41,13 @@ function Contact(){
     
       let [menubar,setMenu] = useState(false);
       let [menubar1,setMenu1] = useState(false);
+
+      let [successmsg, setsuccessMsg] = useState(false);
+      let [errormsg, seterrorMsg] = useState(false);
+
       let [messages,setMessage] = useState(null);
+      let [message1,setMessage1] = useState(null);
+      let [message2,setMessage2] = useState(null);
 
       let newMovie={};
 
@@ -58,10 +65,24 @@ function Contact(){
         })
         .then((response)=>response.json())
         .then((response)=>{
-          setMessage(response.message);
-            setTimeout(()=>{
-              setMessage(null);
-           },8000)
+          if(response.success==true){
+            setMessage(response.message);
+            setsuccessMsg(true)
+            setTimeout(() => {
+              setsuccessMsg(false);
+            },5000);
+            setTimeout(() => {
+              window.location.reload();
+            },5000);
+          } else{
+            setMessage(response.message);
+            setMessage1(response.error);
+            setMessage2(response.text);
+            seterrorMsg(true)
+            setTimeout(() => {
+              seterrorMsg(false);
+            },10000);
+           }
         })
         .catch((err)=>{
             console.log(err);
@@ -86,6 +107,25 @@ function Contact(){
             </div>
           </div>
         </div>
+
+        {successmsg===true?(
+          <div className="submit_alert">
+            <div className="submit_msg">
+              <p>{messages}</p>
+            </div>
+         </div>
+         ):null}
+         {errormsg===true?(
+          <div className="submit_alert">
+            <div className="submit_msg1">
+               <p>{message1}</p>
+               <p>{messages}</p>
+               <p>{message2}</p>
+               <p></p>
+            </div>
+         </div>
+         ):null}
+
         <div className="container-fluid">
         
         <div className="row">
@@ -236,7 +276,7 @@ function Contact(){
                       }
                       }></textarea>
             </div>
-            <button onClick={()=>{addForm();}} className="btn_submit">Submit</button>
+            <button type="submit" onClick={()=>{addForm();}} className="btn_submit">Submit</button>
           </div>
         </div>
       </div>
@@ -418,7 +458,7 @@ function Contact(){
               </div>
               <div className="footer_details_3" data-aos="fade-bottom">
               <p className="footer_head">Courses</p>
-              <p>Language</p>
+              <p><Link to="/language_courses" style={{color:'black'}}>Language</Link></p>
               <p>Programming</p>
               <p>Musical</p>
               </div>
@@ -434,7 +474,7 @@ function Contact(){
             </div>
         </div>
         <div className="col-lg-12 col-xl-12 col-md-12 col-sm-12 rights">
-          <p>© 2022 <Link to="/login">Copyright</Link>. Designed by <a href="https://luc.to/aaron" > ATJ</a></p>
+          <p>© 2022 <Link to="/login" style={{color:'white'}}>Copyright</Link>. Designed by <a href="https://luc.to/aaron" > ATJ</a></p>
         </div></div>)}
         
         </section>

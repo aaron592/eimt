@@ -152,7 +152,7 @@ function Header(){
               </div>
               {menubar===true?(
                 <section className="cover" onClick={()=>{setMenu(false)}}>
-                      <div className="col-lg-2 col-xl-3 col-md-6 col-sm-2 search_new">
+                      <div className="col-lg-2 col-xl-3 col-md-6 col-sm-2 search_new" >
                         <input type="text" placeholder="&#128269; Search for anything...." className="search_bar"/>
                      </div>
                      <div className="col-xl-4 col-sm-6 col-md-8 nav_details_new" onClick={()=>{setMenu(true)}}>
@@ -388,8 +388,8 @@ and maintain their competitiveness on worldwide scale.</p>
             }            
          </div>
 
-         <div className="elc_content">
-            <div className="elc_content_tab">
+         <div className="d-flex flex-row elc_content">
+            <div className="d-flex flex-row elc_content_tab">
               <div className="elc_content_msg">
                 <p className="h2">We offer best courses having good scope in the future.</p>
                 <p className="p">Languages ought to be studied in the context of their particular cultures. If it is not an option, it should at least be taught by people who have experience in these situations or who are knowledgeable about the specific language's cultural and linguistic nuances.</p>
@@ -575,7 +575,7 @@ and maintain their competitiveness on worldwide scale.</p>
               </div>
               <div className="footer_details_3" data-aos="fade-bottom">
               <p className="footer_head">Courses</p>
-              <p>Language</p>
+              <p><Link to="/language_courses" style={{color:'black'}}>Language</Link></p>
               <p>Programming</p>
               <p>Musical</p>
               </div>
@@ -591,7 +591,7 @@ and maintain their competitiveness on worldwide scale.</p>
             </div>
         </div>
         <div className="col-lg-12 col-xl-12 col-md-12 col-sm-12 rights">
-          <p>© 2022 <Link to="/login">Copyright</Link>. Designed by <a href="https://luc.to/aaron" > ATJ</a></p>
+          <p>© 2022 <Link to="/login" style={{color:'white'}}>Copyright</Link>. Designed by <a href="https://luc.to/aaron" > ATJ</a></p>
         </div></div>)}
         
       
